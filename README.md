@@ -1,9 +1,9 @@
-# Simulador Matemático Profesional
+# Simulador de Matemática Modular - 200 Reactivos Reales
 
-Este paquete contiene la arquitectura limpia lista para despliegue inmediato.
+Este paquete contiene la arquitectura modular y limpia.
 
-## Componentes Incluidos:
-1. `index.html` - Interfaz y estructura semántica.
-2. `index.css` - Estilos responsive y paleta moderna.
-3. `index.js` - Lógica algorítmica y base de datos con 200 reactivos reales.
-4. `README.md` - Documentación del proyecto.
+## Archivos Incluidos:
+1. `index.html` - Estructura semántica base.
+2. `index.css` - Estilos de interfaz de usuario.
+3. `index.js` - Lógica algorítmica y base de 200 preguntas reales.
+4. `README.md` - Documentación técnica y guía de instalación.
