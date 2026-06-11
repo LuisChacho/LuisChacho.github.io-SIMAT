@@ -1,3 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRUEBA FINAL MATEMÁTICAS - 150 PREGUNTAS</title>
+    <style>
+    :root {
+    --bg-color: #0b0f19;
+    --container-bg: #151f32;
+    --accent-primary: #2563eb;
+    --accent-hover: #1d4ed8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --correct-color: #10b981;
+    --incorrect-color: #ef4444;
+    --gold-color: #f59e0b;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 855px;
+    margin: 25px auto;
+    background: var(--container-bg);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
+    border: 1px solid #1e293b;
+}
+
+h1 {
+    font-size: 20pt;
+    text-align: center;
+    color: var(--gold-color);
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+}
+
+.screen { display: none; }
+.screen.active { display: block; }
+
+.welcome-text {
+    font-size: 11.5pt;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.btn-main {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    margin: 15px auto;
+    padding: 14px 28px;
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 12pt;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.btn-main:hover, .btn-main:focus {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+.hud {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1e293b;
+    font-size: 11pt;
+    font-weight: 600;
+}
+
+.hud-right { color: var(--gold-color); }
+
+.lifelines-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.lifeline-btn {
+    flex: 1;
+    background: #1e293b;
+    color: white;
+    border: 1px solid #334155;
+    padding: 10px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 10pt;
+    transition: background 0.15s;
+}
+
+.lifeline-btn:hover:not(:disabled) {
+    background: #334155;
+}
+
+.lifeline-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.help-panel {
+    background: #0f172a;
+    border-left: 4px solid var(--gold-color);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0 6px 6px 0;
+    font-size: 11pt;
+    display: none;
+}
+
+.question-box {
+    font-size: 13pt;
+    font-weight: 500;
+    margin-bottom: 25px;
+    background: #0f172a;
+    padding: 22px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    line-height: 1.6;
+}
+
+.options-grid { display: flex; flex-direction: column; gap: 12px; }
+
+.option-btn {
+    display: block;
+    width: 100%;
+    background: #1e293b;
+    color: var(--text-main);
+    border: 1px solid #334155;
+    padding: 15px 20px;
+    border-radius: 6px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 11.5pt;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.option-btn:hover:not(:disabled), .option-btn:focus:not(:disabled) {
+    background: #253248;
+    border-color: #475569;
+}
+
+.option-btn.correct { background: var(--correct-color) !important; border-color: #047857 !important; color: white; font-weight: bold; }
+.option-btn.incorrect { background: var(--incorrect-color) !important; border-color: #b91c1c !important; color: white; font-weight: bold; }
+
+.feedback-box {
+    margin-top: 25px;
+    padding: 20px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    display: none;
+    border-radius: 8px;
+}
+
+.feedback-box.visible { display: block; }
+
+.feedback-title {
+    font-size: 12pt;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="game-container">
+    <h1>SIMULADOR DE MATEMÁTICA</h1>
+
+    <!-- PANTALLA INICIAL -->
+    <div id="screen-start" class="screen active">
+        <p class="welcome-text">
+            ¡Bienvenidos a la plataforma de evaluación definitiva para el ingreso a la Universidad! Te enfrentarás a un banco real estructurado de <strong>150 preguntas aleatorias</strong> con soluciones exactas y explicaciones analíticas. Tanto el orden de los reactivos como las opciones se reordenan dinámicamente mediante un algoritmo inteligente antipatrón, asegurando que la respuesta correcta jamás siga un orden predecible.
+        </p>
+        <button class="btn-main" onclick="startGame()">Jugar</button>
+    </div>
+
+    <!-- PANTALLA DE JUEGO -->
+    <div id="screen-game" class="screen">
+        <div class="hud">
+            <div id="hud-progress">Pregunta: 1 / 150</div>
+            <div id="hud-score" class="hud-right">Premio: 0 PUNTOS</div>
+        </div>
+
+        <div class="lifelines-container">
+            <button id="btn-5050" class="lifeline-btn" onclick="use5050()">50/50</button>
+            <button id="btn-remove-one" class="lifeline-btn" onclick="useRemoveOne()">Eliminar una</button>
+            <button id="btn-phone" class="lifeline-btn" onclick="usePhone()">Llamada telefónica</button>
+            <button id="btn-audience" class="lifeline-btn" onclick="useAudience()">Ayuda del público</button>
+        </div>
+
+        <div id="help-display" class="help-panel"></div>
+
+        <div class="question-box" id="question-text">Procesando reactivo matemático...</div>
+
+        <div class="options-grid">
+            <button class="option-btn" id="opt-A" onclick="submitAnswer('A')">A)</button>
+            <button class="option-btn" id="opt-B" onclick="submitAnswer('B')">B)</button>
+            <button class="option-btn" id="opt-C" onclick="submitAnswer('C')">C)</button>
+            <button class="option-btn" id="opt-D" onclick="submitAnswer('D')">D)</button>
+        </div>
+
+        <div id="feedback-box" class="feedback-box">
+            <div id="feedback-title" class="feedback-title">Resultado analítico</div>
+            <p id="feedback-text" style="font-size: 11pt; margin-bottom: 15px; color: var(--text-muted); line-height: 1.5;"></p>
+            <button class="btn-main" id="btn-next" onclick="nextQuestion()" style="margin: 0; max-width: 100%;">Siguiente</button>
+        </div>
+    </div>
+
+    <!-- PANTALLA FINAL -->
+    <div id="screen-end" class="screen">
+        <h2 style="text-align: center; color: var(--gold-color); margin-bottom: 15px;">¡EXAMEN CONCLUIDO!</h2>
+        <p class="welcome-text" id="end-message"></p>
+        <button class="btn-main" onclick="restartGame()">Reiniciar</button>
+    </div>
+</div>
+
+<script>
 const bancoOriginal = [
     {
         "categoria": "Simplificación",
@@ -1818,3 +2062,7 @@ function useAudience() {
     helpDiv.innerText = `📊 Tendencia de votación del público evaluador: A) ${dist[0]}% | B) ${dist[1]}% | C) ${dist[2]}% | D) ${dist[3]}%`;
     document.getElementById('btn-audience').disabled = true;
 }
+
+</script>
+</body>
+</html>
