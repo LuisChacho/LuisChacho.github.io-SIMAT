@@ -1,8 +1,8 @@
-# Simulador Matemático de Alta Competitividad - 200 Reactivos Reales
+# Simulador de Matemática Modular - 200 Reactivos Reales
 
-Este paquete contiene la arquitectura limpia lista para despliegue inmediato.
+Este simulador está optimizado con código completamente limpio y desacoplado en archivos individuales listos para producción en GitHub Pages.
 
-## Optimizaciones Incorporadas:
-1. **Soluciones Definitivas:** Las opciones muestran el resultado matemático neto simplificado (sin operaciones colgantes).
-2. **Algoritmo Antipatrón:** El motor de JavaScript valida el barajado para asegurar que la respuesta jamás sea únicamente la opción 'A' ni se repitan patrones lineales predecibles.
-3. **Carga Estática:** 200 preguntas integradas directamente para máxima velocidad.
+## Características Técnicas Implementadas:
+- **Banco masivo de 200 preguntas estáticas independientes** cargadas directamente en el archivo `index.js`.
+- **Tiempo Global Dinámico Ajustado:** 200 minutos exactos de cuenta regresiva controlada (1 min por pregunta).
+- **Aleatorización Algorítmica Dual:** El sistema mezcla el orden de las preguntas y baraja dinámicamente el mapeo de las respuestas (A, B, C, D) para asegurar que el literal correcto cambie constantemente en cada partida.
