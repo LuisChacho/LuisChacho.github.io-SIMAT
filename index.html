@@ -3,60 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMULADOR DE MATEMÁTICA - 200 PREGUNTAS</title>
+    <title>Plataforma de Evaluación Matemática de Alta Competitividad</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
 <div class="game-container">
+    <div class="brand-header">PLATAFORMA DE EVALUACIÓN ACADÉMICA</div>
     <h1>SIMULADOR DE MATEMÁTICA</h1>
 
-    <!-- PANTALLA INICIAL -->
     <div id="screen-start" class="screen active">
         <p class="welcome-text">
-            ¡Bienvenidos a la PRUEBA FINAL de Matemática! Te enfrentarás a un total exacto de <strong>200 preguntas aleatorias</strong>. Dispones de exactamente 1 minuto por pregunta, lo que define un <strong>tiempo global ininterrumpido de 200 minutos (3 horas y 20 minutos)</strong>. Tanto el orden de los reactivos como los literales de respuesta cambian dinámicamente en cada partida para que la solución correcta jamás se repita en la misma opción.
+            Bienvenido al entorno formal de simulación matemática. Te enfrentarás a un banco consolidado de <strong>200 reactivos estructurados</strong> bajo notación científica oficial. Las respuestas se encuentran totalmente resueltas y simplificadas a su mínima expresión neta para evitar ambigüedades. El tiempo ha sido deshabilitado para permitir un análisis calmado y preciso de los problemas.
         </p>
-        <button class="btn-main" onclick="startGame()">¡INICIAR SIMULADOR (200 PREGUNTAS)!</button>
+        <button class="btn-main" onclick="startGame()">INICIAR SIMULADOR PROFESIONAL</button>
     </div>
 
-    <!-- PANTALLA DE JUEGO -->
     <div id="screen-game" class="screen">
         <div class="hud">
-            <div id="hud-progress">Pregunta: 1 / 200</div>
-            <div id="hud-timer" class="hud-timer">Tiempo: 200:00</div>
-            <div id="hud-score" class="hud-right">Premio: 0 PUNTOS</div>
+            <div class="hud-item">
+                <span class="hud-label">PROGRESO REACTIVOS</span>
+                <span id="hud-progress" class="hud-value">1 / 200</span>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">PUNTUACIÓN ACUMULADA</span>
+                <span id="hud-score" class="hud-value color-gold">0 PUNTOS</span>
+            </div>
         </div>
 
         <div class="lifelines-container">
             <button id="btn-5050" class="lifeline-btn" onclick="use5050()">Comodín 50/50</button>
-            <button id="btn-remove-one" class="lifeline-btn" onclick="useRemoveOne()">Eliminar una</button>
-            <button id="btn-phone" class="lifeline-btn" onclick="usePhone()">Llamada</button>
-            <button id="btn-audience" class="lifeline-btn" onclick="useAudience()">Público</button>
+            <button id="btn-remove-one" class="lifeline-btn" onclick="useRemoveOne()">Eliminar una opción</button>
+            <button id="btn-phone" class="lifeline-btn" onclick="usePhone()">Consultar Tutor</button>
+            <button id="btn-audience" class="lifeline-btn" onclick="useAudience()">Estadística Académica</button>
         </div>
 
         <div id="help-display" class="help-panel"></div>
 
-        <div class="question-box" id="question-text">Cargando desafío matemático...</div>
+        <div class="question-container">
+            <div id="question-meta" class="question-tag">TEMA</div>
+            <div class="question-box">
+                <div id="math-question-body"></div>
+            </div>
+        </div>
 
         <div class="options-grid">
-            <button class="option-btn" id="opt-A" onclick="submitAnswer('A')">A)</button>
-            <button class="option-btn" id="opt-B" onclick="submitAnswer('B')">B)</button>
-            <button class="option-btn" id="opt-C" onclick="submitAnswer('C')">C)</button>
-            <button class="option-btn" id="opt-D" onclick="submitAnswer('D')">D)</button>
+            <button class="option-btn" id="opt-A" onclick="submitAnswer('A')"><span class="lit">A</span> <div class="opt-text" id="text-A"></div></button>
+            <button class="option-btn" id="opt-B" onclick="submitAnswer('B')"><span class="lit">B</span> <div class="opt-text" id="text-B"></div></button>
+            <button class="option-btn" id="opt-C" onclick="submitAnswer('C')"><span class="lit">C</span> <div class="opt-text" id="text-C"></div></button>
+            <button class="option-btn" id="opt-D" onclick="submitAnswer('D')"><span class="lit">D</span> <div class="opt-text" id="text-D"></div></button>
         </div>
 
         <div id="feedback-box" class="feedback-box">
-            <div id="feedback-title" class="feedback-title">Resultado</div>
-            <p id="feedback-text" style="font-size: 11pt; margin-bottom: 15px; color: var(--text-muted);"></p>
-            <button class="btn-main" id="btn-next" onclick="nextQuestion()" style="margin: 0;">Siguiente Pregunta</button>
+            <div id="feedback-title" class="feedback-title">Análisis Técnico</div>
+            <div class="feedback-body">
+                <p class="feedback-subtitle">Justificación Operacional Detallada:</p>
+                <p id="feedback-text"></p>
+            </div>
+            <button class="btn-main" id="btn-next" onclick="nextQuestion()" style="margin: 20px 0 0 auto; max-width: 260px;">Avanzar al siguiente reactivo</button>
         </div>
     </div>
 
-    <!-- PANTALLA FINAL -->
     <div id="screen-end" class="screen">
-        <h2 style="text-align: center; color: var(--gold-color); margin-bottom: 15px;">¡EXAMEN CONCLUIDO!</h2>
+        <div class="success-icon">✓</div>
+        <h2 style="text-align: center; color: var(--gold-color); margin-bottom: 15px; font-size: 20pt;">SIMULACIÓN CONCLUIDA</h2>
         <p class="welcome-text" id="end-message"></p>
-        <button class="btn-main" onclick="restartGame()">Volver a empezar</button>
+        <button class="btn-main" onclick="restartGame()">Reiniciar Entorno</button>
     </div>
 </div>
 
