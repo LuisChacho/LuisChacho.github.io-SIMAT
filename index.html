@@ -3,60 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIMULADOR DE MATEMÁTICA - 200 PREGUNTAS</title>
+    <title>Plataforma de Evaluación Institucional - Matemática</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<div class="game-container">
-    <h1>SIMULADOR DE MATEMÁTICA</h1>
+<div class="app-container">
+    <header class="app-header">
+        <div class="brand">Evaluación Institucional</div>
+        <div class="hud-progress" id="hud-progress">Progreso: 1 / 200</div>
+    </header>
 
     <!-- PANTALLA INICIAL -->
     <div id="screen-start" class="screen active">
-        <p class="welcome-text">
-            ¡Bienvenidos a la plataforma de evaluación definitiva! Te enfrentarás a un banco real de <strong>200 preguntas aleatorias</strong> con notación matemática formal tipográfica (exponentes reales, signos y operadores limpios) para una lectura fluida y sin confusiones. Dispones de exactamente 1 minuto por pregunta, configurando un <strong>tiempo global unificado de 200 minutos (3 horas y 20 minutos)</strong>. El orden de los reactivos y literales se reorganiza dinámicamente.
-        </p>
-        <button class="btn-main" onclick="startGame()">¡INICIAR EVALUACIÓN (200 PREGUNTAS)!</button>
+        <div class="content-card start-card">
+            <h2>Evaluación Diagnóstica de Matemática</h2>
+            <p class="instruction-text">
+                Bienvenido a la plataforma oficial de evaluación. Esta prueba consta de un banco estandarizado de <strong>200 reactivos algebraicos</strong> diseñados para medir competencias analíticas de alta competencia. 
+            </p>
+            <p class="instruction-text">
+                Las preguntas y opciones se reorganizan algorítmicamente en cada sesión para garantizar la integridad académica del proceso. No hay límite de tiempo estricto por reactivo, permitiendo un análisis conceptual profundo de las expresiones tipográficas.
+            </p>
+            <button class="btn-primary" onclick="startGame()">Comenzar Evaluación</button>
+        </div>
     </div>
 
     <!-- PANTALLA DE JUEGO -->
     <div id="screen-game" class="screen">
-        <div class="hud">
-            <div id="hud-progress">Pregunta: 1 / 200</div>
-            <div id="hud-timer" class="hud-timer">Tiempo: 200:00</div>
-            <div id="hud-score" class="hud-right">Puntaje: 0 PUNTOS</div>
-        </div>
+        <div class="main-layout">
+            <div class="workspace">
+                <div class="question-container">
+                    <span class="badge" id="question-badge">Matemática</span>
+                    <div class="question-text" id="question-text">Cargando reactivo formal...</div>
+                </div>
 
-        <div class="lifelines-container">
-            <button id="btn-5050" class="lifeline-btn" onclick="use5050()">Comodín 50/50</button>
-            <button id="btn-remove-one" class="lifeline-btn" onclick="useRemoveOne()">Eliminar una</button>
-            <button id="btn-phone" class="lifeline-btn" onclick="usePhone()">Tutor</button>
-            <button id="btn-audience" class="lifeline-btn" onclick="useAudience()">Público</button>
-        </div>
+                <div class="options-container">
+                    <button class="option-row" id="opt-A" onclick="submitAnswer('A')"><span class="prefix">A</span> <span class="text" id="txt-A"></span></button>
+                    <button class="option-row" id="opt-B" onclick="submitAnswer('B')"><span class="prefix">B</span> <span class="text" id="txt-B"></span></button>
+                    <button class="option-row" id="opt-C" onclick="submitAnswer('C')"><span class="prefix">C</span> <span class="text" id="txt-C"></span></button>
+                    <button class="option-row" id="opt-D" onclick="submitAnswer('D')"><span class="prefix">D</span> <span class="text" id="txt-D"></span></button>
+                </div>
 
-        <div id="help-display" class="help-panel"></div>
+                <div id="feedback-box" class="feedback-panel">
+                    <h3 id="feedback-title">Resultado del análisis</h3>
+                    <p id="feedback-text"></p>
+                    <button class="btn-primary btn-next" id="btn-next" onclick="nextQuestion()">Avanzar al siguiente reactivo</button>
+                </div>
+            </div>
 
-        <div class="question-box" id="question-text">Procesando reactivo matemático...</div>
-
-        <div class="options-grid">
-            <button class="option-btn" id="opt-A" onclick="submitAnswer('A')">A)</button>
-            <button class="option-btn" id="opt-B" onclick="submitAnswer('B')">B)</button>
-            <button class="option-btn" id="opt-C" onclick="submitAnswer('C')">C)</button>
-            <button class="option-btn" id="opt-D" onclick="submitAnswer('D')">D)</button>
-        </div>
-
-        <div id="feedback-box" class="feedback-box">
-            <div id="feedback-title" class="feedback-title">Resultado analítico</div>
-            <p id="feedback-text" style="font-size: 11pt; margin-bottom: 15px; color: var(--text-muted); line-height: 1.5;"></p>
-            <button class="btn-main" id="btn-next" onclick="nextQuestion()" style="margin: 0; max-width: 100%;">Avanzar al Siguiente Reactivo</button>
+            <aside class="sidebar-tools">
+                <div class="tools-title">Soportes Académicos</div>
+                <button id="btn-5050" class="tool-btn" onclick="use5050()">Descartar 50% de opciones</button>
+                <button id="btn-remove-one" class="tool-btn" onclick="useRemoveOne()">Eliminar un distractor</button>
+                <button id="btn-phone" class="tool-btn" onclick="usePhone()">Consultar Guía Didáctica</button>
+                <button id="btn-audience" class="tool-btn" onclick="useAudience()">Tendencia de Coincidencia</button>
+                
+                <div id="help-display" class="help-box"></div>
+                
+                <div class="score-card">
+                    <div class="score-label">Reactivos Correctos</div>
+                    <div class="score-val" id="hud-score">0</div>
+                </div>
+            </aside>
         </div>
     </div>
 
     <!-- PANTALLA FINAL -->
     <div id="screen-end" class="screen">
-        <h2 style="text-align: center; color: var(--gold-color); margin-bottom: 15px;">¡EVALUACIÓN COMPLETADA!</h2>
-        <p class="welcome-text" id="end-message"></p>
-        <button class="btn-main" onclick="restartGame()">Reiniciar Simulador</button>
+        <div class="content-card end-card">
+            <h2>Evaluación Concluida</h2>
+            <p class="instruction-text" id="end-message"></p>
+            <button class="btn-primary" onclick="restartGame()">Cerrar y Reiniciar Sesión</button>
+        </div>
     </div>
 </div>
 

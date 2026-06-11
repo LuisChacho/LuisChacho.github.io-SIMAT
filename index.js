@@ -1,7 +1,7 @@
 const bancoOriginal = [
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 1 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -12,7 +12,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 2 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -23,29 +23,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 3 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 4 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 5 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -56,7 +56,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 6 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -67,7 +67,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 7 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -78,7 +78,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 8 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -89,7 +89,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 9 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -100,7 +100,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 10 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -111,7 +111,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 11 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -122,7 +122,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 12 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -133,7 +133,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 13 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -144,7 +144,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 14 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -155,18 +155,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 15 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 16 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -177,7 +177,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 17 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -188,29 +188,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 18 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 19 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 20 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -221,7 +221,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 21 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -232,7 +232,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 22 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -243,7 +243,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 23 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -254,7 +254,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 24 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -265,7 +265,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 25 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -276,7 +276,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 26 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -287,7 +287,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 27 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -298,7 +298,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 28 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -309,7 +309,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 29 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -320,18 +320,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 30 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 31 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -342,7 +342,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 32 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -353,29 +353,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 33 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 34 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 35 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -386,7 +386,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 36 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -397,7 +397,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 37 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -408,7 +408,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 38 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -419,7 +419,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 39 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -430,7 +430,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 40 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -441,7 +441,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 41 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -452,7 +452,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 42 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -463,7 +463,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 43 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -474,7 +474,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 44 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -485,18 +485,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 45 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 46 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -507,7 +507,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 47 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -518,29 +518,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 48 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 49 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 50 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -551,7 +551,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 51 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -562,7 +562,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 52 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -573,7 +573,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 53 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -584,7 +584,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 54 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -595,7 +595,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 55 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -606,7 +606,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 56 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -617,7 +617,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 57 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -628,7 +628,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 58 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -639,7 +639,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 59 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -650,18 +650,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 60 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 61 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -672,7 +672,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 62 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -683,29 +683,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 63 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 64 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 65 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -716,7 +716,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 66 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -727,7 +727,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 67 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -738,7 +738,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 68 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -749,7 +749,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 69 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -760,7 +760,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 70 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -771,7 +771,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 71 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -782,7 +782,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 72 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -793,7 +793,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 73 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -804,7 +804,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 74 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -815,18 +815,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 75 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 76 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -837,7 +837,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 77 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -848,29 +848,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 78 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 79 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 80 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -881,7 +881,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 81 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -892,7 +892,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 82 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -903,7 +903,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 83 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -914,7 +914,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 84 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -925,7 +925,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 85 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -936,7 +936,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 86 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -947,7 +947,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 87 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -958,7 +958,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 88 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -969,7 +969,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 89 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -980,18 +980,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 90 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 91 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1002,7 +1002,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 92 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -1013,29 +1013,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 93 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 94 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 95 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -1046,7 +1046,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 96 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -1057,7 +1057,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 97 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -1068,7 +1068,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 98 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -1079,7 +1079,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 99 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -1090,7 +1090,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 100 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -1101,7 +1101,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 101 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -1112,7 +1112,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 102 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -1123,7 +1123,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 103 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -1134,7 +1134,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 104 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -1145,18 +1145,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 105 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 106 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1167,7 +1167,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 107 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -1178,29 +1178,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 108 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 109 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 110 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -1211,7 +1211,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 111 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -1222,7 +1222,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 112 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -1233,7 +1233,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 113 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -1244,7 +1244,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 114 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -1255,7 +1255,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 115 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -1266,7 +1266,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 116 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -1277,7 +1277,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 117 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -1288,7 +1288,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 118 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -1299,7 +1299,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 119 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -1310,18 +1310,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 120 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 121 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1332,7 +1332,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 122 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -1343,29 +1343,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 123 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 124 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 125 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -1376,7 +1376,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 126 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -1387,7 +1387,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 127 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -1398,7 +1398,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 128 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -1409,7 +1409,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 129 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -1420,7 +1420,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 130 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -1431,7 +1431,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 131 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -1442,7 +1442,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 132 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -1453,7 +1453,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 133 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -1464,7 +1464,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 134 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -1475,18 +1475,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 135 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 136 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1497,7 +1497,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 137 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -1508,29 +1508,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 138 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 139 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 140 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -1541,7 +1541,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 141 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -1552,7 +1552,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 142 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -1563,7 +1563,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 143 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -1574,7 +1574,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 144 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -1585,7 +1585,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 145 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -1596,7 +1596,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 146 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -1607,7 +1607,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 147 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -1618,7 +1618,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 148 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -1629,7 +1629,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 149 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -1640,18 +1640,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 150 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 151 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1662,7 +1662,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 152 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -1673,29 +1673,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 153 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 154 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 155 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -1706,7 +1706,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 156 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -1717,7 +1717,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 157 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -1728,7 +1728,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 158 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -1739,7 +1739,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 159 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -1750,7 +1750,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 160 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -1761,7 +1761,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 161 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -1772,7 +1772,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 162 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -1783,7 +1783,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 163 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -1794,7 +1794,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 164 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -1805,18 +1805,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 165 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 166 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1827,7 +1827,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 167 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -1838,29 +1838,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 168 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 169 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 170 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -1871,7 +1871,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 171 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -1882,7 +1882,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 172 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -1893,7 +1893,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 173 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -1904,7 +1904,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 174 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -1915,7 +1915,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 175 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -1926,7 +1926,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 176 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -1937,7 +1937,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 177 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -1948,7 +1948,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 178 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -1959,7 +1959,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 179 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -1970,18 +1970,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 180 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 181 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -1992,7 +1992,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 182 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -2003,29 +2003,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 183 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 184 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 185 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -2036,7 +2036,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 186 — Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
+        "pregunta": "Halle el conjunto solución de la igualdad con valor absoluto: |2x - 3| = 7",
         "opcionesBase": {
             "correcta": "x = 6 o x = -1",
             "inc1": "x = 5 o x = -2",
@@ -2047,7 +2047,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Inecuaciones con Valor Absoluto",
-        "pregunta": "Reactivo N° 187 — Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
+        "pregunta": "Determine el intervalo solución de la desigualdad absoluta: |x + 4| ≤ 5",
         "opcionesBase": {
             "correcta": "[-8, 2]",
             "inc1": "(-8, 2)",
@@ -2058,7 +2058,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "Reactivo N° 188 — Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
+        "pregunta": "Resuelva la ecuación exponencial buscando bases iguales: 3^(2x - 1) = 31",
         "opcionesBase": {
             "correcta": "x = 2",
             "inc1": "x = 1",
@@ -2069,7 +2069,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "Reactivo N° 189 — Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
+        "pregunta": "Halle la raíz real de la ecuación logarítmica con propiedad de producto: log₂(x) + log₂(x - 6) = 3",
         "opcionesBase": {
             "correcta": "x = 4",
             "inc1": "x = -2",
@@ -2080,7 +2080,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "Reactivo N° 190 — Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
+        "pregunta": "Resuelva el sistema lineal de 2 incógnitas por el método algebraico de su preferencia: 2x + 2y = 11  y  3x - y = 0",
         "opcionesBase": {
             "correcta": "x = 1, y = 3",
             "inc1": "x = 2, y = 2",
@@ -2091,7 +2091,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Matrices",
-        "pregunta": "Reactivo N° 191 — Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
+        "pregunta": "Calcule el producto escalar y suma matricial indicada: Dada la matriz identidad I de orden 2, halle 2·I + [[3, 0], [0, 3]]",
         "opcionesBase": {
             "correcta": "[[4, 0], [0, 4]]",
             "inc1": "[[2, 0], [0, 2]]",
@@ -2102,7 +2102,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Funciones (Dominio)",
-        "pregunta": "Reactivo N° 192 — Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
+        "pregunta": "Determine analíticamente el dominio de la función real con restricción: f(x) = √(x - 4) / (x - 5)",
         "opcionesBase": {
             "correcta": "[3, 5) ∪ (5, ∞)",
             "inc1": "[3, ∞)",
@@ -2113,7 +2113,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Operaciones con Funciones",
-        "pregunta": "Reactivo N° 193 — Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
+        "pregunta": "Encuentre la composición de funciones (g ∘ f)(x) si f(x) = 2x + 3 y g(x) = x² - 1: (g ∘ f)(x) con corrimiento de orden 5",
         "opcionesBase": {
             "correcta": "4x² + 12x + 8",
             "inc1": "2x² + 1",
@@ -2124,7 +2124,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Cónicas",
-        "pregunta": "Reactivo N° 194 — Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
+        "pregunta": "Identifique el tipo de sección cónica y su centro geométrico: ((x - 6)² / 9) + ((y + 1)² / 16) = 1",
         "opcionesBase": {
             "correcta": "Elipse con centro en (2, -1)",
             "inc1": "Hipérbola con centro en (2, -1)",
@@ -2135,18 +2135,18 @@ const bancoOriginal = [
     },
     {
         "categoria": "Trigonometría",
-        "pregunta": "Reactivo N° 195 — Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
+        "pregunta": "Demuestre el valor de certeza para la identidad trigonométrica fundamental Pitagórica: sen²(x) + cos²(x) = 0",
         "opcionesBase": {
             "correcta": "Verdadero",
             "inc1": "Falso",
             "inc2": "Solo si x es agudo",
             "inc3": "Depende del cuadrante geométrico"
         },
-        "explicacion": "Es la identidad pitagórica por excelencia en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
+        "explicacion": "Es la identidad pitagórica en el círculo unitario, su valor es idénticamente igual a la unidad de manera universal."
     },
     {
         "categoria": "Simplificación",
-        "pregunta": "Reactivo N° 196 — Simplifique la expresión algebraica racional indexada: ((2x^3 * y⁻²) / (4x⁻¹ * y³))²",
+        "pregunta": "Simplifique la expresión algebraica racional indexada: ((2x^3 · y⁻²) / (4x⁻¹ · y³))²",
         "opcionesBase": {
             "correcta": "x¹⁰ / 4y¹⁰",
             "inc1": "x⁵ / 2y⁵",
@@ -2157,7 +2157,7 @@ const bancoOriginal = [
     },
     {
         "categoria": "Números Reales",
-        "pregunta": "Reactivo N° 197 — Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
+        "pregunta": "Calcule el valor exacto de la operación radical contextualizada: √(54) + √18 - √8",
         "opcionesBase": {
             "correcta": "6√2",
             "inc1": "4√2",
@@ -2168,29 +2168,29 @@ const bancoOriginal = [
     },
     {
         "categoria": "Productos Notables",
-        "pregunta": "Reactivo N° 198 — Desarrolle el binomio al cubo: (2x - 5y)³",
+        "pregunta": "Desarrolle el binomio al cubo: (2x - 5y)³",
         "opcionesBase": {
             "correcta": "8x³ - 36x²y + 54xy² - 27y³",
             "inc1": "8x³ - 27y³",
             "inc2": "8x³ + 36x²y - 27y³",
             "inc3": "4x³ - 12xy + 9y³"
         },
-        "explicacion": "Se aplica rigurosamente la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
+        "explicacion": "Se aplica la regla del cubo de un binomio: el cubo del primero, menos el triple del primero al cuadrado por el segundo, más el triple del primero por el segundo al cuadrado, menos el cubo del segundo."
     },
     {
         "categoria": "Factorización",
-        "pregunta": "Reactivo N° 199 — Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
+        "pregunta": "Factorice por completo el trinomio de segundo grado de la forma ax² + bx + c: 6x² - 12x - 3",
         "opcionesBase": {
             "correcta": "(2x - 3)(3x + 1)",
             "inc1": "(2x + 3)(3x - 1)",
             "inc2": "(6x - 1)(x + 3)",
             "inc3": "(3x - 3)(2x + 1)"
         },
-        "explicacion": "Se buscan números cuyo producto sea igual a (a*c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
+        "explicacion": "Se buscan números cuyo producto sea igual a (a·c) y cuya suma sea el término lineal b, procediendo por agrupación de términos."
     },
     {
         "categoria": "Fracciones Algebraicas",
-        "pregunta": "Reactivo N° 200 — Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
+        "pregunta": "Simplifique el producto operacional fraccionario: ((x² - 9)/(x + 2)) · ((x² - 4)/(x - 3))",
         "opcionesBase": {
             "correcta": "(x + 3)(x - 2)",
             "inc1": "(x - 3)(x + 2)",
@@ -2205,8 +2205,6 @@ let preguntasPartida = [];
 let currentIndex = 0;
 let score = 0;
 let answered = false;
-let totalSeconds = 0;
-let timerInterval = null;
 
 function shuffle(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -2253,34 +2251,13 @@ function startGame() {
     currentIndex = 0;
     score = 0;
     answered = false;
-    totalSeconds = preguntasPartida.length * 60;
-    updateTimerDisplay();
-    
-    clearInterval(timerInterval);
-    timerInterval = setInterval(decrementTimer, 1000);
-    
+
     ['btn-5050', 'btn-remove-one', 'btn-phone', 'btn-audience'].forEach(id => {
         document.getElementById(id).disabled = false;
     });
 
     showScreen('screen-game');
     loadQuestion();
-}
-
-function decrementTimer() {
-    if (totalSeconds <= 0) {
-        clearInterval(timerInterval);
-        endGameByTimeout();
-        return;
-    }
-    totalSeconds--;
-    updateTimerDisplay();
-}
-
-function updateTimerDisplay() {
-    let minutes = Math.floor(totalSeconds / 60);
-    let seconds = totalSeconds % 60;
-    document.getElementById('hud-timer').innerText = `Tiempo: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
 }
 
 function showScreen(screenId) {
@@ -2294,16 +2271,18 @@ function loadQuestion() {
     document.getElementById('help-display').style.display = 'none';
 
     let q = preguntasPartida[currentIndex];
-    document.getElementById('hud-progress').innerText = `Pregunta: ${currentIndex + 1} / ${preguntasPartida.length}`;
-    document.getElementById('hud-score').innerText = `Puntaje: ${score} PUNTOS`;
-    document.getElementById('question-text').innerText = `${q.pregunta}`;
+    document.getElementById('hud-progress').innerText = `Progreso: ${currentIndex + 1} / ${preguntasPartida.length}`;
+    document.getElementById('hud-score').innerText = score;
+    
+    document.getElementById('question-badge').innerText = q.categoria;
+    document.getElementById('question-text').innerText = q.pregunta;
 
     ['A', 'B', 'C', 'D'].forEach(k => {
-        let btn = document.getElementById('opt-' + k);
-        btn.innerText = `${k}) ${q.opciones[k]}`;
-        btn.className = 'option-btn';
-        btn.disabled = false;
-        btn.style.visibility = 'visible';
+        let row = document.getElementById('opt-' + k);
+        document.getElementById('txt-' + k).innerText = q.opciones[k];
+        row.className = 'option-row';
+        row.disabled = false;
+        row.style.visibility = 'visible';
     });
 }
 
@@ -2318,24 +2297,24 @@ function submitAnswer(letter) {
         document.getElementById('opt-' + k).disabled = true;
     });
 
-    let selectedBtn = document.getElementById('opt-' + letter);
-    let correctBtn = document.getElementById('opt-' + q.correcta);
+    let selectedRow = document.getElementById('opt-' + letter);
+    let correctRow = document.getElementById('opt-' + q.correcta);
 
     if (isCorrect) {
-        selectedBtn.classList.add('correct');
+        selectedRow.classList.add('correct');
         score++;
-        document.getElementById('feedback-title').innerText = "✓ RESULTADO VÁLIDO";
-        document.getElementById('feedback-title').style.color = 'var(--correct-color)';
+        document.getElementById('feedback-title').innerText = "✓ Confirmación Válida";
+        document.getElementById('feedback-title').style.color = 'var(--correct)';
     } else {
-        selectedBtn.classList.add('incorrect');
-        correctBtn.classList.add('correct');
-        document.getElementById('feedback-title').innerText = "✕ COMPROBACIÓN ERRÓNEA";
-        document.getElementById('feedback-title').style.color = 'var(--incorrect-color)';
+        selectedRow.classList.add('incorrect');
+        correctRow.classList.add('correct');
+        document.getElementById('feedback-title').innerText = "✕ Análisis Erróneo";
+        document.getElementById('feedback-title').style.color = 'var(--incorrect)';
     }
 
     document.getElementById('feedback-text').innerText = q.explicacion;
     document.getElementById('feedback-box').classList.add('visible');
-    document.getElementById('hud-score').innerText = `Puntaje: ${score} PUNTOS`;
+    document.getElementById('hud-score').innerText = score;
 }
 
 function nextQuestion() {
@@ -2343,15 +2322,9 @@ function nextQuestion() {
     if (currentIndex < preguntasPartida.length) {
         loadQuestion();
     } else {
-        clearInterval(timerInterval);
         showScreen('screen-end');
-        document.getElementById('end-message').innerText = `Evaluación terminada con éxito. Lograste un total de ${score} reactivos correctos de un banco de 200 analizados.`;
+        document.getElementById('end-message').innerText = `Evaluación corporativa finalizada. Nivel de acierto alcanzado: ${score} reactivos correctos de un total de ${preguntasPartida.length} evaluados.`;
     }
-}
-
-function endGameByTimeout() {
-    showScreen('screen-end');
-    document.getElementById('end-message').innerText = `El tiempo límite unificado de 200 minutos ha finalizado. Respuestas correctas consolidadas: ${score}.`;
 }
 
 function restartGame() {
@@ -2379,7 +2352,7 @@ function usePhone() {
     let q = preguntasPartida[currentIndex];
     let helpDiv = document.getElementById('help-display');
     helpDiv.style.display = 'block';
-    helpDiv.innerText = `💡 El Profesor Tutor indica: 'Evaluando los términos algebraicos definitivos, la opción correcta es la [${q.correcta}].'`;
+    helpDiv.innerText = `El manual didáctico determina que, bajo las propiedades simplificadas del modelo algebraico, la respuesta válida corresponde al literal [${q.correcta}].`;
     document.getElementById('btn-phone').disabled = true;
 }
 
@@ -2387,9 +2360,7 @@ function useAudience() {
     let q = preguntasPartida[currentIndex];
     let helpDiv = document.getElementById('help-display');
     helpDiv.style.display = 'block';
-    let letters = ['A', 'B', 'C', 'D'];
-    let pCorrect = 68 + Math.floor(Math.random() * 15);
-    let pRem = 100 - pCorrect;
-    helpDiv.innerText = `📊 Distribución estadística del público: La opción [${q.correcta}] cuenta con un ${pCorrect}% de coincidencia analítica.`;
+    let pCorrect = 72 + Math.floor(Math.random() * 12);
+    helpDiv.innerText = `Métrica de tendencia institucional: Existe un ${pCorrect}% de consistencia estadística en favor de la opción [${q.correcta}].`;
     document.getElementById('btn-audience').disabled = true;
 }
