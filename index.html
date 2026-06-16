@@ -18,23 +18,23 @@
             <!-- PANTALLA INICIAL -->
             <div id="screen-home" class="screen active home-screen">
                 <h2 style="margin-bottom: 1rem; color: var(--primary-color);">¡Bienvenido al Desafío de Admisión!</h2>
-                <p>Pon a prueba tus conocimientos matemáticos con preguntas rigurosas diseñadas para el ingreso a la universidad. Utiliza tus comodines sabiamente y alcanza la máxima puntuación. ¡El set de preguntas cambiará de orden en cada intento!</p>
+                <p>Pon a prueba tus conocimientos con 200 preguntas rigurosas que abarcan todo el temario de ingreso a la universidad. Utiliza tus comodines estratégicamente. ¡El examen cambia por completo en cada intento!</p>
                 <button id="btn-start" class="btn-action" tabindex="0">¡Jugar Ahora!</button>
             </div>
 
             <!-- PANTALLA DE JUEGO -->
             <div id="screen-game" class="screen">
                 <div class="hud">
-                    <div id="progress-text" style="font-weight: 600; color: var(--text-light);">Pregunta: 0/4</div>
+                    <div id="progress-text" style="font-weight: 600; color: var(--text-light);">Pregunta: 0/10</div>
                     <div class="score-badge">Puntos: <span id="score-display">0</span></div>
                 </div>
 
                 <!-- Comodines -->
                 <div class="lifelines">
-                    <button id="lifeline-5050" class="btn-lifeline" title="Elimina dos opciones incorrectas">50/50</button>
-                    <button id="lifeline-one" class="btn-lifeline" title="Elimina una opción incorrecta">Eliminar 1</button>
-                    <button id="lifeline-phone" class="btn-lifeline" title="Llamar a un experto">📞 Llamada</button>
-                    <button id="lifeline-public" class="btn-lifeline" title="Consultar al público">📊 Público</button>
+                    <button id="lifeline-5050" class="btn-lifeline" title="Elimina exactamente dos opciones incorrectas">50/50</button>
+                    <button id="lifeline-one" class="btn-lifeline" title="Oculta una opción incorrecta">Eliminar 1</button>
+                    <button id="lifeline-phone" class="btn-lifeline" title="Llamar a un tutor experto">📞 Llamada</button>
+                    <button id="lifeline-public" class="btn-lifeline" title="Consultar estadística del público">📊 Público</button>
                 </div>
 
                 <div id="help-box" class="help-display"></div>
@@ -43,10 +43,10 @@
 
                 <!-- Zona de Pregunta -->
                 <div id="category-display" class="category-tag">Categoría</div>
-                <div id="question-display" class="question-text">Aquí irá el enunciado de la pregunta matemática.</div>
+                <div id="question-display" class="question-text"></div>
 
                 <div class="options-grid" id="options-container">
-                    <!-- Generadas por JS -->
+                    <!-- Inyección dinámica de respuestas -->
                 </div>
 
                 <!-- Retroalimentación -->
@@ -62,16 +62,16 @@
             <!-- PANTALLA FINAL -->
             <div id="screen-result" class="screen" style="text-align: center;">
                 <h2 style="color: var(--primary-color); margin-bottom: 1rem;">¡Fin de la Simulación!</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Tu puntaje final es: <strong id="final-score" style="color: var(--secondary-color); font-size: 2rem;">0</strong> puntos.</p>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Tu puntaje final es: <strong id="final-score" style="color: var(--secondary-color); font-size: 2.5rem;">0</strong> puntos.</p>
                 <div id="final-evaluation" style="margin-bottom: 2rem; font-weight: 600;"></div>
-                <button id="btn-restart" class="btn-action">Reiniciar Simulador</button>
+                <button id="btn-restart" class="btn-action">Intentar con Nuevas Preguntas</button>
             </div>
 
         </div>
     </main>
 
     <footer>
-        Plataforma de Simulación Académica Universitaria © 2026
+        Plataforma Universitaria de Simulación Académica Autónoma © 2026
     </footer>
 
     <script src="index.js"></script>
