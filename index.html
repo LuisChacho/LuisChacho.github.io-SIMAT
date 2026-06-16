@@ -3,107 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluación Estandarizada de Competencias Matemáticas</title>
+    <title>Simulador de Matemáticas - Admisión Universitaria</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
-<div class="app-wrapper">
-    <header class="app-header">
-        <div class="header-container">
-            <span class="brand-title">Plataforma de Evaluación Digital</span>
-            <div id="hud-progress" class="hud-badge">Índice: 1 / 200</div>
-        </div>
+    <header>
+        <h1>🎓 SIMULADOR DE MATEMÁTICAS</h1>
     </header>
 
-    <main class="main-content">
-        <!-- PANTALLA DE APERTURA -->
-        <div id="screen-start" class="view-panel active">
-            <div class="card">
-                <div class="card-body central-welcome">
-                    <h2>Evaluación Modular Obligatoria</h2>
-                    <p class="summary-text">
-                        Esta plataforma académica aloja el banco oficial estandarizado de <strong>200 reactivos algebraicos de alta complejidad</strong>. El propósito de este entorno es validar las destrezas operativas y analíticas del sustentante bajo condiciones rigurosas de selección múltiple.
-                    </p>
-                    <p class="summary-text">
-                        Para garantizar una transparencia absoluta y evitar la memorización mecánica, tanto el orden secuencial de aparición de los problemas como la distribución de los literales de respuesta se barajan algorítmicamente en cada sesión de manera única.
-                    </p>
-                    <button class="btn-action" onclick="startGame()">Iniciar Evaluación</button>
-                </div>
+    <main>
+        <div class="container">
+            
+            <!-- PANTALLA INICIAL -->
+            <div id="screen-home" class="screen active home-screen">
+                <h2 style="margin-bottom: 1rem; color: var(--primary-color);">¡Bienvenido al Desafío de Admisión!</h2>
+                <p>Pon a prueba tus conocimientos matemáticos con preguntas rigurosas diseñadas para el ingreso a la universidad. Utiliza tus comodines sabiamente y alcanza la máxima puntuación. ¡El set de preguntas cambiará de orden en cada intento!</p>
+                <button id="btn-start" class="btn-action" tabindex="0">¡Jugar Ahora!</button>
             </div>
-        </div>
 
-        <!-- PANTALLA PRINCIPAL DEL SIMULADOR -->
-        <div id="screen-game" class="view-panel">
-            <div class="game-grid">
-                <div class="interactive-area">
-                    <div class="card question-card">
-                        <div class="card-header-meta">
-                            <span id="question-badge" class="topic-tag">Área Temática</span>
-                        </div>
-                        <div id="question-text" class="formal-question">Cargando reactivo conceptual...</div>
-                    </div>
-
-                    <div class="options-stack">
-                        <button class="option-row" id="opt-A" onclick="submitAnswer('A')">
-                            <span class="letter-index">A</span>
-                            <span id="txt-A" class="option-payload"></span>
-                        </button>
-                        <button class="option-row" id="opt-B" onclick="submitAnswer('B')">
-                            <span class="letter-index">B</span>
-                            <span id="txt-B" class="option-payload"></span>
-                        </button>
-                        <button class="option-row" id="opt-C" onclick="submitAnswer('C')">
-                            <span class="letter-index">C</span>
-                            <span id="txt-C" class="option-payload"></span>
-                        </button>
-                        <button class="option-row" id="opt-D" onclick="submitAnswer('D')">
-                            <span class="letter-index">D</span>
-                            <span id="txt-D" class="option-payload"></span>
-                        </button>
-                    </div>
-
-                    <div id="feedback-box" class="feedback-panel">
-                        <h4 id="feedback-title">Análisis Técnico</h4>
-                        <p id="feedback-text"></p>
-                        <button class="btn-action btn-inline" id="btn-next" onclick="nextQuestion()">Siguiente Reactivo</button>
-                    </div>
+            <!-- PANTALLA DE JUEGO -->
+            <div id="screen-game" class="screen">
+                <div class="hud">
+                    <div id="progress-text" style="font-weight: 600; color: var(--text-light);">Pregunta: 0/4</div>
+                    <div class="score-badge">Puntos: <span id="score-display">0</span></div>
                 </div>
 
-                <aside class="sidebar-panel">
-                    <div class="card sidebar-card">
-                        <h3>Asistencias</h3>
-                        <div class="tools-list">
-                            <button id="btn-5050" class="btn-tool" onclick="use5050()">Filtro de Descarte 50/50</button>
-                            <button id="btn-remove-one" class="btn-tool" onclick="useRemoveOne()">Suprimir un Distractor</button>
-                            <button id="btn-phone" class="btn-tool" onclick="usePhone()">Consultar Guía Técnica</button>
-                            <button id="btn-audience" class="btn-tool" onclick="useAudience()">Simetría de Coincidencias</button>
-                        </div>
-                        
-                        <div id="help-display" class="help-callout"></div>
+                <!-- Comodines -->
+                <div class="lifelines">
+                    <button id="lifeline-5050" class="btn-lifeline" title="Elimina dos opciones incorrectas">50/50</button>
+                    <button id="lifeline-one" class="btn-lifeline" title="Elimina una opción incorrecta">Eliminar 1</button>
+                    <button id="lifeline-phone" class="btn-lifeline" title="Llamar a un experto">📞 Llamada</button>
+                    <button id="lifeline-public" class="btn-lifeline" title="Consultar al público">📊 Público</button>
+                </div>
 
-                        <div class="metric-block">
-                            <span class="metric-label">Aciertos Consolidados</span>
-                            <div id="hud-score" class="metric-value">0</div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
-        </div>
+                <div id="help-box" class="help-display"></div>
 
-        <!-- PANTALLA DE CIERRE -->
-        <div id="screen-end" class="view-panel">
-            <div class="card compact-card text-center">
-                <div class="card-body">
-                    <h2>Examen Finalizado</h2>
-                    <p id="end-message" class="summary-text"></p>
-                    <button class="btn-action" onclick="restartGame()">Volver a Evaluar</button>
+                <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #e2e8f0;">
+
+                <!-- Zona de Pregunta -->
+                <div id="category-display" class="category-tag">Categoría</div>
+                <div id="question-display" class="question-text">Aquí irá el enunciado de la pregunta matemática.</div>
+
+                <div class="options-grid" id="options-container">
+                    <!-- Generadas por JS -->
+                </div>
+
+                <!-- Retroalimentación -->
+                <div id="feedback-display" class="feedback-box">
+                    <strong id="feedback-title"></strong> <span id="feedback-text"></span>
+                </div>
+
+                <div style="margin-top: 1.5rem; text-align: right;">
+                    <button id="btn-next" class="btn-action" style="display: none;">Siguiente Pregunta</button>
                 </div>
             </div>
+
+            <!-- PANTALLA FINAL -->
+            <div id="screen-result" class="screen" style="text-align: center;">
+                <h2 style="color: var(--primary-color); margin-bottom: 1rem;">¡Fin de la Simulación!</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Tu puntaje final es: <strong id="final-score" style="color: var(--secondary-color); font-size: 2rem;">0</strong> puntos.</p>
+                <div id="final-evaluation" style="margin-bottom: 2rem; font-weight: 600;"></div>
+                <button id="btn-restart" class="btn-action">Reiniciar Simulador</button>
+            </div>
+
         </div>
     </main>
-</div>
 
-<script src="index.js"></script>
+    <footer>
+        Plataforma de Simulación Académica Universitaria © 2026
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

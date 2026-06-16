@@ -1,9 +1,16 @@
-# Plataforma Estandarizada de Simulación - Edición Ejecutiva Limpia
+# 🎓 Simulador de Matemáticas - Ingreso a la Universidad
 
-Este ecosistema ha sido rediseñado bajo una arquitectura visual corporativa minimalista y de alta gama.
+Este proyecto es un simulador gamificado e interactivo diseñado para estudiantes que aspiran a ingresar a la educación superior.
 
-## Correcciones e Ingeniería Visual Implementada:
-1. **Tipografía Racional Modificada:** Se eliminaron las cadenas de caracteres planos ambiguos de código informático. Las variables matemáticas ahora se expresan mediante notación formal con superíndices algebraicos nativos y puntos centrados de producto (`x¹⁰`, `y⁻²`, `·`).
-2. **Eliminación Total de Prefijos Fijos:** La aplicación web remueve cualquier cadena estática del tipo "Pregunta 1:" o "Pregunta 2:". El contenedor lee exclusivamente el enunciado puro del reactivo matemático.
-3. **Remoción de Mecanismos de Tiempo:** Se eliminó cualquier cronómetro o temporizador restrictivo para incentivar un entorno de análisis conceptual profundo y sin presiones.
-4. **Diseño Institucional de Alta Gama (Fondo Blanco Organizado):** Se reemplazaron los fondos oscuros informales. Ahora la interfaz corre sobre una paleta ejecutiva clara (`#fafbfc`), tarjetas minimalistas con bordes limpios, tipografía limpia institucional y una organización espacial asimétrica impecable.
+## 📦 Archivos Incluidos
+1. `index.html`: Estructura semántica del simulador.
+2. `index.css`: Estilos visuales adaptados a una interfaz de plataforma universitaria.
+3. `index.js`: Motor de lógica, manejo del banco de preguntas y comportamiento de los comodines.
+4. `README.md`: Documentación de uso y despliegue.
+
+## 🚀 Despliegue en GitHub Pages
+1. Sube estos archivos a un repositorio en tu cuenta de GitHub.
+2. Ve a la sección **Settings** (Configuración) de tu repositorio.
+3. Busca el apartado **Pages** en el menú lateral izquierdo.
+4. En *Build and deployment*, selecciona la rama `main` (o `master`) y la carpeta `/ (root)`.
+5. Haz clic en **Save**. ¡Tu simulador estará listo en unos minutos en la URL provista!
