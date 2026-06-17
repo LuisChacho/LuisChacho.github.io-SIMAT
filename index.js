@@ -1,82 +1,1810 @@
-// BANCO COMPLETO DE 200 PREGUNTAS DISTRIBUIDAS EN LOS 15 EJES TEMÁTICOS CON NOTACIÓN CIENTÍFICA NATIVA
-const bancoPreguntas = [];
-
-const ejes = [
-    { cat: "Intervalos", plantillas: [
-        { p: "Si A = (-3, 4] y B = [1, 6), determine la intersección A &cap; B.", o: {A:"[1, 4]", B:"(1, 4]", C:"[-3, 6)", D:"(4, 6)"}, c: "A", e: "Los valores compartidos van desde el 1 incluido en ambos hasta el 4 incluido en ambos." },
-        { p: "Calcule la diferencia A - B si A = [-5, 2] y B = (-2, 5].", o: {A:"[-5, -2]", B:"[-5, -2)", C:"(2, 5]", D:"[-5, 5]"}, c: "A", e: "Quitamos a la porción de B. Como B es abierto en -2, ese punto se queda en A de forma cerrada." },
-        { p: "Halle el complemento del intervalo C = (-&infin;, 3] respecto a los reales.", o: {A:"(3, +&infin;)", B:"[3, +&infin;)", C:"(-&infin;, 3)", D: "&#8477;"}, c: "A", e: "El complemento invierte el extremo cerrado a abierto, abarcando todos los números mayores estrictos que 3." }
-    ]},
-    { cat: "Ecuaciones e Inecuaciones con Valor Absoluto", plantillas: [
-        { p: "Resuelva la ecuación lineal de módulo: |2x - 4| = 10.", o: {A:"{7, -3}", B:"{7, 3}", C:"{-7, -3}", D:"{5, -5}"}, c: "A", e: "Genera dos casos: 2x-4=10 (x=7) y 2x-4=-10 (x=-3)." },
-        { p: "Determine el conjunto solución para la inecuación: |x + 3| &le; 5.", o: {A:"[-8, 2]", B:"(-8, 2)", C:"(-&infin;, -8] &cup; [2, +&infin;)", D:"[2, 8]"}, c: "A", e: "Se despliega como -5 &le; x + 3 &le; 5. Restando 3 en cada miembro se obtiene el intervalo cerrado [-8, 2]." }
-    ]},
-    { cat: "Ecuaciones", plantillas: [
-        { p: "Halle las raíces de la ecuación cuadrática: x<sup>2</sup> - 7x + 12 = 0.", o: {A:"{3, 4}", B:"{-3, -4}", C:"{2, 6}", D:"{1, 12}"}, c: "A", e: "Factorizando el trinomio de la forma resulta (x - 3)(x - 4) = 0, cuyas raíces son 3 y 4." },
-        { p: "Resuelva la ecuación exponencial de bases homólogas: 2<sup>2x-1</sup> = 32.", o: {A:"x = 3", B:"x = 2", C:"x = 4", D:"x = 5"}, c: "A", e: "Dado que 32 = 2<sup>5</sup>, igualamos los exponentes: 2x - 1 = 5, lo cual nos da x = 3." },
-        { p: "Encuentre la solución real para la ecuación logarítmica: log<sub>2</sub>(x) + log<sub>2</sub>(x-2) = 3.", o: {A:"x = 4", B:"x = -2", C:"x = 2", D:"{4, -2}"}, c: "A", e: "Alineando propiedades: x(x-2) = 2<sup>3</sup> = 8. La ecuación x<sup>2</sup>-2x-8=0 da raíces 4 y -2 (pero el argumento exige x > 2)." }
-    ]},
-    { cat: "Sistema de Ecuaciones", plantillas: [
-        { p: "Dado el sistema lineal:<br>3x + 2y = 12<br>5x - 2y = 4<br>Determine el valor de la incógnita x.", o: {A:"x = 2", B:"x = 3", C:"x = 1", D:"x = 4"}, c: "A", e: "Sumando directamente ambas ecuaciones eliminamos la variable y, obteniendo 8x = 16, lo que implica x = 2." }
-    ]},
-    { cat: "Funciones (puntos de corte, vértice, dominio)", plantillas: [
-        { p: "Halle la abscisa del vértice de la función cuadrática f(x) = 2x<sup>2</sup> - 8x + 5.", o: {A:"x = 2", B:"x = -2", C:"x = 4", D:"x = 0"}, c: "A", e: "Utilizando la fórmula analítica h = -b / (2a) obtenemos: -(-8) / (2 * 2) = 8 / 4 = 2." }
-    ]},
-    { cat: "Funciones: operaciones con funciones", plantillas: [
-        { p: "Dadas f(x) = 3x + 2 y g(x) = x<sup>2</sup>, encuentre la composición algebraica (g &cir; f)(x).", o: {A:"9x<sup>2</sup> + 12x + 4", B:"3x<sup>2</sup> + 2", C:"9x<sup>2</sup> + 4", D:"3x<sup>3</sup> + 2x<sup>2</sup>"}, c: "A", e: "Sustituyendo f dentro de g: (3x + 2)<sup>2</sup> = 9x<sup>2</sup> + 12x + 4 por desarrollo de binomio al cuadrado." }
-    ]},
-    { cat: "Funciones: dominio y rango específico", plantillas: [
-        { p: "Determine el dominio real estricto de la función irracional g(x) = &radic;(2x - 8).", o: {A:"[4, +&infin;)", B:"(4, +&infin;)", C:"(-&infin;, 4]", D:"&#8477;"}, c: "A", e: "Para asegurar raíces reales de índice par, la condición obliga a que 2x - 8 &ge; 0, resolviendo en x &ge; 4." }
-    ]},
-    { cat: "Identidades Trigonométricas", plantillas: [
-        { p: "Simplifique la siguiente expresión utilizando identidades fundamentales: sin<sup>2</sup>(&theta;) &middot; csc(&theta;).", o: {A:"sin(&theta;)", B:"cos(&theta;)", C:"1", D:"tan(&theta;)"}, c: "A", e: "Sustituyendo la cosecante por su recíproca: sin<sup>2</sup>(&theta;) &middot; (1 / sin(&theta;)) = sin(&theta;)." }
-    ]},
-    { cat: "Distancia entre dos puntos", plantillas: [
-        { p: "Calcule la distancia euclidiana entre los puntos coordenados A(2, 3) y B(5, 7).", o: {A:"5 u", B:"7 u", C:"&radic;7 u", D:"25 u"}, c: "A", e: "Aplicando Pitágoras cartesiano: &radic;((5-2)<sup>2</sup> + (7-3)<sup>2</sup>) = &radic;(3<sup>2</sup> + 4<sup>2</sup>) = &radic;25 = 5 unidades." }
-    ]},
-    { cat: "Distancia entre punto y recta", plantillas: [
-        { p: "Calcule la distancia perpendicular mínima desde el punto P(1, 2) a la recta l: 3x + 4y - 1 u = 0.", o: {A:"2 u", B:"1 u", C:"5 u", D:"0 u"}, c: "A", e: "Utilizando la fórmula d = |Ax+By+C| / &radic;(A<sup>2</sup>+B<sup>2</sup>) resulta: |3(1)+4(2)-1| / 5 = 10 / 5 = 2." }
-    ]},
-    { cat: "Vectores", plantillas: [
-        { p: "Dados los vectores u = (1, 3) y v = (4, -1), determine su producto escalar u &middot; v.", o: {A:"1", B:"7", C:"-3", D:"12"}, c: "A", e: "El producto escalar suma los productos de componentes: (1)(4) + (3)(-1) = 4 - 3 = 1." }
-    ]},
-    { cat: "Límites de funciones", plantillas: [
-        { p: "Determine el límite al infinito por comparación de grados: lim <sub>x&rarr;&infin;</sub> (6x<sup>2</sup> - 5) / (2x<sup>2</sup> + x).", o: {A:"3", B:"0", C:"&infin;", D:"-5"}, c: "A", e: "Al tener el mismo grado máximo en numerador y denominador, el límite equivale al cociente de sus coeficientes principales: 6/2 = 3." }
-    ]},
-    { cat: "Matrices", plantillas: [
-        { p: "Dada la matriz identidad I de 2x2, calcule el resultado operativo de 3I - I<sup>T</sup>.", o: {A:"2I", B:"3I", C:"I", D:"[[0,0],[0,0]]"}, c: "A", e: "La transpuesta de la identidad es la misma matriz. Restando: 3I - I = 2I." }
-    ]},
-    { cat: "Cónicas", plantillas: [
-        { p: "Identifique la cónica asociada a partir de la ecuación cuadrática: 2x<sup>2</sup> + 2y<sup>2</sup> - 8 = 0.", o: {A:"Circunferencia", B:"Elipse", C:"Parábola", D:"Hipérbola"}, c: "A", e: "Al tener coeficientes cuadráticos idénticos y del mismo signo (A = B = 2), la ecuación modela una circunferencia." }
-    ]},
-    { cat: "Derivadas", plantillas: [
-        { p: "Calcule la derivada de la función potencia empleando reglas de derivación: f(x) = 4x<sup>3</sup> - 5x.", o: {A:"12x<sup>2</sup> - 5", B:"12x - 5", C:"4x<sup>2</sup>", D:"12x<sup>3</sup>"}, c: "A", e: "Bajando los exponentes multiplicativos de forma lineal: d/dx(4x<sup>3</sup>) = 12x<sup>2</sup> y d/dx(-5x) = -5." }
-    ]}
+const bancoPreguntas = [
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #1] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #2] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #3] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #4] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #5] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #6] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #7] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #8] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #9] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #10] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #11] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #12] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #13] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #14] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #15] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #16] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #17] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #18] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #19] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #20] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #21] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #22] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #23] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #24] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #25] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #26] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #27] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #28] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #29] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #30] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #31] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #32] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #33] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #34] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #35] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #36] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #37] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #38] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #39] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #40] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #41] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #42] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #43] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #44] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #45] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #46] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #47] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #48] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #49] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #50] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #51] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #52] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #53] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #54] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #55] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #56] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #57] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #58] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #59] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #60] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #61] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #62] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #63] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #64] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #65] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #66] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #67] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #68] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #69] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #70] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #71] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #72] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #73] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #74] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #75] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #76] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #77] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #78] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #79] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #80] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #81] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #82] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #83] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #84] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #85] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #86] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #87] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #88] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #89] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #90] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #91] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #92] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #93] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #94] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #95] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #96] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #97] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #98] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #99] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #100] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #101] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #102] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #103] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #104] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #105] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #106] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #107] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #108] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #109] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #110] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #111] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #112] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #113] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #114] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #115] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #116] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #117] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #118] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #119] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #120] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #121] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #122] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #123] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #124] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #125] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #126] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #127] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #128] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #129] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #130] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #131] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #132] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #133] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #134] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #135] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #136] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "opciones": {
+            "A": "[2, 5]",
+            "B": "(2, 5]",
+            "C": "[-4, 8)",
+            "D": "(5, 8)"
+        },
+        "correcta": "A",
+        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
+    },
+    {
+        "categoria": "Valor Absoluto",
+        "pregunta": "[Reactivo #137] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
+        "opciones": {
+            "A": "[-2, 6]",
+            "B": "(-2, 6)",
+            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
+            "D": "[2, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
+    },
+    {
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo #138] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
+        "opciones": {
+            "A": "x = 7",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #139] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "opciones": {
+            "A": "x = 6",
+            "B": "x = -4",
+            "C": "x = 4",
+            "D": "{6, -4}"
+        },
+        "correcta": "A",
+        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
+    },
+    {
+        "categoria": "Sistemas de Ecuaciones",
+        "pregunta": "[Reactivo #140] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "opciones": {
+            "A": "5",
+            "B": "4",
+            "C": "3",
+            "D": "6"
+        },
+        "correcta": "A",
+        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
+    },
+    {
+        "categoria": "Funciones Cuadráticas",
+        "pregunta": "[Reactivo #141] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
+        "opciones": {
+            "A": "(2, 3)",
+            "B": "(-2, 3)",
+            "C": "(2, 7)",
+            "D": "(4, 7)"
+        },
+        "correcta": "A",
+        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
+    },
+    {
+        "categoria": "Operaciones con Funciones",
+        "pregunta": "[Reactivo #142] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
+        "opciones": {
+            "A": "4x<sup>2</sup> + 20x + 24",
+            "B": "4x<sup>2</sup> + 25",
+            "C": "2x<sup>2</sup> + 3",
+            "D": "4x<sup>2</sup> + 20x + 25"
+        },
+        "correcta": "A",
+        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
+    },
+    {
+        "categoria": "Dominio y Rango",
+        "pregunta": "[Reactivo #143] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
+        "opciones": {
+            "A": "&#8477; - {3}",
+            "B": "&#8477; - {9}",
+            "C": "(3, +&infin;)",
+            "D": "&#8477; - {-1/2}"
+        },
+        "correcta": "A",
+        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #144] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "opciones": {
+            "A": "4 u",
+            "B": "2 u",
+            "C": "5 u",
+            "D": "3 u"
+        },
+        "correcta": "A",
+        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+    },
+    {
+        "categoria": "Vectores",
+        "pregunta": "[Reactivo #145] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "opciones": {
+            "A": "3",
+            "B": "6",
+            "C": "8",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+    },
+    {
+        "categoria": "Matrices",
+        "pregunta": "[Reactivo #146] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "opciones": {
+            "A": "10",
+            "B": "14",
+            "C": "12",
+            "D": "8"
+        },
+        "correcta": "A",
+        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #147] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "opciones": {
+            "A": "8",
+            "B": "4",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #148] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "opciones": {
+            "A": "3e<sup>3x</sup> + 10x",
+            "B": "e<sup>3x</sup> + 10x",
+            "C": "3e<sup>3x</sup> + 5x",
+            "D": "e<sup>3x</sup> + 5x"
+        },
+        "correcta": "A",
+        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+    },
+    {
+        "categoria": "Cónicas",
+        "pregunta": "[Reactivo #149] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "opciones": {
+            "A": "C(3, -2), r = 4",
+            "B": "C(-3, 2), r = 4",
+            "C": "C(3, -2), r = 16",
+            "D": "C(-3, 2), r = 2"
+        },
+        "correcta": "A",
+        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
+    },
+    {
+        "categoria": "Identidades Trigonométricas",
+        "pregunta": "[Reactivo #150] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
+        "opciones": {
+            "A": "csc(&theta;)",
+            "B": "sin(&theta;)",
+            "C": "cos(&theta;)",
+            "D": "tan(&theta;)"
+        },
+        "correcta": "A",
+        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+    }
 ];
-
-// Generar dinámicamente las 200 preguntas sin repetición combinando las bases temáticas
-let idCampana = 1;
-while(bancoPreguntas.length < 200) {
-    ejes.forEach(eje => {
-        eje.plantillas.forEach(p => {
-            if(bancoPreguntas.length < 200) {
-                bancoPreguntas.push({
-                    categoria: eje.cat,
-                    pregunta: `[Reactivo #${idCampana}] ` + p.p,
-                    opciones: {...p.o},
-                    correcta: p.c,
-                    explicacion: p.e
-                });
-                idCampana++;
-            }
-        });
-    });
-}
 
 let preguntasSeleccionadas = [];
 let indicePreguntaActual = 0;
 let puntaje = 0;
-const totalPreguntasPorJuego = 10; 
+const totalPreguntasPorJuego = 20; 
 
 let comodinesDisponibles = { fiftyFifty: true, deleteOne: true, phone: true, public: true };
 
@@ -184,22 +1912,22 @@ function avanzarPregunta() {
     if (indicePreguntaActual < totalPreguntasPorJuego) {
         mostrarPregunta();
     } else {
-        finalizarJuego();
+        finalizJuego();
     }
 }
 
-function finalizarJuego() {
+function finalizJuego() {
     cambiarPantalla(screenResult);
     document.getElementById('final-score').textContent = puntaje;
     const evalBox = document.getElementById('final-evaluation');
     if (puntaje === totalPreguntasPorJuego) {
-        evalBox.innerHTML = "🏆 ¡Perfecto! Dominas con rigor todos los ejes temáticos del examen de admisión.";
+        evalBox.innerHTML = "🏆 ¡Perfecto! Dominas con rigor científico todos los ejes analíticos.";
         evalBox.style.color = "var(--success)";
     } else if (puntaje >= totalPreguntasPorJuego * 0.7) {
-        evalBox.innerHTML = "👍 ¡Muy bien! Posees bases sumamente sólidas para el ingreso universitario.";
+        evalBox.innerHTML = "👍 ¡Muy bien! Posees habilidades matemáticas muy sólidas.";
         evalBox.style.color = "var(--secondary-color)";
     } else {
-        evalBox.innerHTML = "📚 ¡Continúa repasando! Analiza los argumentos explicativos para fortalecer tus competencias.";
+        evalBox.innerHTML = "📚 Analiza las retroalimentaciones para corregir errores conceptuales.";
         evalBox.style.color = "var(--accent-color)";
     }
 }
@@ -244,7 +1972,7 @@ function usarLlamada() {
     if(!comodinesDisponibles.phone) return;
     const q = preguntasSeleccionadas[indicePreguntaActual];
     helpBox.style.display = 'block';
-    helpBox.innerHTML = `📞 <strong>El Tutor Mentor te sugiere:</strong> "Analizando las propiedades analíticas del modelo, tengo una certeza del 90% de que la respuesta correcta es la opción <strong>\${q.correcta}</strong>."`;
+    helpBox.innerHTML = `📞 <strong>El Tutor te sugiere:</strong> "Analizando las propiedades, considero que la opción correcta es la <strong>\${q.correcta}</strong>."`;
     comodinesDisponibles.phone = false;
     actualizarVisualComodines();
 }
@@ -252,9 +1980,9 @@ function usarLlamada() {
 function usarPublico() {
     if(!comodinesDisponibles.public) return;
     const q = preguntasSeleccionadas[indicePreguntaActual];
-    let dist = {A:10, B:10, C:10, D:10}; dist[q.correcta] = 70;
+    let dist = {A:8, B:7, C:10, D:5}; dist[q.correcta] = 75;
     helpBox.style.display = 'block';
-    helpBox.innerHTML = `📊 <strong>Simulación estadística del Auditorio Académico:</strong><br>A: \${dist.A}% | B: \${dist.B}% | C: \${dist.C}% | D: \${dist.D}%`;
+    helpBox.innerHTML = `📊 <strong>Votación del Público:</strong><br>A: \${dist.A}% | B: \${dist.B}% | C: \${dist.C}% | D: \${dist.D}%`;
     comodinesDisponibles.public = false;
     actualizarVisualComodines();
 }
