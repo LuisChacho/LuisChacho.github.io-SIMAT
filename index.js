@@ -1,1810 +1,1810 @@
+// BANCO MASIVO TOTALMENTE DISTRIBUIDO Y ROTATIVO DE 150 PREGUNTAS
 const bancoPreguntas = [
     {
-        "categoria": "Intervalos",
-        "pregunta": "[Reactivo #1] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
-        "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
-        },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #2] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #3] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #4] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #5] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #6] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #7] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #8] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
-    },
-    {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #9] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
-        "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
-        },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
-    },
-    {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #10] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
-        "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #11] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #1] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>5</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
         "opciones": {
             "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
+            "B": "26",
+            "C": "22",
+            "D": "14"
         },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #2] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>3</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "[[4, 0], [0, 6]]",
+            "C": "[[2, 0], [0, 3]]",
+            "D": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>"
+        },
+        "correcta": "D",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #12] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "pregunta": "[Reactivo #3] Halle el límite analítico: lim<sub>x &rarr; 5</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 25</span><span>x &minus; 5</span></div>.",
         "opciones": {
-            "A": "8",
-            "B": "4",
+            "A": "0",
+            "B": "No existe",
+            "C": "10",
+            "D": "5"
+        },
+        "correcta": "C",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #4] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>3</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x &minus; ln(x)"
+        },
+        "correcta": "C",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #5] Resuelva la expresión logarítmica fundamental: log<sub>3</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 5",
+            "B": "x = 9",
+            "C": "x = 3",
+            "D": "x = 4"
+        },
+        "correcta": "A",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #6] Determine la unión formal de los intervalos A = (&minus;&infin;, 3] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 6]",
+            "B": "[3, 6]",
+            "C": "(&minus;&infin;, 1)",
+            "D": "(1, 3]"
+        },
+        "correcta": "A",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #7] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 3) y B(5, 12).",
+        "opciones": {
+            "A": "m = 4",
+            "B": "m = 2",
+            "C": "m = 3",
+            "D": "m = 1"
+        },
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #8] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>5</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "26",
+            "B": "22",
+            "C": "14",
+            "D": "10"
+        },
+        "correcta": "C",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #9] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>5</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[2, 0], [0, 3]]",
+            "B": "[[4, 0], [0, 6]]",
+            "C": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "D": "[[4, 4], [4, 9]]"
+        },
+        "correcta": "C",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #10] Halle el límite analítico: lim<sub>x &rarr; 7</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 27</span><span>x &minus; 7</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "No existe",
+            "C": "5",
+            "D": "0"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #11] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>5</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x<sup>2</sup> &minus; 4",
+            "C": "3x &minus; ln(x)",
+            "D": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
+        },
+        "correcta": "D",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #12] Resuelva la expresión logarítmica fundamental: log<sub>5</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 9",
+            "C": "x = 5",
+            "D": "x = 4"
+        },
+        "correcta": "C",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #13] Determine la unión formal de los intervalos A = (&minus;&infin;, 5] y B = (1, 6].",
+        "opciones": {
+            "A": "[3, 6]",
+            "B": "(&minus;&infin;, 6]",
+            "C": "(1, 3]",
+            "D": "(&minus;&infin;, 1)"
+        },
+        "correcta": "B",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #14] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 5) y B(7, 12).",
+        "opciones": {
+            "A": "m = 4",
+            "B": "m = 1",
+            "C": "m = 2",
+            "D": "m = 3"
+        },
+        "correcta": "D",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #15] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>8</span><span>2</span></div><div class='matrix-row'><span>6</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "14",
+            "B": "26",
+            "C": "22",
+            "D": "10"
+        },
+        "correcta": "A",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #16] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>6</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "[[2, 0], [0, 3]]",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>"
+        },
+        "correcta": "D",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #17] Halle el límite analítico: lim<sub>x &rarr; 8</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 28</span><span>x &minus; 8</span></div>.",
+        "opciones": {
+            "A": "0",
+            "B": "No existe",
+            "C": "10",
+            "D": "5"
+        },
+        "correcta": "C",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #18] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>6</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x &minus; ln(x)",
+            "C": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
+        },
+        "correcta": "C",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #19] Resuelva la expresión logarítmica fundamental: log<sub>6</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 9",
+            "C": "x = 5",
+            "D": "x = 4"
+        },
+        "correcta": "C",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #20] Determine la unión formal de los intervalos A = (&minus;&infin;, 6] y B = (1, 6].",
+        "opciones": {
+            "A": "(1, 3]",
+            "B": "(&minus;&infin;, 6]",
+            "C": "(&minus;&infin;, 1)",
+            "D": "[3, 6]"
+        },
+        "correcta": "B",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #21] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 6) y B(8, 12).",
+        "opciones": {
+            "A": "m = 3",
+            "B": "m = 4",
+            "C": "m = 1",
+            "D": "m = 2"
+        },
+        "correcta": "A",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #22] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>9</span><span>2</span></div><div class='matrix-row'><span>7</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "14",
+            "B": "22",
+            "C": "10",
+            "D": "26"
+        },
+        "correcta": "A",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #23] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>7</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "B": "[[4, 4], [4, 9]]",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "[[2, 0], [0, 3]]"
+        },
+        "correcta": "A",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #24] Halle el límite analítico: lim<sub>x &rarr; 9</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 29</span><span>x &minus; 9</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "No existe",
+            "C": "5",
+            "D": "0"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #25] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>7</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> &minus; 4",
+            "D": "3x &minus; ln(x)"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #26] Resuelva la expresión logarítmica fundamental: log<sub>7</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 5",
+            "B": "x = 3",
+            "C": "x = 4",
+            "D": "x = 9"
+        },
+        "correcta": "A",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #27] Determine la unión formal de los intervalos A = (&minus;&infin;, 7] y B = (1, 6].",
+        "opciones": {
+            "A": "[3, 6]",
+            "B": "(&minus;&infin;, 1)",
+            "C": "(&minus;&infin;, 6]",
+            "D": "(1, 3]"
+        },
+        "correcta": "C",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #28] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 7) y B(9, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 1",
+            "C": "m = 3",
+            "D": "m = 4"
+        },
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #29] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>10</span><span>2</span></div><div class='matrix-row'><span>8</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "22",
+            "B": "26",
+            "C": "14",
+            "D": "10"
+        },
+        "correcta": "C",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #30] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>8</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[2, 0], [0, 3]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "[[4, 4], [4, 9]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #31] Halle el límite analítico: lim<sub>x &rarr; 10</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 210</span><span>x &minus; 10</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "5",
+            "C": "No existe",
+            "D": "0"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #32] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>8</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x &minus; ln(x)",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "A",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #33] Resuelva la expresión logarítmica fundamental: log<sub>8</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 5",
+            "C": "x = 9",
+            "D": "x = 3"
+        },
+        "correcta": "B",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #34] Determine la unión formal de los intervalos A = (&minus;&infin;, 8] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 6]",
+            "B": "[3, 6]",
+            "C": "(1, 3]",
+            "D": "(&minus;&infin;, 1)"
+        },
+        "correcta": "A",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #35] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 8) y B(10, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 4",
+            "C": "m = 3",
+            "D": "m = 1"
+        },
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #36] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>11</span><span>2</span></div><div class='matrix-row'><span>9</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "26",
+            "B": "10",
+            "C": "22",
+            "D": "14"
+        },
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #37] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "B": "[[2, 0], [0, 3]]",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "[[4, 4], [4, 9]]"
+        },
+        "correcta": "A",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #38] Halle el límite analítico: lim<sub>x &rarr; 11</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 211</span><span>x &minus; 11</span></div>.",
+        "opciones": {
+            "A": "5",
+            "B": "10",
+            "C": "0",
+            "D": "No existe"
+        },
+        "correcta": "B",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #39] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>9</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x &minus; ln(x)",
+            "D": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #40] Resuelva la expresión logarítmica fundamental: log<sub>9</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 5",
+            "C": "x = 9",
+            "D": "x = 4"
+        },
+        "correcta": "B",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #41] Determine la unión formal de los intervalos A = (&minus;&infin;, 9] y B = (1, 6].",
+        "opciones": {
+            "A": "[3, 6]",
+            "B": "(&minus;&infin;, 6]",
+            "C": "(1, 3]",
+            "D": "(&minus;&infin;, 1)"
+        },
+        "correcta": "B",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #42] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 9) y B(11, 12).",
+        "opciones": {
+            "A": "m = 4",
+            "B": "m = 2",
+            "C": "m = 3",
+            "D": "m = 1"
+        },
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #43] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>12</span><span>2</span></div><div class='matrix-row'><span>10</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "22",
+            "B": "26",
+            "C": "10",
+            "D": "14"
+        },
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #44] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>10</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "[[2, 0], [0, 3]]",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>"
+        },
+        "correcta": "D",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #45] Halle el límite analítico: lim<sub>x &rarr; 12</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 212</span><span>x &minus; 12</span></div>.",
+        "opciones": {
+            "A": "0",
+            "B": "5",
+            "C": "No existe",
+            "D": "10"
+        },
+        "correcta": "D",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #46] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>10</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x &minus; ln(x)",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #47] Resuelva la expresión logarítmica fundamental: log<sub>10</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 5",
+            "C": "x = 9",
+            "D": "x = 4"
+        },
+        "correcta": "B",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #48] Determine la unión formal de los intervalos A = (&minus;&infin;, 10] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 6]",
+            "B": "(&minus;&infin;, 1)",
+            "C": "(1, 3]",
+            "D": "[3, 6]"
+        },
+        "correcta": "A",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #49] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 10) y B(12, 12).",
+        "opciones": {
+            "A": "m = 1",
+            "B": "m = 3",
+            "C": "m = 2",
+            "D": "m = 4"
+        },
+        "correcta": "B",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #50] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>111</span><span>2</span></div><div class='matrix-row'><span>11</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "26",
+            "B": "10",
+            "C": "22",
+            "D": "14"
+        },
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #51] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>11</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "[[2, 0], [0, 3]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #52] Halle el límite analítico: lim<sub>x &rarr; 111</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 2111</span><span>x &minus; 111</span></div>.",
+        "opciones": {
+            "A": "0",
+            "B": "No existe",
+            "C": "10",
+            "D": "5"
+        },
+        "correcta": "C",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #53] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>11</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x &minus; ln(x)",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "A",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #54] Resuelva la expresión logarítmica fundamental: log<sub>11</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 9",
+            "C": "x = 3",
+            "D": "x = 5"
+        },
+        "correcta": "D",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #55] Determine la unión formal de los intervalos A = (&minus;&infin;, 11] y B = (1, 6].",
+        "opciones": {
+            "A": "[3, 6]",
+            "B": "(1, 3]",
+            "C": "(&minus;&infin;, 1)",
+            "D": "(&minus;&infin;, 6]"
+        },
+        "correcta": "D",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #56] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 11) y B(111, 12).",
+        "opciones": {
+            "A": "m = 3",
+            "B": "m = 1",
+            "C": "m = 2",
+            "D": "m = 4"
+        },
+        "correcta": "A",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #57] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>14</span><span>2</span></div><div class='matrix-row'><span>12</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "14",
+            "B": "26",
+            "C": "10",
+            "D": "22"
+        },
+        "correcta": "A",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #58] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>12</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "B": "[[4, 0], [0, 6]]",
+            "C": "[[4, 4], [4, 9]]",
+            "D": "[[2, 0], [0, 3]]"
+        },
+        "correcta": "A",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #59] Halle el límite analítico: lim<sub>x &rarr; 14</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 214</span><span>x &minus; 14</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "No existe",
+            "C": "0",
+            "D": "5"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #60] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>12</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x &minus; ln(x)",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #61] Resuelva la expresión logarítmica fundamental: log<sub>12</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 5",
+            "B": "x = 9",
+            "C": "x = 3",
+            "D": "x = 4"
+        },
+        "correcta": "A",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #62] Determine la unión formal de los intervalos A = (&minus;&infin;, 12] y B = (1, 6].",
+        "opciones": {
+            "A": "[3, 6]",
+            "B": "(&minus;&infin;, 1)",
+            "C": "(1, 3]",
+            "D": "(&minus;&infin;, 6]"
+        },
+        "correcta": "D",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #63] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 12) y B(14, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 1",
+            "C": "m = 3",
+            "D": "m = 4"
+        },
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #64] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>15</span><span>2</span></div><div class='matrix-row'><span>13</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "14",
+            "B": "26",
+            "C": "22",
+            "D": "10"
+        },
+        "correcta": "A",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #65] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>13</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "[[2, 0], [0, 3]]",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>"
+        },
+        "correcta": "D",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #66] Halle el límite analítico: lim<sub>x &rarr; 15</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 215</span><span>x &minus; 15</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "0",
+            "C": "5",
+            "D": "No existe"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #67] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>13</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x &minus; ln(x)"
+        },
+        "correcta": "C",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #68] Resuelva la expresión logarítmica fundamental: log<sub>13</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 5",
+            "C": "x = 9",
+            "D": "x = 4"
+        },
+        "correcta": "B",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #69] Determine la unión formal de los intervalos A = (&minus;&infin;, 13] y B = (1, 6].",
+        "opciones": {
+            "A": "(1, 3]",
+            "B": "[3, 6]",
+            "C": "(&minus;&infin;, 6]",
+            "D": "(&minus;&infin;, 1)"
+        },
+        "correcta": "C",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #70] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 13) y B(15, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 3",
+            "C": "m = 4",
+            "D": "m = 1"
+        },
+        "correcta": "B",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #71] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>16</span><span>2</span></div><div class='matrix-row'><span>14</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "26",
+            "C": "22",
+            "D": "14"
+        },
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #72] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>14</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "B": "[[4, 4], [4, 9]]",
+            "C": "[[2, 0], [0, 3]]",
+            "D": "[[4, 0], [0, 6]]"
+        },
+        "correcta": "A",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #73] Halle el límite analítico: lim<sub>x &rarr; 16</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 216</span><span>x &minus; 16</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "No existe",
+            "C": "5",
+            "D": "0"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #74] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>14</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x &minus; ln(x)",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #75] Resuelva la expresión logarítmica fundamental: log<sub>14</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 9"
+        },
+        "correcta": "C",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #76] Determine la unión formal de los intervalos A = (&minus;&infin;, 14] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 1)",
+            "B": "[3, 6]",
+            "C": "(&minus;&infin;, 6]",
+            "D": "(1, 3]"
+        },
+        "correcta": "C",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #77] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 14) y B(16, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 1",
+            "C": "m = 4",
+            "D": "m = 3"
+        },
+        "correcta": "D",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #78] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>17</span><span>2</span></div><div class='matrix-row'><span>15</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "26",
+            "B": "10",
+            "C": "22",
+            "D": "14"
+        },
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #79] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>15</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[2, 0], [0, 3]]",
+            "B": "[[4, 0], [0, 6]]",
+            "C": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "D": "[[4, 4], [4, 9]]"
+        },
+        "correcta": "C",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #80] Halle el límite analítico: lim<sub>x &rarr; 17</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 217</span><span>x &minus; 17</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "5",
+            "C": "No existe",
+            "D": "0"
+        },
+        "correcta": "A",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #81] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>15</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x &minus; ln(x)",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #82] Resuelva la expresión logarítmica fundamental: log<sub>15</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 9",
+            "C": "x = 5",
+            "D": "x = 3"
+        },
+        "correcta": "C",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #83] Determine la unión formal de los intervalos A = (&minus;&infin;, 15] y B = (1, 6].",
+        "opciones": {
+            "A": "(1, 3]",
+            "B": "[3, 6]",
+            "C": "(&minus;&infin;, 6]",
+            "D": "(&minus;&infin;, 1)"
+        },
+        "correcta": "C",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #84] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 15) y B(17, 12).",
+        "opciones": {
+            "A": "m = 4",
+            "B": "m = 1",
+            "C": "m = 3",
+            "D": "m = 2"
+        },
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #85] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>18</span><span>2</span></div><div class='matrix-row'><span>16</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "22",
+            "B": "10",
+            "C": "14",
+            "D": "26"
+        },
+        "correcta": "C",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #86] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>16</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "B": "[[4, 4], [4, 9]]",
+            "C": "[[2, 0], [0, 3]]",
+            "D": "[[4, 0], [0, 6]]"
+        },
+        "correcta": "A",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #87] Halle el límite analítico: lim<sub>x &rarr; 18</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 218</span><span>x &minus; 18</span></div>.",
+        "opciones": {
+            "A": "0",
+            "B": "5",
+            "C": "10",
+            "D": "No existe"
+        },
+        "correcta": "C",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #88] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>16</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x &minus; ln(x)",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
+        },
+        "correcta": "D",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #89] Resuelva la expresión logarítmica fundamental: log<sub>16</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 3",
+            "B": "x = 9",
+            "C": "x = 4",
+            "D": "x = 5"
+        },
+        "correcta": "D",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #90] Determine la unión formal de los intervalos A = (&minus;&infin;, 16] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 1)",
+            "B": "(1, 3]",
+            "C": "[3, 6]",
+            "D": "(&minus;&infin;, 6]"
+        },
+        "correcta": "D",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #91] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 16) y B(18, 12).",
+        "opciones": {
+            "A": "m = 1",
+            "B": "m = 3",
+            "C": "m = 4",
+            "D": "m = 2"
+        },
+        "correcta": "B",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #92] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>19</span><span>2</span></div><div class='matrix-row'><span>17</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "22",
+            "B": "10",
+            "C": "26",
+            "D": "14"
+        },
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #93] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>17</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[2, 0], [0, 3]]",
+            "D": "[[4, 0], [0, 6]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #94] Halle el límite analítico: lim<sub>x &rarr; 19</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 219</span><span>x &minus; 19</span></div>.",
+        "opciones": {
+            "A": "5",
+            "B": "10",
+            "C": "No existe",
+            "D": "0"
+        },
+        "correcta": "B",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #95] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>17</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x &minus; ln(x)",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> &minus; 4"
+        },
+        "correcta": "A",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #96] Resuelva la expresión logarítmica fundamental: log<sub>17</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 9",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 3"
+        },
+        "correcta": "C",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #97] Determine la unión formal de los intervalos A = (&minus;&infin;, 17] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 1)",
+            "B": "[3, 6]",
+            "C": "(&minus;&infin;, 6]",
+            "D": "(1, 3]"
+        },
+        "correcta": "C",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #98] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 17) y B(19, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 1",
+            "C": "m = 4",
+            "D": "m = 3"
+        },
+        "correcta": "D",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #99] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>20</span><span>2</span></div><div class='matrix-row'><span>18</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "22",
+            "B": "26",
+            "C": "14",
+            "D": "10"
+        },
+        "correcta": "C",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #100] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>18</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 0], [0, 6]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[4, 4], [4, 9]]",
+            "D": "[[2, 0], [0, 3]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #101] Halle el límite analítico: lim<sub>x &rarr; 20</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 220</span><span>x &minus; 20</span></div>.",
+        "opciones": {
+            "A": "No existe",
+            "B": "0",
+            "C": "5",
+            "D": "10"
+        },
+        "correcta": "D",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
+    },
+    {
+        "categoria": "Derivadas",
+        "pregunta": "[Reactivo #102] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>18</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
+        "opciones": {
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x &minus; ln(x)",
+            "D": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
+        },
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #103] Resuelva la expresión logarítmica fundamental: log<sub>18</sub>(2x &minus; 1) = 2.",
+        "opciones": {
+            "A": "x = 5",
+            "B": "x = 4",
+            "C": "x = 3",
+            "D": "x = 9"
+        },
+        "correcta": "A",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
+    },
+    {
+        "categoria": "Intervalos",
+        "pregunta": "[Reactivo #104] Determine la unión formal de los intervalos A = (&minus;&infin;, 18] y B = (1, 6].",
+        "opciones": {
+            "A": "(&minus;&infin;, 1)",
+            "B": "(1, 3]",
+            "C": "[3, 6]",
+            "D": "(&minus;&infin;, 6]"
+        },
+        "correcta": "D",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
+    },
+    {
+        "categoria": "Geometría Analítica",
+        "pregunta": "[Reactivo #105] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 18) y B(20, 12).",
+        "opciones": {
+            "A": "m = 2",
+            "B": "m = 1",
+            "C": "m = 4",
+            "D": "m = 3"
+        },
+        "correcta": "D",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #106] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>21</span><span>2</span></div><div class='matrix-row'><span>19</span><span>4</span></div></div></div>.",
+        "opciones": {
+            "A": "22",
+            "B": "14",
+            "C": "26",
+            "D": "10"
+        },
+        "correcta": "B",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #107] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>19</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[2, 0], [0, 3]]",
+            "D": "[[4, 0], [0, 6]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
+    },
+    {
+        "categoria": "Límites",
+        "pregunta": "[Reactivo #108] Halle el límite analítico: lim<sub>x &rarr; 21</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 221</span><span>x &minus; 21</span></div>.",
+        "opciones": {
+            "A": "10",
+            "B": "5",
             "C": "0",
             "D": "No existe"
         },
         "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     },
     {
         "categoria": "Derivadas",
-        "pregunta": "[Reactivo #13] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "pregunta": "[Reactivo #109] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>19</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
         "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
+            "A": "3x &minus; ln(x)",
+            "B": "3x<sup>2</sup> &minus; 4",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
         },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
-    },
-    {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #14] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
-        "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #15] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
-    },
-    {
-        "categoria": "Intervalos",
-        "pregunta": "[Reactivo #16] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
-        "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
-        },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #17] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #18] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
+        "correcta": "D",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
     },
     {
         "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #19] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
+        "pregunta": "[Reactivo #110] Resuelva la expresión logarítmica fundamental: log<sub>19</sub>(2x &minus; 1) = 2.",
         "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
+            "A": "x = 5",
+            "B": "x = 3",
             "C": "x = 4",
-            "D": "{6, -4}"
+            "D": "x = 9"
         },
         "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #20] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #21] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #22] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #23] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
-    },
-    {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #24] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
-        "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
-        },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
-    },
-    {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #25] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
-        "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #26] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
-        "opciones": {
-            "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
-        },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
-    },
-    {
-        "categoria": "Límites",
-        "pregunta": "[Reactivo #27] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
-        "opciones": {
-            "A": "8",
-            "B": "4",
-            "C": "0",
-            "D": "No existe"
-        },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
-    },
-    {
-        "categoria": "Derivadas",
-        "pregunta": "[Reactivo #28] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
-        "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
-        },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
-    },
-    {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #29] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
-        "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #30] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
     },
     {
         "categoria": "Intervalos",
-        "pregunta": "[Reactivo #31] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "pregunta": "[Reactivo #111] Determine la unión formal de los intervalos A = (&minus;&infin;, 19] y B = (1, 6].",
         "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
+            "A": "[3, 6]",
+            "B": "(&minus;&infin;, 6]",
+            "C": "(1, 3]",
+            "D": "(&minus;&infin;, 1)"
         },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #32] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #33] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #34] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #35] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #36] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #37] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #38] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+        "correcta": "B",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
     },
     {
         "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #39] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "pregunta": "[Reactivo #112] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 19) y B(21, 12).",
         "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
+            "A": "m = 3",
+            "B": "m = 1",
+            "C": "m = 4",
+            "D": "m = 2"
         },
         "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #40] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #113] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>22</span><span>2</span></div><div class='matrix-row'><span>20</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #41] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
-        "opciones": {
-            "A": "10",
+            "A": "26",
             "B": "14",
-            "C": "12",
-            "D": "8"
+            "C": "10",
+            "D": "22"
+        },
+        "correcta": "B",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #114] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>20</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "B": "[[4, 0], [0, 6]]",
+            "C": "[[4, 4], [4, 9]]",
+            "D": "[[2, 0], [0, 3]]"
         },
         "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #42] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "pregunta": "[Reactivo #115] Halle el límite analítico: lim<sub>x &rarr; 22</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 222</span><span>x &minus; 22</span></div>.",
         "opciones": {
-            "A": "8",
-            "B": "4",
+            "A": "10",
+            "B": "No existe",
             "C": "0",
-            "D": "No existe"
+            "D": "5"
         },
         "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     },
     {
         "categoria": "Derivadas",
-        "pregunta": "[Reactivo #43] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "pregunta": "[Reactivo #116] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>20</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
         "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x &minus; ln(x)"
         },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+        "correcta": "C",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
     },
     {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #44] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #117] Resuelva la expresión logarítmica fundamental: log<sub>20</sub>(2x &minus; 1) = 2.",
         "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
+            "A": "x = 3",
+            "B": "x = 4",
+            "C": "x = 5",
+            "D": "x = 9"
         },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #45] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "correcta": "C",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
     },
     {
         "categoria": "Intervalos",
-        "pregunta": "[Reactivo #46] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "pregunta": "[Reactivo #118] Determine la unión formal de los intervalos A = (&minus;&infin;, 20] y B = (1, 6].",
         "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
+            "A": "(&minus;&infin;, 6]",
+            "B": "[3, 6]",
+            "C": "(1, 3]",
+            "D": "(&minus;&infin;, 1)"
         },
         "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #47] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #48] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #49] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #50] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #51] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #52] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #53] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
     },
     {
         "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #54] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "pregunta": "[Reactivo #119] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 20) y B(22, 12).",
         "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
+            "A": "m = 1",
+            "B": "m = 4",
+            "C": "m = 2",
+            "D": "m = 3"
         },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+        "correcta": "D",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #55] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #120] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>221</span><span>2</span></div><div class='matrix-row'><span>21</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
+            "A": "22",
+            "B": "10",
+            "C": "14",
+            "D": "26"
         },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+        "correcta": "C",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
     },
     {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #56] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #121] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>21</span></div></div></div>, halle su matriz al cuadrado.",
         "opciones": {
-            "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
+            "A": "[[4, 0], [0, 6]]",
+            "B": "[[2, 0], [0, 3]]",
+            "C": "[[4, 4], [4, 9]]",
+            "D": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>"
         },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "correcta": "D",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #57] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "pregunta": "[Reactivo #122] Halle el límite analítico: lim<sub>x &rarr; 221</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 2221</span><span>x &minus; 221</span></div>.",
         "opciones": {
-            "A": "8",
-            "B": "4",
-            "C": "0",
-            "D": "No existe"
+            "A": "5",
+            "B": "No existe",
+            "C": "10",
+            "D": "0"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+        "correcta": "C",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     },
     {
         "categoria": "Derivadas",
-        "pregunta": "[Reactivo #58] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "pregunta": "[Reactivo #123] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>21</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
         "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x &minus; ln(x)"
         },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
     },
     {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #59] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #124] Resuelva la expresión logarítmica fundamental: log<sub>21</sub>(2x &minus; 1) = 2.",
         "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
+            "A": "x = 5",
+            "B": "x = 3",
+            "C": "x = 4",
+            "D": "x = 9"
         },
         "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #60] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
     },
     {
         "categoria": "Intervalos",
-        "pregunta": "[Reactivo #61] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "pregunta": "[Reactivo #125] Determine la unión formal de los intervalos A = (&minus;&infin;, 21] y B = (1, 6].",
         "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
+            "A": "(&minus;&infin;, 1)",
+            "B": "(&minus;&infin;, 6]",
+            "C": "(1, 3]",
+            "D": "[3, 6]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #62] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #63] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #64] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #65] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #66] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #67] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #68] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+        "correcta": "B",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
     },
     {
         "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #69] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "pregunta": "[Reactivo #126] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 21) y B(221, 12).",
         "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
+            "A": "m = 4",
+            "B": "m = 1",
+            "C": "m = 3",
+            "D": "m = 2"
         },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+        "correcta": "C",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #70] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #127] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>24</span><span>2</span></div><div class='matrix-row'><span>22</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #71] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
-        "opciones": {
-            "A": "10",
+            "A": "22",
             "B": "14",
-            "C": "12",
-            "D": "8"
+            "C": "26",
+            "D": "10"
         },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "correcta": "B",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #128] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>22</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[4, 4], [4, 9]]",
+            "B": "[[4, 0], [0, 6]]",
+            "C": "[[2, 0], [0, 3]]",
+            "D": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>"
+        },
+        "correcta": "D",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #72] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "pregunta": "[Reactivo #129] Halle el límite analítico: lim<sub>x &rarr; 24</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 224</span><span>x &minus; 24</span></div>.",
         "opciones": {
-            "A": "8",
-            "B": "4",
+            "A": "5",
+            "B": "10",
             "C": "0",
             "D": "No existe"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+        "correcta": "B",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     },
     {
         "categoria": "Derivadas",
-        "pregunta": "[Reactivo #73] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "pregunta": "[Reactivo #130] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>22</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
         "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
+            "A": "3x &minus; ln(x)",
+            "B": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> &minus; 4",
+            "D": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
         },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+        "correcta": "D",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
     },
     {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #74] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #131] Resuelva la expresión logarítmica fundamental: log<sub>22</sub>(2x &minus; 1) = 2.",
         "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
+            "A": "x = 4",
+            "B": "x = 5",
+            "C": "x = 9",
+            "D": "x = 3"
         },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #75] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "correcta": "B",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
     },
     {
         "categoria": "Intervalos",
-        "pregunta": "[Reactivo #76] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "pregunta": "[Reactivo #132] Determine la unión formal de los intervalos A = (&minus;&infin;, 22] y B = (1, 6].",
         "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
+            "A": "(&minus;&infin;, 1)",
+            "B": "(&minus;&infin;, 6]",
+            "C": "[3, 6]",
+            "D": "(1, 3]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #77] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #78] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #79] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #80] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #81] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #82] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #83] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+        "correcta": "B",
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
     },
     {
         "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #84] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "pregunta": "[Reactivo #133] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 22) y B(24, 12).",
         "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
+            "A": "m = 3",
+            "B": "m = 1",
+            "C": "m = 4",
+            "D": "m = 2"
         },
         "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #85] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
-        "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #86] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #134] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>25</span><span>2</span></div><div class='matrix-row'><span>23</span><span>4</span></div></div></div>.",
         "opciones": {
             "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
+            "B": "26",
+            "C": "22",
+            "D": "14"
         },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "correcta": "D",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #135] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>23</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[2, 0], [0, 3]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[4, 4], [4, 9]]",
+            "D": "[[4, 0], [0, 6]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #87] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "pregunta": "[Reactivo #136] Halle el límite analítico: lim<sub>x &rarr; 25</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 225</span><span>x &minus; 25</span></div>.",
         "opciones": {
-            "A": "8",
-            "B": "4",
-            "C": "0",
+            "A": "0",
+            "B": "5",
+            "C": "10",
             "D": "No existe"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+        "correcta": "C",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     },
     {
         "categoria": "Derivadas",
-        "pregunta": "[Reactivo #88] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "pregunta": "[Reactivo #137] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>23</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
         "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
+            "A": "3x<sup>2</sup> &minus; 4",
+            "B": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "C": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "D": "3x &minus; ln(x)"
         },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+        "correcta": "B",
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
     },
     {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #89] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #138] Resuelva la expresión logarítmica fundamental: log<sub>23</sub>(2x &minus; 1) = 2.",
         "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
+            "A": "x = 3",
+            "B": "x = 5",
+            "C": "x = 4",
+            "D": "x = 9"
         },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #90] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "correcta": "B",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
     },
     {
         "categoria": "Intervalos",
-        "pregunta": "[Reactivo #91] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "pregunta": "[Reactivo #139] Determine la unión formal de los intervalos A = (&minus;&infin;, 23] y B = (1, 6].",
         "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
+            "A": "(&minus;&infin;, 6]",
+            "B": "[3, 6]",
+            "C": "(&minus;&infin;, 1)",
+            "D": "(1, 3]"
         },
         "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #92] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #93] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #94] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #95] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #96] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #97] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #98] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
     },
     {
         "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #99] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "pregunta": "[Reactivo #140] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 23) y B(25, 12).",
         "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
+            "A": "m = 1",
+            "B": "m = 3",
+            "C": "m = 2",
+            "D": "m = 4"
         },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+        "correcta": "B",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #100] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #141] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>26</span><span>2</span></div><div class='matrix-row'><span>24</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
+            "A": "14",
+            "B": "26",
+            "C": "22",
+            "D": "10"
         },
         "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
     },
     {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #101] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #142] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>24</span></div></div></div>, halle su matriz al cuadrado.",
         "opciones": {
-            "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
+            "A": "[[4, 4], [4, 9]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "[[2, 0], [0, 3]]"
         },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #102] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
+        "pregunta": "[Reactivo #143] Halle el límite analítico: lim<sub>x &rarr; 26</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 226</span><span>x &minus; 26</span></div>.",
         "opciones": {
-            "A": "8",
-            "B": "4",
-            "C": "0",
-            "D": "No existe"
+            "A": "5",
+            "B": "0",
+            "C": "No existe",
+            "D": "10"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
+        "correcta": "D",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     },
     {
         "categoria": "Derivadas",
-        "pregunta": "[Reactivo #103] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
+        "pregunta": "[Reactivo #144] Determine la derivada de la función con exponente compuesto: f(x) = x<sup>24</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x</span></div>.",
         "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
+            "A": "3x<sup>2</sup> + <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>",
+            "B": "3x &minus; ln(x)",
+            "C": "3x<sup>2</sup> &minus; 4",
+            "D": "3x<sup>2</sup> &minus; <div class='fraction'><span class='numerator'>4</span><span>x<sup>2</sup></span></div>"
         },
         "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
+        "explicacion": "La derivada de x<sup>3</sup> es 3x<sup>2</sup>. Reescribiendo el segundo término como &minus;4x<sup>&minus;1</sup>, su derivada es (&minus;4)(&minus;1)x<sup>&minus;2</sup> = 4/x<sup>2</sup>."
     },
     {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #104] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo #145] Resuelva la expresión logarítmica fundamental: log<sub>24</sub>(2x &minus; 1) = 2.",
         "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
+            "A": "x = 9",
+            "B": "x = 3",
+            "C": "x = 4",
+            "D": "x = 5"
         },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #105] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "correcta": "D",
+        "explicacion": "Aplicamos la definición formal de logaritmo: 2x &minus; 1 = 3<sup>2</sup> &rArr; 2x &minus; 1 = 9 &rArr; 2x = 10 &rArr; x = 5."
     },
     {
         "categoria": "Intervalos",
-        "pregunta": "[Reactivo #106] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
+        "pregunta": "[Reactivo #146] Determine la unión formal de los intervalos A = (&minus;&infin;, 24] y B = (1, 6].",
         "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
+            "A": "(&minus;&infin;, 6]",
+            "B": "(1, 3]",
+            "C": "(&minus;&infin;, 1)",
+            "D": "[3, 6]"
         },
         "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #107] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #108] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #109] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #110] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #111] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #112] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #113] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
+        "explicacion": "La unión fusiona todos los elementos de ambos intervalos, abarcando desde el extremo inferior de A hasta el extremo superior de B."
     },
     {
         "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #114] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
+        "pregunta": "[Reactivo #147] Halle la pendiente (m) de la recta tangente que cruza por los puntos coordenados A(2, 24) y B(26, 12).",
         "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
+            "A": "m = 1",
+            "B": "m = 3",
+            "C": "m = 2",
+            "D": "m = 4"
         },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
+        "correcta": "B",
+        "explicacion": "La pendiente se calcula mediante la fórmula m = <div class='fraction'><span class='numerator'>y<sub>2</sub> &minus; y<sub>1</sub></span><span>x<sub>2</sub> &minus; x<sub>1</sub></span></div> = <div class='fraction'><span class='numerator'>12 &minus; 3</span><span>5 &minus; 2</span></div> = 3."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #115] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #148] Calcule el determinante de la matriz bidimensional <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>27</span><span>2</span></div><div class='matrix-row'><span>25</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #116] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
-        "opciones": {
-            "A": "10",
+            "A": "22",
             "B": "14",
-            "C": "12",
-            "D": "8"
+            "C": "26",
+            "D": "10"
         },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
+        "correcta": "B",
+        "explicacion": "El determinante se obtiene mediante el producto de los elementos de la diagonal principal menos la diagonal secundaria: (5 &times; 4) &minus; (2 &times; 3) = 20 &minus; 6 = 14."
+    },
+    {
+        "categoria": "Matrices y Determinantes",
+        "pregunta": "[Reactivo #149] Dada la siguiente matriz identidad modificada <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>2</span><span>0</span></div><div class='matrix-row'><span>0</span><span>25</span></div></div></div>, halle su matriz al cuadrado.",
+        "opciones": {
+            "A": "[[2, 0], [0, 3]]",
+            "B": "<div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>0</span></div><div class='matrix-row'><span>0</span><span>9</span></div></div></div>",
+            "C": "[[4, 0], [0, 6]]",
+            "D": "[[4, 4], [4, 9]]"
+        },
+        "correcta": "B",
+        "explicacion": "Al multiplicar una matriz diagonal por sí misma, cada uno de los coeficientes de la diagonal se eleva directamente al cuadrado."
     },
     {
         "categoria": "Límites",
-        "pregunta": "[Reactivo #117] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
-        "opciones": {
-            "A": "8",
-            "B": "4",
-            "C": "0",
-            "D": "No existe"
-        },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
-    },
-    {
-        "categoria": "Derivadas",
-        "pregunta": "[Reactivo #118] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
-        "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
-        },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
-    },
-    {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #119] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
-        "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #120] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
-    },
-    {
-        "categoria": "Intervalos",
-        "pregunta": "[Reactivo #121] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
-        "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
-        },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #122] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #123] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #124] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #125] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
+        "pregunta": "[Reactivo #150] Halle el límite analítico: lim<sub>x &rarr; 27</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> &minus; 227</span><span>x &minus; 27</span></div>.",
         "opciones": {
             "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #126] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #127] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #128] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
-    },
-    {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #129] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
-        "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
-        },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
-    },
-    {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #130] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
-        "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #131] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
-        "opciones": {
-            "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
-        },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
-    },
-    {
-        "categoria": "Límites",
-        "pregunta": "[Reactivo #132] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
-        "opciones": {
-            "A": "8",
-            "B": "4",
+            "B": "10",
             "C": "0",
             "D": "No existe"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
-    },
-    {
-        "categoria": "Derivadas",
-        "pregunta": "[Reactivo #133] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
-        "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
-        },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
-    },
-    {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #134] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
-        "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #135] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
-    },
-    {
-        "categoria": "Intervalos",
-        "pregunta": "[Reactivo #136] Dados los conjuntos A = (-4, 5] y B = [2, 8), determine la intersección analítica A &cap; B.",
-        "opciones": {
-            "A": "[2, 5]",
-            "B": "(2, 5]",
-            "C": "[-4, 8)",
-            "D": "(5, 8)"
-        },
-        "correcta": "A",
-        "explicacion": "La intersección comprende los valores compartidos simultáneamente, es decir, desde 2 cerrado hasta 5 cerrado."
-    },
-    {
-        "categoria": "Valor Absoluto",
-        "pregunta": "[Reactivo #137] Resuelva la inecuación de módulo: |3x - 6| &le; 12. Indique el intervalo solución.",
-        "opciones": {
-            "A": "[-2, 6]",
-            "B": "(-2, 6)",
-            "C": "(-&infin;, -2] &cup; [6, +&infin;)",
-            "D": "[2, 6]"
-        },
-        "correcta": "A",
-        "explicacion": "Se plantea -12 &le; 3x - 6 &le; 12. Sumando 6: -6 &le; 3x &le; 18. Dividiendo entre 3: [-2, 6]."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo #138] Determine la solución real para la ecuación exponencial: 9<sup>x-1</sup> = 27<sup>x-3</sup>.",
-        "opciones": {
-            "A": "x = 7",
-            "B": "x = 4",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Llevando a base 3: (3<sup>2</sup>)<sup>x-1</sup> = (3<sup>3</sup>)<sup>x-3</sup> &rArr; 2x - 2 = 3x - 9 &rArr; x = 7."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo #139] Resuelva la ecuación aplicando propiedades: log<sub>2</sub>(x + 2) + log<sub>2</sub>(x - 4) = 3.",
-        "opciones": {
-            "A": "x = 6",
-            "B": "x = -4",
-            "C": "x = 4",
-            "D": "{6, -4}"
-        },
-        "correcta": "A",
-        "explicacion": "log<sub>2</sub>((x+2)(x-4))=3 &rArr; x<sup>2</sup>-2x-8 = 2<sup>3</sup>=8 &rArr; x<sup>2</sup>-2x-16=0. Ajustando el argumento real, la raíz válida es 6."
-    },
-    {
-        "categoria": "Sistemas de Ecuaciones",
-        "pregunta": "[Reactivo #140] Resuelva el sistema lineal:<br>2x + 3y = 12<br>3x - y = 7.<br> Halle el valor de (x + y).",
-        "opciones": {
-            "A": "5",
-            "B": "4",
-            "C": "3",
-            "D": "6"
-        },
-        "correcta": "A",
-        "explicacion": "Multiplicando la segunda por 3 y sumando: 11x = 33 &rArr; x = 3. Reemplazando: y = 2. Por tanto x + y = 5."
-    },
-    {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo #141] Determine las coordenadas completas del vértice de la parábola f(x) = x<sup>2</sup> - 4x + 7.",
-        "opciones": {
-            "A": "(2, 3)",
-            "B": "(-2, 3)",
-            "C": "(2, 7)",
-            "D": "(4, 7)"
-        },
-        "correcta": "A",
-        "explicacion": "h = -b/(2a) = 4/2 = 2. Evaluando f(2) = 4 - 8 + 7 = 3. El vértice es (2,3)."
-    },
-    {
-        "categoria": "Operaciones con Funciones",
-        "pregunta": "[Reactivo #142] Dadas f(x) = 2x + 5 y g(x) = x<sup>2</sup> - 1, halle la función compuesta (g &cir; f)(x).",
-        "opciones": {
-            "A": "4x<sup>2</sup> + 20x + 24",
-            "B": "4x<sup>2</sup> + 25",
-            "C": "2x<sup>2</sup> + 3",
-            "D": "4x<sup>2</sup> + 20x + 25"
-        },
-        "correcta": "A",
-        "explicacion": "g(f(x)) = (2x + 5)<sup>2</sup> - 1 = 4x<sup>2</sup> + 20x + 25 - 1 = 4x<sup>2</sup> + 20x + 24."
-    },
-    {
-        "categoria": "Dominio y Rango",
-        "pregunta": "[Reactivo #143] Halle el dominio real de la función racional h(x) = <div class='fraction'><span class='numerator'>2x + 1</span><span>3x - 9</span></div>.",
-        "opciones": {
-            "A": "&#8477; - {3}",
-            "B": "&#8477; - {9}",
-            "C": "(3, +&infin;)",
-            "D": "&#8477; - {-1/2}"
-        },
-        "correcta": "A",
-        "explicacion": "El denominador no puede ser cero: 3x - 9 &ne; 0 &rArr; 3x &ne; 9 &rArr; x &ne; 3."
-    },
-    {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo #144] Calcule la distancia del punto P(3, 4) a la recta con ecuación general: 3x + 4y - 5 = 0.",
-        "opciones": {
-            "A": "4 u",
-            "B": "2 u",
-            "C": "5 u",
-            "D": "3 u"
-        },
-        "correcta": "A",
-        "explicacion": "d = |3(3) + 4(4) - 5| / &radic;(3<sup>2</sup>+4<sup>2</sup>) = |9+16-5|/5 = 20/5 = 4 unidades."
-    },
-    {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo #145] Determine el producto escalar de los vectores tridimensionales u = (2, -1, 3) y v = (4, 2, -1).",
-        "opciones": {
-            "A": "3",
-            "B": "6",
-            "C": "8",
-            "D": "5"
-        },
-        "correcta": "A",
-        "explicacion": "u &middot; v = (2)(4) + (-1)(2) + (3)(-1) = 8 - 2 - 3 = 3."
-    },
-    {
-        "categoria": "Matrices",
-        "pregunta": "[Reactivo #146] Calcule el determinante de la matriz A = [[3, 2], [1, 4]].",
-        "opciones": {
-            "A": "10",
-            "B": "14",
-            "C": "12",
-            "D": "8"
-        },
-        "correcta": "A",
-        "explicacion": "det(A) = (3)(4) - (2)(1) = 12 - 2 = 10."
-    },
-    {
-        "categoria": "Límites",
-        "pregunta": "[Reactivo #147] Calcule el límite indeterminado: lim <sub>x&rarr;4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
-        "opciones": {
-            "A": "8",
-            "B": "4",
-            "C": "0",
-            "D": "No existe"
-        },
-        "correcta": "A",
-        "explicacion": "Factorizando el numerador: (x-4)(x+4)/(x-4) = x+4. Evaluando cuando x tienden a 4, resulta 4 + 4 = 8."
-    },
-    {
-        "categoria": "Derivadas",
-        "pregunta": "[Reactivo #148] Halle la primera derivada de la función exponencial mixta f(x) = e<sup>3x</sup> + 5x<sup>2</sup>.",
-        "opciones": {
-            "A": "3e<sup>3x</sup> + 10x",
-            "B": "e<sup>3x</sup> + 10x",
-            "C": "3e<sup>3x</sup> + 5x",
-            "D": "e<sup>3x</sup> + 5x"
-        },
-        "correcta": "A",
-        "explicacion": "Por regla de la cadena, la derivada de e<sup>3x</sup> es 3e<sup>3x</sup>, y por regla de potencias la de 5x<sup>2</sup> es 10x."
-    },
-    {
-        "categoria": "Cónicas",
-        "pregunta": "[Reactivo #149] Determine el centro C y el radio r de la circunferencia x<sup>2</sup> + y<sup>2</sup> - 6x + 4y - 3 = 0.",
-        "opciones": {
-            "A": "C(3, -2), r = 4",
-            "B": "C(-3, 2), r = 4",
-            "C": "C(3, -2), r = 16",
-            "D": "C(-3, 2), r = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Completando cuadrados: (x-3)<sup>2</sup> + (y+2)<sup>2</sup> = 3 + 9 + 4 = 16. Por ende, Centro(3, -2) y Radio = &radic;16 = 4."
-    },
-    {
-        "categoria": "Identidades Trigonométricas",
-        "pregunta": "[Reactivo #150] Simplifique la siguiente expresión trigonométrica: sec(&theta;) &middot; cot(&theta;).",
-        "opciones": {
-            "A": "csc(&theta;)",
-            "B": "sin(&theta;)",
-            "C": "cos(&theta;)",
-            "D": "tan(&theta;)"
-        },
-        "correcta": "A",
-        "explicacion": "sec(&theta;) &middot; cot(&theta;) = (1/cos(&theta;)) &middot; (cos(&theta;)/sin(&theta;)) = 1/sin(&theta;) = csc(&theta;)."
+        "correcta": "B",
+        "explicacion": "Factorizamos la diferencia de cuadrados en el numerador: (x &minus; 5)(x + 5). Cancelamos el término indeterminado (x &minus; 5), lo que nos deja lim (x + 5) = 5 + 5 = 10."
     }
 ];
 
-let preguntasSeleccionadas = [];
 let indicePreguntaActual = 0;
 let puntaje = 0;
-const totalPreguntasPorJuego = 20; 
+const totalPreguntasPorJuego = 150; 
 
 let comodinesDisponibles = { fiftyFifty: true, deleteOne: true, phone: true, public: true };
 
@@ -1839,13 +1839,6 @@ lifelinePhone.addEventListener('click', usarLlamada);
 lifelinePublic.addEventListener('click', usarPublico);
 
 function iniciarJuego() {
-    let copiaBanco = [...bancoPreguntas];
-    for (let i = copiaBanco.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copiaBanco[i], copiaBanco[j]] = [copiaBanco[j], copiaBanco[i]];
-    }
-    
-    preguntasSeleccionadas = copiaBanco.slice(0, totalPreguntasPorJuego);
     indicePreguntaActual = 0;
     puntaje = 0;
     comodinesDisponibles = { fiftyFifty: true, deleteOne: true, phone: true, public: true };
@@ -1860,19 +1853,17 @@ function mostrarPregunta() {
     feedbackDisplay.className = 'feedback-box';
     btnNext.style.display = 'none';
     scoreDisplay.textContent = puntaje;
-    progressText.textContent = `Pregunta: ${indicePreguntaActual + 1}/${totalPreguntasPorJuego}`;
+    progressText.textContent = "Pregunta: " + (indicePreguntaActual + 1) + "/" + totalPreguntasPorJuego;
 
-    const q = preguntasSeleccionadas[indicePreguntaActual];
+    const q = bancoPreguntas[indicePreguntaActual];
     categoryDisplay.textContent = q.categoria;
-    questionDisplay.innerHTML = `<span class="math-eq">${q.pregunta}</span>`;
+    questionDisplay.innerHTML = '<span class="math-eq">' + q.pregunta + '</span>';
     optionsContainer.innerHTML = '';
 
-    const clavesOrdenadas = Object.keys(q.opciones).sort(() => Math.random() - 0.5);
-
-    clavesOrdenadas.forEach(key => {
+    Object.keys(q.opciones).forEach(key => {
         const btn = document.createElement('button');
         btn.className = 'btn-option';
-        btn.innerHTML = `<span class="math-eq"><strong>${key}:</strong> ${q.opciones[key]}</span>`;
+        btn.innerHTML = '<span class="math-eq"><strong>' + key + ':</strong> ' + q.opciones[key] + '</span>';
         btn.setAttribute('data-option', key);
         btn.addEventListener('click', () => verificarRespuesta(key));
         optionsContainer.appendChild(btn);
@@ -1882,7 +1873,7 @@ function mostrarPregunta() {
 }
 
 function verificarRespuesta(opcionSeleccionada) {
-    const q = preguntasSeleccionadas[indicePreguntaActual];
+    const q = bancoPreguntas[indicePreguntaActual];
     const botones = optionsContainer.querySelectorAll('.btn-option');
     botones.forEach(btn => btn.disabled = true);
     bloquearComodinesTemporamente();
@@ -1912,22 +1903,22 @@ function avanzarPregunta() {
     if (indicePreguntaActual < totalPreguntasPorJuego) {
         mostrarPregunta();
     } else {
-        finalizJuego();
+        finalizarJuego();
     }
 }
 
-function finalizJuego() {
+function finalizarJuego() {
     cambiarPantalla(screenResult);
     document.getElementById('final-score').textContent = puntaje;
     const evalBox = document.getElementById('final-evaluation');
-    if (puntaje === totalPreguntasPorJuego) {
-        evalBox.innerHTML = "🏆 ¡Perfecto! Dominas con rigor científico todos los ejes analíticos.";
+    if (puntaje >= 130) {
+        evalBox.innerHTML = "🏆 ¡Rendimiento Sobresaliente! Dominas perfectamente todo el pensum universitario de matemáticas de corrido.";
         evalBox.style.color = "var(--success)";
-    } else if (puntaje >= totalPreguntasPorJuego * 0.7) {
-        evalBox.innerHTML = "👍 ¡Muy bien! Posees habilidades matemáticas muy sólidas.";
+    } else if (puntaje >= 90) {
+        evalBox.innerHTML = "👍 ¡Buen Trabajo! Tienes bases sólidas, pero revisa los reactivos fallidos.";
         evalBox.style.color = "var(--secondary-color)";
     } else {
-        evalBox.innerHTML = "📚 Analiza las retroalimentaciones para corregir errores conceptuales.";
+        evalBox.innerHTML = "📚 Sigue estudiando. Realizar un examen completo de 150 preguntas requiere práctica constante.";
         evalBox.style.color = "var(--accent-color)";
     }
 }
@@ -1947,7 +1938,7 @@ function bloquearComodinesTemporamente() {
 }
 
 function obtenerOpcionesIncorrectas() {
-    const q = preguntasSeleccionadas[indicePreguntaActual];
+    const q = bancoPreguntas[indicePreguntaActual];
     const botones = Array.from(optionsContainer.querySelectorAll('.btn-option'));
     return botones.filter(b => b.getAttribute('data-option') !== q.correcta && b.style.visibility !== 'hidden');
 }
@@ -1970,19 +1961,19 @@ function usarEliminarUna() {
 
 function usarLlamada() {
     if(!comodinesDisponibles.phone) return;
-    const q = preguntasSeleccionadas[indicePreguntaActual];
+    const q = bancoPreguntas[indicePreguntaActual];
     helpBox.style.display = 'block';
-    helpBox.innerHTML = `📞 <strong>El Tutor te sugiere:</strong> "Analizando las propiedades, considero que la opción correcta es la <strong>\${q.correcta}</strong>."`;
+    helpBox.innerHTML = '📞 <strong>El Tutor Académico te sugiere:</strong> "Aplicando las leyes analíticas, considero firmemente que la opción correcta es la <strong>' + q.correcta + '</strong>."';
     comodinesDisponibles.phone = false;
     actualizarVisualComodines();
 }
 
 function usarPublico() {
     if(!comodinesDisponibles.public) return;
-    const q = preguntasSeleccionadas[indicePreguntaActual];
-    let dist = {A:8, B:7, C:10, D:5}; dist[q.correcta] = 75;
+    const q = bancoPreguntas[indicePreguntaActual];
+    let dist = {A:12, B:14, C:10, D:9}; dist[q.correcta] = 65;
     helpBox.style.display = 'block';
-    helpBox.innerHTML = `📊 <strong>Votación del Público:</strong><br>A: \${dist.A}% | B: \${dist.B}% | C: \${dist.C}% | D: \${dist.D}%`;
+    helpBox.innerHTML = '📊 <strong>Votación del Auditorio Universitario:</strong><br>A: ' + dist.A + '% | B: ' + dist.B + '% | C: ' + dist.C + '% | D: ' + dist.D + '%';
     comodinesDisponibles.public = false;
     actualizarVisualComodines();
 }

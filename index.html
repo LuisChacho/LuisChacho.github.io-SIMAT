@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Matemáticas Universitario</title>
+    <title>Simulador de Matemáticas de Alta Competencia</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -13,17 +13,17 @@
     <main>
         <div class="container">
             <!-- PANTALLA INICIAL -->
-            <div id="screen-home" class="screen active home-screen">
-                <h2>Desafío de Admisión Superior</h2>
-                <p>Pon a prueba tus competencias con un banco masivo de 150 a 200 preguntas rigurosas que abarcan de forma aleatoria y sin repetición todos los ejes temáticos del examen de ingreso.</p>
-                <button id="btn-start" class="btn-action">¡Iniciar Simulación!</button>
+            <div id="screen-home" class="screen active">
+                <h2>Desafío Completo de Admisión Superior</h2>
+                <p>Pon a prueba tus competencias de manera rigurosa. Esta versión ejecutará las <strong>150 preguntas reales de corrido</strong> en un único examen continuo y sin interrupciones para simular con exactitud las condiciones de la prueba oficial.</p>
+                <button id="btn-start" class="btn-action">¡Iniciar Simulación de 150 Preguntas!</button>
             </div>
 
             <!-- PANTALLA DE JUEGO -->
             <div id="screen-game" class="screen">
                 <div class="hud">
-                    <div id="progress-text">Pregunta: 0/20</div>
-                    <div class="score-badge">Puntos: <span id="score-display">0</span></div>
+                    <div id="progress-text" style="font-weight: bold; color: var(--primary-color);">Pregunta: 0/150</div>
+                    <div class="score-badge">Aciertos: <span id="score-display">0</span></div>
                 </div>
 
                 <div class="lifelines">
@@ -46,15 +46,15 @@
                 </div>
 
                 <div style="margin-top: 1.5rem; text-align: right;">
-                    <button id="btn-next" class="btn-action" style="display: none;">Siguiente</button>
+                    <button id="btn-next" class="btn-action" style="display: none;">Siguiente Pregunta</button>
                 </div>
             </div>
 
             <!-- PANTALLA FINAL -->
             <div id="screen-result" class="screen" style="text-align: center;">
                 <h2>Simulación Finalizada</h2>
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem;">Tu puntaje: <strong id="final-score" style="color: var(--secondary-color); font-size: 2.5rem;">0</strong></p>
-                <div id="final-evaluation" style="margin-bottom: 2rem; font-weight: 600;"></div>
+                <p style="font-size: 1.4rem; margin-bottom: 1.5rem;">Tu puntaje final: <strong id="final-score" style="color: var(--secondary-color); font-size: 2.8rem;">0</strong> / 150</p>
+                <div id="final-evaluation" style="margin-bottom: 2rem; font-weight: 600; font-size: 1.2rem;"></div>
                 <button id="btn-restart" class="btn-action">Intentar de Nuevo</button>
             </div>
         </div>
