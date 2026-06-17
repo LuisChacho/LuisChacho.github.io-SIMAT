@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Matemáticas de Alta Competencia</title>
+    <title>Simulador de Matemáticas Universitario Oficial</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -12,14 +12,12 @@
     </header>
     <main>
         <div class="container">
-            <!-- PANTALLA INICIAL -->
             <div id="screen-home" class="screen active">
-                <h2>Desafío Completo de Admisión Superior</h2>
-                <p>Pon a prueba tus competencias de manera rigurosa. Esta versión ejecutará las <strong>150 preguntas reales de corrido</strong> en un único examen continuo y sin interrupciones para simular con exactitud las condiciones de la prueba oficial.</p>
-                <button id="btn-start" class="btn-action">¡Iniciar Simulación de 150 Preguntas!</button>
+                <h2>Simulación Continua de Alta Competencia</h2>
+                <p>Este sistema está configurado para evaluar las <strong>150 preguntas de corrido</strong>, simulando las condiciones rigurosas de la prueba real sin interrupciones ni reinicios anticipados.</p>
+                <button id="btn-start" class="btn-action">Iniciar Examen (150 Reactivos)</button>
             </div>
 
-            <!-- PANTALLA DE JUEGO -->
             <div id="screen-game" class="screen">
                 <div class="hud">
                     <div id="progress-text" style="font-weight: bold; color: var(--primary-color);">Pregunta: 0/150</div>
@@ -50,16 +48,15 @@
                 </div>
             </div>
 
-            <!-- PANTALLA FINAL -->
             <div id="screen-result" class="screen" style="text-align: center;">
-                <h2>Simulación Finalizada</h2>
-                <p style="font-size: 1.4rem; margin-bottom: 1.5rem;">Tu puntaje final: <strong id="final-score" style="color: var(--secondary-color); font-size: 2.8rem;">0</strong> / 150</p>
+                <h2>Evaluación Finalizada</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 1.5rem;">Puntaje Final: <strong id="final-score" style="color: var(--secondary-color); font-size: 2.8rem;">0</strong> / 150</p>
                 <div id="final-evaluation" style="margin-bottom: 2rem; font-weight: 600; font-size: 1.2rem;"></div>
-                <button id="btn-restart" class="btn-action">Intentar de Nuevo</button>
+                <button id="btn-restart" class="btn-action">Volver al Inicio</button>
             </div>
         </div>
     </main>
-    <footer>Plataforma de Evaluación Académica Autónoma © 2026</footer>
+    <footer>Plataforma Autónoma de Evaluación Académica © 2026</footer>
     <script src="index.js"></script>
 </body>
 </html>
