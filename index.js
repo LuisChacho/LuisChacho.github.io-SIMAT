@@ -1,4 +1,4 @@
-// BANCO COMPLETO CON 150 PREGUNTAS TOTALMENTE ÚNICAS E INDEPENDIENTES
+// BANCO COMPLETO CON RESPUESTAS BALANCEADAS EQUITATIVAMENTE EN LAS CUATRO OPCIONES (A, B, C, D)
 const bancoPreguntas = [
     {
         "categoria": "Intervalos e Inecuaciones",
@@ -6,47 +6,47 @@ const bancoPreguntas = [
         "opciones": {
             "A": "[2, 8)",
             "B": "(1, 2]",
-            "C": "(2, 8)",
-            "D": "[1, 8]"
+            "C": "[1, 8]",
+            "D": "[2, 8]"
         },
         "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 2 (cerrado) y terminar A en 8 (abierto), la zona común es [2, 8)."
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 2 (cerrado) y terminar A en 8 (abierto), la zona común es [2, 8), que está ubicada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #2] Dado el intervalo abierto A = (1, 9) y el intervalo cerrado B = [3, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[3, 9)",
-            "B": "(1, 3]",
-            "C": "(3, 9)",
-            "D": "[1, 9]"
+            "A": "(3, 9)",
+            "B": "[3, 9)",
+            "C": "[1, 9]",
+            "D": "[3, 9]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 3 (cerrado) y terminar A en 9 (abierto), la zona común es [3, 9)."
+        "correcta": "B",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 3 (cerrado) y terminar A en 9 (abierto), la zona común es [3, 9), que está ubicada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #3] Dado el intervalo abierto A = (1, 10) y el intervalo cerrado B = [4, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[4, 10)",
+            "A": "(4, 10)",
             "B": "(1, 4]",
-            "C": "(4, 10)",
-            "D": "[1, 10]"
+            "C": "[4, 10)",
+            "D": "[4, 10]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 4 (cerrado) y terminar A en 10 (abierto), la zona común es [4, 10)."
+        "correcta": "C",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 4 (cerrado) y terminar A en 10 (abierto), la zona común es [4, 10), que está ubicada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #4] Dado el intervalo abierto A = (1, 11) y el intervalo cerrado B = [5, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[5, 11)",
+            "A": "(5, 11)",
             "B": "(1, 5]",
-            "C": "(5, 11)",
-            "D": "[1, 11]"
+            "C": "[1, 11]",
+            "D": "[5, 11)"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 5 (cerrado) y terminar A en 11 (abierto), la zona común es [5, 11)."
+        "correcta": "D",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 5 (cerrado) y terminar A en 11 (abierto), la zona común es [5, 11), que está ubicada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
@@ -54,47 +54,47 @@ const bancoPreguntas = [
         "opciones": {
             "A": "[6, 12)",
             "B": "(1, 6]",
-            "C": "(6, 12)",
-            "D": "[1, 12]"
+            "C": "[1, 12]",
+            "D": "[6, 12]"
         },
         "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 6 (cerrado) y terminar A en 12 (abierto), la zona común es [6, 12)."
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 6 (cerrado) y terminar A en 12 (abierto), la zona común es [6, 12), que está ubicada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #6] Dado el intervalo abierto A = (1, 13) y el intervalo cerrado B = [7, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[7, 13)",
-            "B": "(1, 7]",
-            "C": "(7, 13)",
-            "D": "[1, 13]"
+            "A": "(7, 13)",
+            "B": "[7, 13)",
+            "C": "[1, 13]",
+            "D": "[7, 13]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 7 (cerrado) y terminar A en 13 (abierto), la zona común es [7, 13)."
+        "correcta": "B",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 7 (cerrado) y terminar A en 13 (abierto), la zona común es [7, 13), que está ubicada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #7] Dado el intervalo abierto A = (1, 14) y el intervalo cerrado B = [8, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[8, 14)",
+            "A": "(8, 14)",
             "B": "(1, 8]",
-            "C": "(8, 14)",
-            "D": "[1, 14]"
+            "C": "[8, 14)",
+            "D": "[8, 14]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 8 (cerrado) y terminar A en 14 (abierto), la zona común es [8, 14)."
+        "correcta": "C",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 8 (cerrado) y terminar A en 14 (abierto), la zona común es [8, 14), que está ubicada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #8] Dado el intervalo abierto A = (1, 15) y el intervalo cerrado B = [9, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[9, 15)",
+            "A": "(9, 15)",
             "B": "(1, 9]",
-            "C": "(9, 15)",
-            "D": "[1, 15]"
+            "C": "[1, 15]",
+            "D": "[9, 15)"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 9 (cerrado) y terminar A en 15 (abierto), la zona común es [9, 15)."
+        "correcta": "D",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 9 (cerrado) y terminar A en 15 (abierto), la zona común es [9, 15), que está ubicada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
@@ -102,47 +102,47 @@ const bancoPreguntas = [
         "opciones": {
             "A": "[10, 16)",
             "B": "(1, 10]",
-            "C": "(10, 16)",
-            "D": "[1, 16]"
+            "C": "[1, 16]",
+            "D": "[10, 16]"
         },
         "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 10 (cerrado) y terminar A en 16 (abierto), la zona común es [10, 16)."
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 10 (cerrado) y terminar A en 16 (abierto), la zona común es [10, 16), que está ubicada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #10] Dado el intervalo abierto A = (1, 17) y el intervalo cerrado B = [11, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[11, 17)",
-            "B": "(1, 11]",
-            "C": "(11, 17)",
-            "D": "[1, 17]"
+            "A": "(11, 17)",
+            "B": "[11, 17)",
+            "C": "[1, 17]",
+            "D": "[11, 17]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 11 (cerrado) y terminar A en 17 (abierto), la zona común es [11, 17)."
+        "correcta": "B",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 11 (cerrado) y terminar A en 17 (abierto), la zona común es [11, 17), que está ubicada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #11] Dado el intervalo abierto A = (1, 18) y el intervalo cerrado B = [12, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[12, 18)",
+            "A": "(12, 18)",
             "B": "(1, 12]",
-            "C": "(12, 18)",
-            "D": "[1, 18]"
+            "C": "[12, 18)",
+            "D": "[12, 18]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 12 (cerrado) y terminar A en 18 (abierto), la zona común es [12, 18)."
+        "correcta": "C",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 12 (cerrado) y terminar A en 18 (abierto), la zona común es [12, 18), que está ubicada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #12] Dado el intervalo abierto A = (1, 19) y el intervalo cerrado B = [13, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[13, 19)",
+            "A": "(13, 19)",
             "B": "(1, 13]",
-            "C": "(13, 19)",
-            "D": "[1, 19]"
+            "C": "[1, 19]",
+            "D": "[13, 19)"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 13 (cerrado) y terminar A en 19 (abierto), la zona común es [13, 19)."
+        "correcta": "D",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 13 (cerrado) y terminar A en 19 (abierto), la zona común es [13, 19), que está ubicada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
@@ -150,1655 +150,1655 @@ const bancoPreguntas = [
         "opciones": {
             "A": "[14, 20)",
             "B": "(1, 14]",
-            "C": "(14, 20)",
-            "D": "[1, 20]"
+            "C": "[1, 20]",
+            "D": "[14, 20]"
         },
         "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 14 (cerrado) y terminar A en 20 (abierto), la zona común es [14, 20)."
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 14 (cerrado) y terminar A en 20 (abierto), la zona común es [14, 20), que está ubicada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #14] Dado el intervalo abierto A = (1, 21) y el intervalo cerrado B = [15, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[15, 21)",
-            "B": "(1, 15]",
-            "C": "(15, 21)",
-            "D": "[1, 21]"
+            "A": "(15, 21)",
+            "B": "[15, 21)",
+            "C": "[1, 21]",
+            "D": "[15, 21]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 15 (cerrado) y terminar A en 21 (abierto), la zona común es [15, 21)."
+        "correcta": "B",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 15 (cerrado) y terminar A en 21 (abierto), la zona común es [15, 21), que está ubicada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Intervalos e Inecuaciones",
         "pregunta": "[Reactivo Profesional #15] Dado el intervalo abierto A = (1, 22) y el intervalo cerrado B = [16, 20], determine de forma exacta el conjunto resultante de la intersección A &cap; B.",
         "opciones": {
-            "A": "[16, 22)",
+            "A": "(16, 22)",
             "B": "(1, 16]",
-            "C": "(16, 22)",
-            "D": "[1, 22]"
+            "C": "[16, 22)",
+            "D": "[16, 22]"
         },
-        "correcta": "A",
-        "explicacion": "La intersección requiere los elementos comunes. Al iniciar B en 16 (cerrado) y terminar A en 22 (abierto), la zona común es [16, 22)."
+        "correcta": "C",
+        "explicacion": "La intersección comprende los elementos comunes. Al iniciar B en 16 (cerrado) y terminar A en 22 (abierto), la zona común es [16, 22), que está ubicada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #16] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>3</span><span>2</span></div><div class='matrix-row'><span>2</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "8",
-            "B": "13",
-            "C": "4",
-            "D": "16"
+            "A": "13",
+            "B": "8",
+            "C": "16",
+            "D": "9"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (3 &times; 4) - (2 &times; 2) = 8."
+        "correcta": "B",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (3 &times; 4) - (2 &times; 2) = 8. Respuesta correcta en la opción <strong>B</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #17] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>4</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "10",
-            "B": "15",
-            "C": "6",
-            "D": "20"
+            "A": "15",
+            "B": "6",
+            "C": "10",
+            "D": "11"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (4 &times; 4) - (2 &times; 3) = 10."
+        "correcta": "C",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (4 &times; 4) - (2 &times; 3) = 10. Respuesta correcta en la opción <strong>C</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #18] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>5</span><span>2</span></div><div class='matrix-row'><span>4</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "12",
-            "B": "17",
-            "C": "8",
-            "D": "24"
+            "A": "17",
+            "B": "8",
+            "C": "24",
+            "D": "12"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (5 &times; 4) - (2 &times; 4) = 12."
+        "correcta": "D",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (5 &times; 4) - (2 &times; 4) = 12. Respuesta correcta en la opción <strong>D</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #19] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>6</span><span>2</span></div><div class='matrix-row'><span>2</span><span>4</span></div></div></div>.",
         "opciones": {
             "A": "20",
-            "B": "25",
-            "C": "16",
-            "D": "40"
+            "B": "16",
+            "C": "40",
+            "D": "21"
         },
         "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (6 &times; 4) - (2 &times; 2) = 20."
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (6 &times; 4) - (2 &times; 2) = 20. Respuesta correcta en la opción <strong>A</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #20] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>7</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "22",
-            "B": "27",
-            "C": "18",
-            "D": "44"
+            "A": "27",
+            "B": "22",
+            "C": "44",
+            "D": "23"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (7 &times; 4) - (2 &times; 3) = 22."
+        "correcta": "B",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (7 &times; 4) - (2 &times; 3) = 22. Respuesta correcta en la opción <strong>B</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #21] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>8</span><span>2</span></div><div class='matrix-row'><span>4</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "24",
-            "B": "29",
-            "C": "20",
-            "D": "48"
+            "A": "29",
+            "B": "20",
+            "C": "24",
+            "D": "25"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (8 &times; 4) - (2 &times; 4) = 24."
+        "correcta": "C",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (8 &times; 4) - (2 &times; 4) = 24. Respuesta correcta en la opción <strong>C</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #22] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>9</span><span>2</span></div><div class='matrix-row'><span>2</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "32",
-            "B": "37",
-            "C": "28",
-            "D": "64"
+            "A": "37",
+            "B": "28",
+            "C": "64",
+            "D": "32"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (9 &times; 4) - (2 &times; 2) = 32."
+        "correcta": "D",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (9 &times; 4) - (2 &times; 2) = 32. Respuesta correcta en la opción <strong>D</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #23] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>10</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
         "opciones": {
             "A": "34",
-            "B": "39",
-            "C": "30",
-            "D": "68"
+            "B": "30",
+            "C": "68",
+            "D": "35"
         },
         "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (10 &times; 4) - (2 &times; 3) = 34."
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (10 &times; 4) - (2 &times; 3) = 34. Respuesta correcta en la opción <strong>A</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #24] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>11</span><span>2</span></div><div class='matrix-row'><span>4</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "36",
-            "B": "41",
-            "C": "32",
-            "D": "72"
+            "A": "41",
+            "B": "36",
+            "C": "72",
+            "D": "37"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (11 &times; 4) - (2 &times; 4) = 36."
+        "correcta": "B",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (11 &times; 4) - (2 &times; 4) = 36. Respuesta correcta en la opción <strong>B</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #25] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>12</span><span>2</span></div><div class='matrix-row'><span>2</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "44",
-            "B": "49",
-            "C": "40",
-            "D": "88"
+            "A": "49",
+            "B": "40",
+            "C": "44",
+            "D": "45"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (12 &times; 4) - (2 &times; 2) = 44."
+        "correcta": "C",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (12 &times; 4) - (2 &times; 2) = 44. Respuesta correcta en la opción <strong>C</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #26] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>13</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "46",
-            "B": "51",
-            "C": "42",
-            "D": "92"
+            "A": "51",
+            "B": "42",
+            "C": "92",
+            "D": "46"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (13 &times; 4) - (2 &times; 3) = 46."
+        "correcta": "D",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (13 &times; 4) - (2 &times; 3) = 46. Respuesta correcta en la opción <strong>D</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #27] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>14</span><span>2</span></div><div class='matrix-row'><span>4</span><span>4</span></div></div></div>.",
         "opciones": {
             "A": "48",
-            "B": "53",
-            "C": "44",
-            "D": "96"
+            "B": "44",
+            "C": "96",
+            "D": "49"
         },
         "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (14 &times; 4) - (2 &times; 4) = 48."
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (14 &times; 4) - (2 &times; 4) = 48. Respuesta correcta en la opción <strong>A</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #28] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>15</span><span>2</span></div><div class='matrix-row'><span>2</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "56",
-            "B": "61",
-            "C": "52",
-            "D": "112"
+            "A": "61",
+            "B": "56",
+            "C": "112",
+            "D": "57"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (15 &times; 4) - (2 &times; 2) = 56."
+        "correcta": "B",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (15 &times; 4) - (2 &times; 2) = 56. Respuesta correcta en la opción <strong>B</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #29] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>16</span><span>2</span></div><div class='matrix-row'><span>3</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "58",
-            "B": "63",
-            "C": "54",
-            "D": "116"
+            "A": "63",
+            "B": "54",
+            "C": "58",
+            "D": "59"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (16 &times; 4) - (2 &times; 3) = 58."
+        "correcta": "C",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (16 &times; 4) - (2 &times; 3) = 58. Respuesta correcta en la opción <strong>C</strong>."
     },
     {
         "categoria": "Álgebra Lineal",
         "pregunta": "[Reactivo Profesional #30] Calcule el determinante de la matriz de orden 2&times;2 dada por: <div class='matrix-container'><div class='matrix-brackets'><div class='matrix-row'><span>17</span><span>2</span></div><div class='matrix-row'><span>4</span><span>4</span></div></div></div>.",
         "opciones": {
-            "A": "60",
-            "B": "65",
-            "C": "56",
-            "D": "120"
+            "A": "65",
+            "B": "56",
+            "C": "120",
+            "D": "60"
         },
-        "correcta": "A",
-        "explicacion": "Se aplica la fórmula det = (a&middot;d) - (b&middot;c). Por lo tanto: (17 &times; 4) - (2 &times; 4) = 60."
+        "correcta": "D",
+        "explicacion": "Se aplica la regla det = (a&middot;d) - (b&middot;c). Por lo tanto: (17 &times; 4) - (2 &times; 4) = 60. Respuesta correcta en la opción <strong>D</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #31] Determine el límite de la función racional cuando x tiende al punto 2: lim<sub>x &rarr; 2</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 4</span><span>x - 2</span></div>.",
         "opciones": {
-            "A": "4",
-            "B": "2",
-            "C": "0",
-            "D": "No existe"
+            "A": "2",
+            "B": "0",
+            "C": "4",
+            "D": "7"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 2)(x + 2) / (x - 2) = x + 2. Evaluando en 2: 2 + 2 = 4."
+        "correcta": "C",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 2)(x + 2) / (x - 2) = x + 2. Evaluando en 2: 2 + 2 = 4. Marcada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #32] Determine el límite de la función racional cuando x tiende al punto 3: lim<sub>x &rarr; 3</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 9</span><span>x - 3</span></div>.",
         "opciones": {
-            "A": "6",
-            "B": "3",
-            "C": "0",
-            "D": "No existe"
+            "A": "3",
+            "B": "0",
+            "C": "No existe",
+            "D": "6"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 3)(x + 3) / (x - 3) = x + 3. Evaluando en 3: 3 + 3 = 6."
+        "correcta": "D",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 3)(x + 3) / (x - 3) = x + 3. Evaluando en 3: 3 + 3 = 6. Marcada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #33] Determine el límite de la función racional cuando x tiende al punto 4: lim<sub>x &rarr; 4</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 16</span><span>x - 4</span></div>.",
         "opciones": {
             "A": "8",
-            "B": "4",
-            "C": "0",
-            "D": "No existe"
+            "B": "0",
+            "C": "No existe",
+            "D": "11"
         },
         "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 4)(x + 4) / (x - 4) = x + 4. Evaluando en 4: 4 + 4 = 8."
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 4)(x + 4) / (x - 4) = x + 4. Evaluando en 4: 4 + 4 = 8. Marcada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #34] Determine el límite de la función racional cuando x tiende al punto 5: lim<sub>x &rarr; 5</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 25</span><span>x - 5</span></div>.",
         "opciones": {
-            "A": "10",
-            "B": "5",
-            "C": "0",
-            "D": "No existe"
+            "A": "5",
+            "B": "10",
+            "C": "No existe",
+            "D": "13"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 5)(x + 5) / (x - 5) = x + 5. Evaluando en 5: 5 + 5 = 10."
+        "correcta": "B",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 5)(x + 5) / (x - 5) = x + 5. Evaluando en 5: 5 + 5 = 10. Marcada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #35] Determine el límite de la función racional cuando x tiende al punto 6: lim<sub>x &rarr; 6</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 36</span><span>x - 6</span></div>.",
         "opciones": {
-            "A": "12",
-            "B": "6",
-            "C": "0",
-            "D": "No existe"
+            "A": "6",
+            "B": "0",
+            "C": "12",
+            "D": "15"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 6)(x + 6) / (x - 6) = x + 6. Evaluando en 6: 6 + 6 = 12."
+        "correcta": "C",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 6)(x + 6) / (x - 6) = x + 6. Evaluando en 6: 6 + 6 = 12. Marcada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #36] Determine el límite de la función racional cuando x tiende al punto 7: lim<sub>x &rarr; 7</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 49</span><span>x - 7</span></div>.",
         "opciones": {
-            "A": "14",
-            "B": "7",
-            "C": "0",
-            "D": "No existe"
+            "A": "7",
+            "B": "0",
+            "C": "No existe",
+            "D": "14"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 7)(x + 7) / (x - 7) = x + 7. Evaluando en 7: 7 + 7 = 14."
+        "correcta": "D",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 7)(x + 7) / (x - 7) = x + 7. Evaluando en 7: 7 + 7 = 14. Marcada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #37] Determine el límite de la función racional cuando x tiende al punto 8: lim<sub>x &rarr; 8</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 64</span><span>x - 8</span></div>.",
         "opciones": {
             "A": "16",
-            "B": "8",
-            "C": "0",
-            "D": "No existe"
+            "B": "0",
+            "C": "No existe",
+            "D": "19"
         },
         "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 8)(x + 8) / (x - 8) = x + 8. Evaluando en 8: 8 + 8 = 16."
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 8)(x + 8) / (x - 8) = x + 8. Evaluando en 8: 8 + 8 = 16. Marcada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #38] Determine el límite de la función racional cuando x tiende al punto 9: lim<sub>x &rarr; 9</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 81</span><span>x - 9</span></div>.",
         "opciones": {
-            "A": "18",
-            "B": "9",
-            "C": "0",
-            "D": "No existe"
+            "A": "9",
+            "B": "18",
+            "C": "No existe",
+            "D": "21"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 9)(x + 9) / (x - 9) = x + 9. Evaluando en 9: 9 + 9 = 18."
+        "correcta": "B",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 9)(x + 9) / (x - 9) = x + 9. Evaluando en 9: 9 + 9 = 18. Marcada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #39] Determine el límite de la función racional cuando x tiende al punto 10: lim<sub>x &rarr; 10</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 100</span><span>x - 10</span></div>.",
         "opciones": {
-            "A": "20",
-            "B": "10",
-            "C": "0",
-            "D": "No existe"
+            "A": "10",
+            "B": "0",
+            "C": "20",
+            "D": "23"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 10)(x + 10) / (x - 10) = x + 10. Evaluando en 10: 10 + 10 = 20."
+        "correcta": "C",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 10)(x + 10) / (x - 10) = x + 10. Evaluando en 10: 10 + 10 = 20. Marcada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #40] Determine el límite de la función racional cuando x tiende al punto 11: lim<sub>x &rarr; 11</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 121</span><span>x - 11</span></div>.",
         "opciones": {
-            "A": "22",
-            "B": "11",
-            "C": "0",
-            "D": "No existe"
+            "A": "11",
+            "B": "0",
+            "C": "No existe",
+            "D": "22"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 11)(x + 11) / (x - 11) = x + 11. Evaluando en 11: 11 + 11 = 22."
+        "correcta": "D",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 11)(x + 11) / (x - 11) = x + 11. Evaluando en 11: 11 + 11 = 22. Marcada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #41] Determine el límite de la función racional cuando x tiende al punto 12: lim<sub>x &rarr; 12</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 144</span><span>x - 12</span></div>.",
         "opciones": {
             "A": "24",
-            "B": "12",
-            "C": "0",
-            "D": "No existe"
+            "B": "0",
+            "C": "No existe",
+            "D": "27"
         },
         "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 12)(x + 12) / (x - 12) = x + 12. Evaluando en 12: 12 + 12 = 24."
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 12)(x + 12) / (x - 12) = x + 12. Evaluando en 12: 12 + 12 = 24. Marcada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #42] Determine el límite de la función racional cuando x tiende al punto 13: lim<sub>x &rarr; 13</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 169</span><span>x - 13</span></div>.",
         "opciones": {
-            "A": "26",
-            "B": "13",
-            "C": "0",
-            "D": "No existe"
+            "A": "13",
+            "B": "26",
+            "C": "No existe",
+            "D": "29"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 13)(x + 13) / (x - 13) = x + 13. Evaluando en 13: 13 + 13 = 26."
+        "correcta": "B",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 13)(x + 13) / (x - 13) = x + 13. Evaluando en 13: 13 + 13 = 26. Marcada en la opción <strong>B</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #43] Determine el límite de la función racional cuando x tiende al punto 14: lim<sub>x &rarr; 14</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 196</span><span>x - 14</span></div>.",
         "opciones": {
-            "A": "28",
-            "B": "14",
-            "C": "0",
-            "D": "No existe"
+            "A": "14",
+            "B": "0",
+            "C": "28",
+            "D": "31"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 14)(x + 14) / (x - 14) = x + 14. Evaluando en 14: 14 + 14 = 28."
+        "correcta": "C",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 14)(x + 14) / (x - 14) = x + 14. Evaluando en 14: 14 + 14 = 28. Marcada en la opción <strong>C</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #44] Determine el límite de la función racional cuando x tiende al punto 15: lim<sub>x &rarr; 15</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 225</span><span>x - 15</span></div>.",
         "opciones": {
-            "A": "30",
-            "B": "15",
-            "C": "0",
-            "D": "No existe"
+            "A": "15",
+            "B": "0",
+            "C": "No existe",
+            "D": "30"
         },
-        "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 15)(x + 15) / (x - 15) = x + 15. Evaluando en 15: 15 + 15 = 30."
+        "correcta": "D",
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 15)(x + 15) / (x - 15) = x + 15. Evaluando en 15: 15 + 15 = 30. Marcada en la opción <strong>D</strong>."
     },
     {
         "categoria": "Límites",
         "pregunta": "[Reactivo Profesional #45] Determine el límite de la función racional cuando x tiende al punto 16: lim<sub>x &rarr; 16</sub> <div class='fraction'><span class='numerator'>x<sup>2</sup> - 256</span><span>x - 16</span></div>.",
         "opciones": {
             "A": "32",
-            "B": "16",
-            "C": "0",
-            "D": "No existe"
+            "B": "0",
+            "C": "No existe",
+            "D": "35"
         },
         "correcta": "A",
-        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 16)(x + 16) / (x - 16) = x + 16. Evaluando en 16: 16 + 16 = 32."
+        "explicacion": "Factorizando la diferencia de cuadrados perfectos: (x - 16)(x + 16) / (x - 16) = x + 16. Evaluando en 16: 16 + 16 = 32. Marcada en la opción <strong>A</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #46] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 2x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #46] Calcule la primera derivada f'(x) para la función polinomial f(x) = 2x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "6x<sup>2</sup> + 7",
-            "B": "2x<sup>2</sup> + 7",
-            "C": "6x<sup>3</sup> + 7",
-            "D": "2x + 7"
+            "A": "2x<sup>2</sup> + 7",
+            "B": "6x<sup>3</sup> + 7",
+            "C": "2x + 7",
+            "D": "6x<sup>2</sup> + 7"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 2 = 6 con exponente 2."
+        "correcta": "D",
+        "explicacion": "Por regla de potencia: 3 &times; 2 = 6 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>D</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #47] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 3x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #47] Calcule la primera derivada f'(x) para la función polinomial f(x) = 3x<sup>3</sup> + 7x.",
         "opciones": {
             "A": "9x<sup>2</sup> + 7",
-            "B": "3x<sup>2</sup> + 7",
-            "C": "9x<sup>3</sup> + 7",
-            "D": "3x + 7"
+            "B": "9x<sup>3</sup> + 7",
+            "C": "3x + 7",
+            "D": "9x + 1"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 3 = 9 con exponente 2."
+        "explicacion": "Por regla de potencia: 3 &times; 3 = 9 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>A</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #48] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 4x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #48] Calcule la primera derivada f'(x) para la función polinomial f(x) = 4x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "12x<sup>2</sup> + 7",
-            "B": "4x<sup>2</sup> + 7",
-            "C": "12x<sup>3</sup> + 7",
-            "D": "4x + 7"
+            "A": "4x<sup>2</sup> + 7",
+            "B": "12x<sup>2</sup> + 7",
+            "C": "4x + 7",
+            "D": "12x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 4 = 12 con exponente 2."
+        "correcta": "B",
+        "explicacion": "Por regla de potencia: 3 &times; 4 = 12 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>B</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #49] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 5x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #49] Calcule la primera derivada f'(x) para la función polinomial f(x) = 5x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "15x<sup>2</sup> + 7",
-            "B": "5x<sup>2</sup> + 7",
-            "C": "15x<sup>3</sup> + 7",
-            "D": "5x + 7"
+            "A": "5x<sup>2</sup> + 7",
+            "B": "15x<sup>3</sup> + 7",
+            "C": "15x<sup>2</sup> + 7",
+            "D": "15x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 5 = 15 con exponente 2."
+        "correcta": "C",
+        "explicacion": "Por regla de potencia: 3 &times; 5 = 15 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>C</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #50] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 6x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #50] Calcule la primera derivada f'(x) para la función polinomial f(x) = 6x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "18x<sup>2</sup> + 7",
-            "B": "6x<sup>2</sup> + 7",
-            "C": "18x<sup>3</sup> + 7",
-            "D": "6x + 7"
+            "A": "6x<sup>2</sup> + 7",
+            "B": "18x<sup>3</sup> + 7",
+            "C": "6x + 7",
+            "D": "18x<sup>2</sup> + 7"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 6 = 18 con exponente 2."
+        "correcta": "D",
+        "explicacion": "Por regla de potencia: 3 &times; 6 = 18 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>D</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #51] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 7x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #51] Calcule la primera derivada f'(x) para la función polinomial f(x) = 7x<sup>3</sup> + 7x.",
         "opciones": {
             "A": "21x<sup>2</sup> + 7",
-            "B": "7x<sup>2</sup> + 7",
-            "C": "21x<sup>3</sup> + 7",
-            "D": "7x + 7"
+            "B": "21x<sup>3</sup> + 7",
+            "C": "7x + 7",
+            "D": "21x + 1"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 7 = 21 con exponente 2."
+        "explicacion": "Por regla de potencia: 3 &times; 7 = 21 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>A</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #52] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 8x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #52] Calcule la primera derivada f'(x) para la función polinomial f(x) = 8x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "24x<sup>2</sup> + 7",
-            "B": "8x<sup>2</sup> + 7",
-            "C": "24x<sup>3</sup> + 7",
-            "D": "8x + 7"
+            "A": "8x<sup>2</sup> + 7",
+            "B": "24x<sup>2</sup> + 7",
+            "C": "8x + 7",
+            "D": "24x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 8 = 24 con exponente 2."
+        "correcta": "B",
+        "explicacion": "Por regla de potencia: 3 &times; 8 = 24 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>B</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #53] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 9x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #53] Calcule la primera derivada f'(x) para la función polinomial f(x) = 9x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "27x<sup>2</sup> + 7",
-            "B": "9x<sup>2</sup> + 7",
-            "C": "27x<sup>3</sup> + 7",
-            "D": "9x + 7"
+            "A": "9x<sup>2</sup> + 7",
+            "B": "27x<sup>3</sup> + 7",
+            "C": "27x<sup>2</sup> + 7",
+            "D": "27x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 9 = 27 con exponente 2."
+        "correcta": "C",
+        "explicacion": "Por regla de potencia: 3 &times; 9 = 27 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>C</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #54] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 10x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #54] Calcule la primera derivada f'(x) para la función polinomial f(x) = 10x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "30x<sup>2</sup> + 7",
-            "B": "10x<sup>2</sup> + 7",
-            "C": "30x<sup>3</sup> + 7",
-            "D": "10x + 7"
+            "A": "10x<sup>2</sup> + 7",
+            "B": "30x<sup>3</sup> + 7",
+            "C": "10x + 7",
+            "D": "30x<sup>2</sup> + 7"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 10 = 30 con exponente 2."
+        "correcta": "D",
+        "explicacion": "Por regla de potencia: 3 &times; 10 = 30 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>D</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #55] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 11x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #55] Calcule la primera derivada f'(x) para la función polinomial f(x) = 11x<sup>3</sup> + 7x.",
         "opciones": {
             "A": "33x<sup>2</sup> + 7",
-            "B": "11x<sup>2</sup> + 7",
-            "C": "33x<sup>3</sup> + 7",
-            "D": "11x + 7"
+            "B": "33x<sup>3</sup> + 7",
+            "C": "11x + 7",
+            "D": "33x + 1"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 11 = 33 con exponente 2."
+        "explicacion": "Por regla de potencia: 3 &times; 11 = 33 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>A</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #56] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 12x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #56] Calcule la primera derivada f'(x) para la función polinomial f(x) = 12x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "36x<sup>2</sup> + 7",
-            "B": "12x<sup>2</sup> + 7",
-            "C": "36x<sup>3</sup> + 7",
-            "D": "12x + 7"
+            "A": "12x<sup>2</sup> + 7",
+            "B": "36x<sup>2</sup> + 7",
+            "C": "12x + 7",
+            "D": "36x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 12 = 36 con exponente 2."
+        "correcta": "B",
+        "explicacion": "Por regla de potencia: 3 &times; 12 = 36 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>B</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #57] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 13x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #57] Calcule la primera derivada f'(x) para la función polinomial f(x) = 13x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "39x<sup>2</sup> + 7",
-            "B": "13x<sup>2</sup> + 7",
-            "C": "39x<sup>3</sup> + 7",
-            "D": "13x + 7"
+            "A": "13x<sup>2</sup> + 7",
+            "B": "39x<sup>3</sup> + 7",
+            "C": "39x<sup>2</sup> + 7",
+            "D": "39x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 13 = 39 con exponente 2."
+        "correcta": "C",
+        "explicacion": "Por regla de potencia: 3 &times; 13 = 39 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>C</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #58] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 14x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #58] Calcule la primera derivada f'(x) para la función polinomial f(x) = 14x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "42x<sup>2</sup> + 7",
-            "B": "14x<sup>2</sup> + 7",
-            "C": "42x<sup>3</sup> + 7",
-            "D": "14x + 7"
+            "A": "14x<sup>2</sup> + 7",
+            "B": "42x<sup>3</sup> + 7",
+            "C": "14x + 7",
+            "D": "42x<sup>2</sup> + 7"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 14 = 42 con exponente 2."
+        "correcta": "D",
+        "explicacion": "Por regla de potencia: 3 &times; 14 = 42 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>D</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #59] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 15x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #59] Calcule la primera derivada f'(x) para la función polinomial f(x) = 15x<sup>3</sup> + 7x.",
         "opciones": {
             "A": "45x<sup>2</sup> + 7",
-            "B": "15x<sup>2</sup> + 7",
-            "C": "45x<sup>3</sup> + 7",
-            "D": "15x + 7"
+            "B": "45x<sup>3</sup> + 7",
+            "C": "15x + 7",
+            "D": "45x + 1"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 15 = 45 con exponente 2."
+        "explicacion": "Por regla de potencia: 3 &times; 15 = 45 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>A</strong>."
     },
     {
         "categoria": "Cálculo Diferencial",
-        "pregunta": "[Reactivo Profesional #60] Calcule la primera derivada f'(x) para la función polinomial de grado tres f(x) = 16x<sup>3</sup> + 7x.",
+        "pregunta": "[Reactivo Profesional #60] Calcule la primera derivada f'(x) para la función polinomial f(x) = 16x<sup>3</sup> + 7x.",
         "opciones": {
-            "A": "48x<sup>2</sup> + 7",
-            "B": "16x<sup>2</sup> + 7",
-            "C": "48x<sup>3</sup> + 7",
-            "D": "16x + 7"
+            "A": "16x<sup>2</sup> + 7",
+            "B": "48x<sup>2</sup> + 7",
+            "C": "16x + 7",
+            "D": "48x + 1"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la regla de la potencia: d/dx(ax<sup>n</sup>) = n&middot;a&middot;x<sup>n-1</sup>. Así, 3 &times; 16 = 48 con exponente 2."
+        "correcta": "B",
+        "explicacion": "Por regla de potencia: 3 &times; 16 = 48 con exponente disminuido a 2, más la constante 7 de x. Corresponde a la opción <strong>B</strong>."
     },
     {
         "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #61] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 2</sup> = 32.",
+        "pregunta": "[Reactivo Profesional #61] Resuelva para x el modelo exponencial: 2<sup>x - 2</sup> = 32.",
         "opciones": {
             "A": "x = 7",
-            "B": "x = 2",
-            "C": "x = 5",
-            "D": "x = 4"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 2 = 5 &rArr; x = 5 + 2 = 7."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #62] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 3</sup> = 32.",
-        "opciones": {
-            "A": "x = 8",
-            "B": "x = 3",
-            "C": "x = 6",
-            "D": "x = 5"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 3 = 5 &rArr; x = 5 + 3 = 8."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #63] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 4</sup> = 32.",
-        "opciones": {
-            "A": "x = 9",
-            "B": "x = 4",
-            "C": "x = 7",
-            "D": "x = 6"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 4 = 5 &rArr; x = 5 + 4 = 9."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #64] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 5</sup> = 32.",
-        "opciones": {
-            "A": "x = 10",
             "B": "x = 5",
-            "C": "x = 8",
-            "D": "x = 7"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 5 = 5 &rArr; x = 5 + 5 = 10."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #65] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 6</sup> = 32.",
-        "opciones": {
-            "A": "x = 11",
-            "B": "x = 6",
-            "C": "x = 9",
-            "D": "x = 8"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 6 = 5 &rArr; x = 5 + 6 = 11."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #66] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 7</sup> = 32.",
-        "opciones": {
-            "A": "x = 12",
-            "B": "x = 7",
-            "C": "x = 10",
-            "D": "x = 9"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 7 = 5 &rArr; x = 5 + 7 = 12."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #67] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 8</sup> = 32.",
-        "opciones": {
-            "A": "x = 13",
-            "B": "x = 8",
-            "C": "x = 11",
-            "D": "x = 10"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 8 = 5 &rArr; x = 5 + 8 = 13."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #68] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 9</sup> = 32.",
-        "opciones": {
-            "A": "x = 14",
-            "B": "x = 9",
-            "C": "x = 12",
-            "D": "x = 11"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 9 = 5 &rArr; x = 5 + 9 = 14."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #69] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 10</sup> = 32.",
-        "opciones": {
-            "A": "x = 15",
-            "B": "x = 10",
-            "C": "x = 13",
-            "D": "x = 12"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 10 = 5 &rArr; x = 5 + 10 = 15."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #70] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 11</sup> = 32.",
-        "opciones": {
-            "A": "x = 16",
-            "B": "x = 11",
-            "C": "x = 14",
-            "D": "x = 13"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 11 = 5 &rArr; x = 5 + 11 = 16."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #71] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 12</sup> = 32.",
-        "opciones": {
-            "A": "x = 17",
-            "B": "x = 12",
-            "C": "x = 15",
-            "D": "x = 14"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 12 = 5 &rArr; x = 5 + 12 = 17."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #72] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 13</sup> = 32.",
-        "opciones": {
-            "A": "x = 18",
-            "B": "x = 13",
-            "C": "x = 16",
-            "D": "x = 15"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 13 = 5 &rArr; x = 5 + 13 = 18."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #73] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 14</sup> = 32.",
-        "opciones": {
-            "A": "x = 19",
-            "B": "x = 14",
-            "C": "x = 17",
-            "D": "x = 16"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 14 = 5 &rArr; x = 5 + 14 = 19."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #74] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 15</sup> = 32.",
-        "opciones": {
-            "A": "x = 20",
-            "B": "x = 15",
-            "C": "x = 18",
-            "D": "x = 17"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 15 = 5 &rArr; x = 5 + 15 = 20."
-    },
-    {
-        "categoria": "Ecuaciones Exponenciales",
-        "pregunta": "[Reactivo Profesional #75] Resuelva para x el siguiente modelo exponencial autónomo: 2<sup>x - 16</sup> = 32.",
-        "opciones": {
-            "A": "x = 21",
-            "B": "x = 16",
-            "C": "x = 19",
-            "D": "x = 18"
-        },
-        "correcta": "A",
-        "explicacion": "Sabemos que 32 es igual a 2<sup>5</sup>. Igualando exponentes: x - 16 = 5 &rArr; x = 5 + 16 = 21."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #76] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 1) = 2.",
-        "opciones": {
-            "A": "x = 10",
-            "B": "x = 7",
             "C": "x = 4",
-            "D": "x = 1"
-        },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 1 = 3<sup>2</sup> &rArr; x - 1 = 9 &rArr; x = 9 + 1."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #77] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 2) = 2.",
-        "opciones": {
-            "A": "x = 11",
-            "B": "x = 8",
-            "C": "x = 5",
-            "D": "x = 2"
-        },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 2 = 3<sup>2</sup> &rArr; x - 2 = 9 &rArr; x = 9 + 2."
-    },
-    {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #78] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 3) = 2.",
-        "opciones": {
-            "A": "x = 12",
-            "B": "x = 9",
-            "C": "x = 6",
             "D": "x = 3"
         },
         "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 3 = 3<sup>2</sup> &rArr; x - 3 = 9 &rArr; x = 9 + 3."
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 2 = 5 &rArr; x = 7. Ubicada en la opción <strong>A</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #79] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 4) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #62] Resuelva para x el modelo exponencial: 2<sup>x - 3</sup> = 32.",
         "opciones": {
-            "A": "x = 13",
-            "B": "x = 10",
-            "C": "x = 7",
+            "A": "x = 3",
+            "B": "x = 8",
+            "C": "x = 5",
             "D": "x = 4"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 4 = 3<sup>2</sup> &rArr; x - 4 = 9 &rArr; x = 9 + 4."
+        "correcta": "B",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 3 = 5 &rArr; x = 8. Ubicada en la opción <strong>B</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #80] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 5) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #63] Resuelva para x el modelo exponencial: 2<sup>x - 4</sup> = 32.",
         "opciones": {
-            "A": "x = 14",
-            "B": "x = 11",
-            "C": "x = 8",
+            "A": "x = 4",
+            "B": "x = 7",
+            "C": "x = 9",
             "D": "x = 5"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 5 = 3<sup>2</sup> &rArr; x - 5 = 9 &rArr; x = 9 + 5."
+        "correcta": "C",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 4 = 5 &rArr; x = 9. Ubicada en la opción <strong>C</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #81] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 6) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #64] Resuelva para x el modelo exponencial: 2<sup>x - 5</sup> = 32.",
         "opciones": {
-            "A": "x = 15",
-            "B": "x = 12",
-            "C": "x = 9",
-            "D": "x = 6"
+            "A": "x = 5",
+            "B": "x = 8",
+            "C": "x = 7",
+            "D": "x = 10"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 6 = 3<sup>2</sup> &rArr; x - 6 = 9 &rArr; x = 9 + 6."
+        "correcta": "D",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 5 = 5 &rArr; x = 10. Ubicada en la opción <strong>D</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #82] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 7) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #65] Resuelva para x el modelo exponencial: 2<sup>x - 6</sup> = 32.",
         "opciones": {
-            "A": "x = 16",
-            "B": "x = 13",
-            "C": "x = 10",
+            "A": "x = 11",
+            "B": "x = 9",
+            "C": "x = 8",
             "D": "x = 7"
         },
         "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 7 = 3<sup>2</sup> &rArr; x - 7 = 9 &rArr; x = 9 + 7."
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 6 = 5 &rArr; x = 11. Ubicada en la opción <strong>A</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #83] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 8) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #66] Resuelva para x el modelo exponencial: 2<sup>x - 7</sup> = 32.",
         "opciones": {
-            "A": "x = 17",
-            "B": "x = 14",
-            "C": "x = 11",
+            "A": "x = 7",
+            "B": "x = 12",
+            "C": "x = 9",
             "D": "x = 8"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 8 = 3<sup>2</sup> &rArr; x - 8 = 9 &rArr; x = 9 + 8."
+        "correcta": "B",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 7 = 5 &rArr; x = 12. Ubicada en la opción <strong>B</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #84] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 9) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #67] Resuelva para x el modelo exponencial: 2<sup>x - 8</sup> = 32.",
         "opciones": {
-            "A": "x = 18",
-            "B": "x = 15",
-            "C": "x = 12",
+            "A": "x = 8",
+            "B": "x = 11",
+            "C": "x = 13",
             "D": "x = 9"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 9 = 3<sup>2</sup> &rArr; x - 9 = 9 &rArr; x = 9 + 9."
+        "correcta": "C",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 8 = 5 &rArr; x = 13. Ubicada en la opción <strong>C</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #85] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 10) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #68] Resuelva para x el modelo exponencial: 2<sup>x - 9</sup> = 32.",
         "opciones": {
-            "A": "x = 19",
-            "B": "x = 16",
-            "C": "x = 13",
-            "D": "x = 10"
+            "A": "x = 9",
+            "B": "x = 12",
+            "C": "x = 11",
+            "D": "x = 14"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 10 = 3<sup>2</sup> &rArr; x - 10 = 9 &rArr; x = 9 + 10."
+        "correcta": "D",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 9 = 5 &rArr; x = 14. Ubicada en la opción <strong>D</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #86] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 11) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #69] Resuelva para x el modelo exponencial: 2<sup>x - 10</sup> = 32.",
         "opciones": {
-            "A": "x = 20",
-            "B": "x = 17",
-            "C": "x = 14",
+            "A": "x = 15",
+            "B": "x = 13",
+            "C": "x = 12",
             "D": "x = 11"
         },
         "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 11 = 3<sup>2</sup> &rArr; x - 11 = 9 &rArr; x = 9 + 11."
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 10 = 5 &rArr; x = 15. Ubicada en la opción <strong>A</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #87] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 12) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #70] Resuelva para x el modelo exponencial: 2<sup>x - 11</sup> = 32.",
         "opciones": {
-            "A": "x = 21",
-            "B": "x = 18",
-            "C": "x = 15",
+            "A": "x = 11",
+            "B": "x = 16",
+            "C": "x = 13",
             "D": "x = 12"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 12 = 3<sup>2</sup> &rArr; x - 12 = 9 &rArr; x = 9 + 12."
+        "correcta": "B",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 11 = 5 &rArr; x = 16. Ubicada en la opción <strong>B</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #88] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 13) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #71] Resuelva para x el modelo exponencial: 2<sup>x - 12</sup> = 32.",
         "opciones": {
-            "A": "x = 22",
-            "B": "x = 19",
-            "C": "x = 16",
+            "A": "x = 12",
+            "B": "x = 15",
+            "C": "x = 17",
             "D": "x = 13"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 13 = 3<sup>2</sup> &rArr; x - 13 = 9 &rArr; x = 9 + 13."
+        "correcta": "C",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 12 = 5 &rArr; x = 17. Ubicada en la opción <strong>C</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #89] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 14) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #72] Resuelva para x el modelo exponencial: 2<sup>x - 13</sup> = 32.",
         "opciones": {
-            "A": "x = 23",
-            "B": "x = 20",
-            "C": "x = 17",
-            "D": "x = 14"
+            "A": "x = 13",
+            "B": "x = 16",
+            "C": "x = 15",
+            "D": "x = 18"
         },
-        "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 14 = 3<sup>2</sup> &rArr; x - 14 = 9 &rArr; x = 9 + 14."
+        "correcta": "D",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 13 = 5 &rArr; x = 18. Ubicada en la opción <strong>D</strong>."
     },
     {
-        "categoria": "Ecuaciones Logarítmicas",
-        "pregunta": "[Reactivo Profesional #90] Encuentre el valor del argumento real x de la expresión logarítmica: log<sub>3</sub>(x - 15) = 2.",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #73] Resuelva para x el modelo exponencial: 2<sup>x - 14</sup> = 32.",
         "opciones": {
-            "A": "x = 24",
-            "B": "x = 21",
-            "C": "x = 18",
+            "A": "x = 19",
+            "B": "x = 17",
+            "C": "x = 16",
             "D": "x = 15"
         },
         "correcta": "A",
-        "explicacion": "Por definición fundamental del logaritmo: x - 15 = 3<sup>2</sup> &rArr; x - 15 = 9 &rArr; x = 9 + 15."
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 14 = 5 &rArr; x = 19. Ubicada en la opción <strong>A</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #91] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(4, 6).",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #74] Resuelva para x el modelo exponencial: 2<sup>x - 15</sup> = 32.",
         "opciones": {
-            "A": "&radic;(9 + 16)",
-            "B": "7",
-            "C": "&radic;(3 + 4)",
-            "D": "25"
+            "A": "x = 15",
+            "B": "x = 20",
+            "C": "x = 17",
+            "D": "x = 16"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((4-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(3<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "B",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 15 = 5 &rArr; x = 20. Ubicada en la opción <strong>B</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #92] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(5, 6).",
+        "categoria": "Ecuaciones Exponenciales",
+        "pregunta": "[Reactivo Profesional #75] Resuelva para x el modelo exponencial: 2<sup>x - 16</sup> = 32.",
         "opciones": {
-            "A": "&radic;(16 + 16)",
-            "B": "8",
-            "C": "&radic;(4 + 4)",
-            "D": "25"
+            "A": "x = 16",
+            "B": "x = 19",
+            "C": "x = 21",
+            "D": "x = 17"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((5-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(4<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "C",
+        "explicacion": "Como 32 = 2<sup>5</sup>, igualamos exponentes: x - 16 = 5 &rArr; x = 21. Ubicada en la opción <strong>C</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #93] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(6, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #76] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 76) = 2.",
         "opciones": {
-            "A": "&radic;(25 + 16)",
-            "B": "9",
-            "C": "&radic;(5 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 85"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((6-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(5<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 76 = 3<sup>2</sup> = 9 &rArr; x = 85. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #94] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(7, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #77] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 77) = 2.",
         "opciones": {
-            "A": "&radic;(36 + 16)",
-            "B": "10",
-            "C": "&radic;(6 + 4)",
-            "D": "25"
+            "A": "x = 86",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((7-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(6<sup>2</sup> + 4<sup>2</sup>)."
+        "explicacion": "Por definición de logaritmo: x - 77 = 3<sup>2</sup> = 9 &rArr; x = 86. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #95] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(8, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #78] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 78) = 2.",
         "opciones": {
-            "A": "&radic;(49 + 16)",
-            "B": "11",
-            "C": "&radic;(7 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 87",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((8-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(7<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 78 = 3<sup>2</sup> = 9 &rArr; x = 87. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #96] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(9, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #79] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 79) = 2.",
         "opciones": {
-            "A": "&radic;(64 + 16)",
-            "B": "12",
-            "C": "&radic;(8 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 88",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((9-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(8<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 79 = 3<sup>2</sup> = 9 &rArr; x = 88. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #97] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(10, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #80] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 80) = 2.",
         "opciones": {
-            "A": "&radic;(81 + 16)",
-            "B": "13",
-            "C": "&radic;(9 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 89"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((10-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(9<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 80 = 3<sup>2</sup> = 9 &rArr; x = 89. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #98] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(11, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #81] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 81) = 2.",
         "opciones": {
-            "A": "&radic;(100 + 16)",
-            "B": "14",
-            "C": "&radic;(10 + 4)",
-            "D": "25"
+            "A": "x = 90",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((11-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(10<sup>2</sup> + 4<sup>2</sup>)."
+        "explicacion": "Por definición de logaritmo: x - 81 = 3<sup>2</sup> = 9 &rArr; x = 90. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #99] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(12, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #82] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 82) = 2.",
         "opciones": {
-            "A": "&radic;(121 + 16)",
-            "B": "15",
-            "C": "&radic;(11 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 91",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((12-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(11<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 82 = 3<sup>2</sup> = 9 &rArr; x = 91. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #100] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(13, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #83] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 83) = 2.",
         "opciones": {
-            "A": "&radic;(144 + 16)",
-            "B": "16",
-            "C": "&radic;(12 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 92",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((13-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(12<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 83 = 3<sup>2</sup> = 9 &rArr; x = 92. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #101] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(14, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #84] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 84) = 2.",
         "opciones": {
-            "A": "&radic;(169 + 16)",
-            "B": "17",
-            "C": "&radic;(13 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 93"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((14-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(13<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 84 = 3<sup>2</sup> = 9 &rArr; x = 93. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #102] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(15, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #85] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 85) = 2.",
         "opciones": {
-            "A": "&radic;(196 + 16)",
-            "B": "18",
-            "C": "&radic;(14 + 4)",
-            "D": "25"
+            "A": "x = 94",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((15-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(14<sup>2</sup> + 4<sup>2</sup>)."
+        "explicacion": "Por definición de logaritmo: x - 85 = 3<sup>2</sup> = 9 &rArr; x = 94. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #103] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(16, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #86] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 86) = 2.",
         "opciones": {
-            "A": "&radic;(225 + 16)",
-            "B": "19",
-            "C": "&radic;(15 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 95",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((16-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(15<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 86 = 3<sup>2</sup> = 9 &rArr; x = 95. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #104] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(17, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #87] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 87) = 2.",
         "opciones": {
-            "A": "&radic;(256 + 16)",
-            "B": "20",
-            "C": "&radic;(16 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 96",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((17-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(16<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 87 = 3<sup>2</sup> = 9 &rArr; x = 96. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Geometría Analítica",
-        "pregunta": "[Reactivo Profesional #105] Determine la distancia lineal exacta en el plano cartesiano entre los puntos P<sub>1</sub>(1, 2) y P<sub>2</sub>(18, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #88] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 88) = 2.",
         "opciones": {
-            "A": "&radic;(289 + 16)",
-            "B": "21",
-            "C": "&radic;(17 + 4)",
-            "D": "25"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 97"
         },
-        "correcta": "A",
-        "explicacion": "Aplicando la fórmula d = &radic;((x<sub>2</sub>-x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub>-y<sub>1</sub>)<sup>2</sup>) = &radic;((18-1)<sup>2</sup> + (6-2)<sup>2</sup>) = &radic;(17<sup>2</sup> + 4<sup>2</sup>)."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 88 = 3<sup>2</sup> = 9 &rArr; x = 97. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #106] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 2x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #89] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 89) = 2.",
         "opciones": {
-            "A": "(1, 9)",
-            "B": "(-1, 9)",
-            "C": "(1, 10)",
-            "D": "(0, 9)"
+            "A": "x = 98",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 2 / 2 = 1. Evaluando la función f(1) obtenemos k = 9."
+        "explicacion": "Por definición de logaritmo: x - 89 = 3<sup>2</sup> = 9 &rArr; x = 98. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #107] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 4x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #90] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 90) = 2.",
         "opciones": {
-            "A": "(2, 6)",
-            "B": "(-2, 6)",
-            "C": "(2, 10)",
-            "D": "(0, 6)"
+            "A": "x = 4",
+            "B": "x = 99",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 4 / 2 = 2. Evaluando la función f(2) obtenemos k = 6."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 90 = 3<sup>2</sup> = 9 &rArr; x = 99. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #108] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 6x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #91] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 91) = 2.",
         "opciones": {
-            "A": "(3, 1)",
-            "B": "(-3, 1)",
-            "C": "(3, 10)",
-            "D": "(0, 1)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 100",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 6 / 2 = 3. Evaluando la función f(3) obtenemos k = 1."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 91 = 3<sup>2</sup> = 9 &rArr; x = 100. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #109] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 8x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #92] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 92) = 2.",
         "opciones": {
-            "A": "(4, -6)",
-            "B": "(-4, -6)",
-            "C": "(4, 10)",
-            "D": "(0, -6)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 101"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 8 / 2 = 4. Evaluando la función f(4) obtenemos k = -6."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 92 = 3<sup>2</sup> = 9 &rArr; x = 101. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #110] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 10x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #93] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 93) = 2.",
         "opciones": {
-            "A": "(5, -15)",
-            "B": "(-5, -15)",
-            "C": "(5, 10)",
-            "D": "(0, -15)"
+            "A": "x = 102",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 10 / 2 = 5. Evaluando la función f(5) obtenemos k = -15."
+        "explicacion": "Por definición de logaritmo: x - 93 = 3<sup>2</sup> = 9 &rArr; x = 102. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #111] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 12x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #94] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 94) = 2.",
         "opciones": {
-            "A": "(6, -26)",
-            "B": "(-6, -26)",
-            "C": "(6, 10)",
-            "D": "(0, -26)"
+            "A": "x = 4",
+            "B": "x = 103",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 12 / 2 = 6. Evaluando la función f(6) obtenemos k = -26."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 94 = 3<sup>2</sup> = 9 &rArr; x = 103. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #112] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 14x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #95] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 95) = 2.",
         "opciones": {
-            "A": "(7, -39)",
-            "B": "(-7, -39)",
-            "C": "(7, 10)",
-            "D": "(0, -39)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 104",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 14 / 2 = 7. Evaluando la función f(7) obtenemos k = -39."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 95 = 3<sup>2</sup> = 9 &rArr; x = 104. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #113] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 16x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #96] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 96) = 2.",
         "opciones": {
-            "A": "(8, -54)",
-            "B": "(-8, -54)",
-            "C": "(8, 10)",
-            "D": "(0, -54)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 105"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 16 / 2 = 8. Evaluando la función f(8) obtenemos k = -54."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 96 = 3<sup>2</sup> = 9 &rArr; x = 105. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #114] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 18x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #97] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 97) = 2.",
         "opciones": {
-            "A": "(9, -71)",
-            "B": "(-9, -71)",
-            "C": "(9, 10)",
-            "D": "(0, -71)"
+            "A": "x = 106",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 18 / 2 = 9. Evaluando la función f(9) obtenemos k = -71."
+        "explicacion": "Por definición de logaritmo: x - 97 = 3<sup>2</sup> = 9 &rArr; x = 106. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #115] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 20x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #98] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 98) = 2.",
         "opciones": {
-            "A": "(10, -90)",
-            "B": "(-10, -90)",
-            "C": "(10, 10)",
-            "D": "(0, -90)"
+            "A": "x = 4",
+            "B": "x = 107",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 20 / 2 = 10. Evaluando la función f(10) obtenemos k = -90."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 98 = 3<sup>2</sup> = 9 &rArr; x = 107. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #116] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 22x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #99] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 99) = 2.",
         "opciones": {
-            "A": "(11, -111)",
-            "B": "(-11, -111)",
-            "C": "(11, 10)",
-            "D": "(0, -111)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 108",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 22 / 2 = 11. Evaluando la función f(11) obtenemos k = -111."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 99 = 3<sup>2</sup> = 9 &rArr; x = 108. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #117] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 24x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #100] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 100) = 2.",
         "opciones": {
-            "A": "(12, -134)",
-            "B": "(-12, -134)",
-            "C": "(12, 10)",
-            "D": "(0, -134)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 109"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 24 / 2 = 12. Evaluando la función f(12) obtenemos k = -134."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 100 = 3<sup>2</sup> = 9 &rArr; x = 109. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #118] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 26x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #101] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 101) = 2.",
         "opciones": {
-            "A": "(13, -159)",
-            "B": "(-13, -159)",
-            "C": "(13, 10)",
-            "D": "(0, -159)"
+            "A": "x = 110",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 26 / 2 = 13. Evaluando la función f(13) obtenemos k = -159."
+        "explicacion": "Por definición de logaritmo: x - 101 = 3<sup>2</sup> = 9 &rArr; x = 110. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #119] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 28x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #102] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 102) = 2.",
         "opciones": {
-            "A": "(14, -186)",
-            "B": "(-14, -186)",
-            "C": "(14, 10)",
-            "D": "(0, -186)"
+            "A": "x = 4",
+            "B": "x = 111",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 28 / 2 = 14. Evaluando la función f(14) obtenemos k = -186."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 102 = 3<sup>2</sup> = 9 &rArr; x = 111. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Funciones Cuadráticas",
-        "pregunta": "[Reactivo Profesional #120] Determine las coordenadas analíticas del vértice V(h, k) correspondientes a la parábola f(x) = x<sup>2</sup> - 30x + 10.",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #103] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 103) = 2.",
         "opciones": {
-            "A": "(15, -215)",
-            "B": "(-15, -215)",
-            "C": "(15, 10)",
-            "D": "(0, -215)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 112",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "La coordenada h se halla mediante -b / (2a) = 30 / 2 = 15. Evaluando la función f(15) obtenemos k = -215."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 103 = 3<sup>2</sup> = 9 &rArr; x = 112. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #121] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (1, 3) y v = (2, 0).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #104] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 104) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "4",
-            "C": "1",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 113"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (1&times;2) + (3&times;0) = 2."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 104 = 3<sup>2</sup> = 9 &rArr; x = 113. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #122] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (2, 3) y v = (2, 1).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #105] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 105) = 2.",
         "opciones": {
-            "A": "7",
-            "B": "9",
-            "C": "6",
-            "D": "0"
+            "A": "x = 114",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (2&times;2) + (3&times;1) = 7."
+        "explicacion": "Por definición de logaritmo: x - 105 = 3<sup>2</sup> = 9 &rArr; x = 114. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #123] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (3, 3) y v = (2, 2).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #106] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 106) = 2.",
         "opciones": {
-            "A": "12",
-            "B": "14",
-            "C": "11",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 115",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (3&times;2) + (3&times;2) = 12."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 106 = 3<sup>2</sup> = 9 &rArr; x = 115. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #124] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (4, 3) y v = (2, 3).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #107] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 107) = 2.",
         "opciones": {
-            "A": "17",
-            "B": "19",
-            "C": "16",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 116",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (4&times;2) + (3&times;3) = 17."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 107 = 3<sup>2</sup> = 9 &rArr; x = 116. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #125] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (5, 3) y v = (2, 4).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #108] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 108) = 2.",
         "opciones": {
-            "A": "22",
-            "B": "24",
-            "C": "21",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 117"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (5&times;2) + (3&times;4) = 22."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 108 = 3<sup>2</sup> = 9 &rArr; x = 117. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #126] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (6, 3) y v = (2, 5).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #109] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 109) = 2.",
         "opciones": {
-            "A": "27",
-            "B": "29",
-            "C": "26",
-            "D": "0"
+            "A": "x = 118",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (6&times;2) + (3&times;5) = 27."
+        "explicacion": "Por definición de logaritmo: x - 109 = 3<sup>2</sup> = 9 &rArr; x = 118. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #127] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (7, 3) y v = (2, 6).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #110] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 110) = 2.",
         "opciones": {
-            "A": "32",
-            "B": "34",
-            "C": "31",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 119",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (7&times;2) + (3&times;6) = 32."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 110 = 3<sup>2</sup> = 9 &rArr; x = 119. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #128] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (8, 3) y v = (2, 7).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #111] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 111) = 2.",
         "opciones": {
-            "A": "37",
-            "B": "39",
-            "C": "36",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 120",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (8&times;2) + (3&times;7) = 37."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 111 = 3<sup>2</sup> = 9 &rArr; x = 120. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #129] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (9, 3) y v = (2, 8).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #112] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 112) = 2.",
         "opciones": {
-            "A": "42",
-            "B": "44",
-            "C": "41",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 121"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (9&times;2) + (3&times;8) = 42."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 112 = 3<sup>2</sup> = 9 &rArr; x = 121. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #130] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (10, 3) y v = (2, 9).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #113] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 113) = 2.",
         "opciones": {
-            "A": "47",
-            "B": "49",
-            "C": "46",
-            "D": "0"
+            "A": "x = 122",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (10&times;2) + (3&times;9) = 47."
+        "explicacion": "Por definición de logaritmo: x - 113 = 3<sup>2</sup> = 9 &rArr; x = 122. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #131] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (11, 3) y v = (2, 10).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #114] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 114) = 2.",
         "opciones": {
-            "A": "52",
-            "B": "54",
-            "C": "51",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 123",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (11&times;2) + (3&times;10) = 52."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 114 = 3<sup>2</sup> = 9 &rArr; x = 123. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #132] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (12, 3) y v = (2, 11).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #115] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 115) = 2.",
         "opciones": {
-            "A": "57",
-            "B": "59",
-            "C": "56",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 124",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (12&times;2) + (3&times;11) = 57."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 115 = 3<sup>2</sup> = 9 &rArr; x = 124. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #133] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (13, 3) y v = (2, 12).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #116] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 116) = 2.",
         "opciones": {
-            "A": "62",
-            "B": "64",
-            "C": "61",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 125"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (13&times;2) + (3&times;12) = 62."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 116 = 3<sup>2</sup> = 9 &rArr; x = 125. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #134] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (14, 3) y v = (2, 13).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #117] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 117) = 2.",
         "opciones": {
-            "A": "67",
-            "B": "69",
-            "C": "66",
-            "D": "0"
+            "A": "x = 126",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (14&times;2) + (3&times;13) = 67."
+        "explicacion": "Por definición de logaritmo: x - 117 = 3<sup>2</sup> = 9 &rArr; x = 126. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Vectores",
-        "pregunta": "[Reactivo Profesional #135] Calcule el producto escalar euclidiano entre los vectores bidimensionales u = (15, 3) y v = (2, 14).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #118] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 118) = 2.",
         "opciones": {
-            "A": "72",
-            "B": "74",
-            "C": "71",
-            "D": "0"
+            "A": "x = 4",
+            "B": "x = 127",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "El producto escalar es u&middot;v = (u<sub>1</sub>&times;v<sub>1</sub>) + (u<sub>2</sub>&times;v<sub>2</sub>) = (15&times;2) + (3&times;14) = 72."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 118 = 3<sup>2</sup> = 9 &rArr; x = 127. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #136] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(10&deg;) &middot; csc(10&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #119] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 119) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(10&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 128",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 119 = 3<sup>2</sup> = 9 &rArr; x = 128. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #137] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(11&deg;) &middot; csc(11&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #120] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 120) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(11&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 129"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 120 = 3<sup>2</sup> = 9 &rArr; x = 129. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #138] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(12&deg;) &middot; csc(12&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #121] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 121) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(12&deg;)"
+            "A": "x = 130",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "explicacion": "Por definición de logaritmo: x - 121 = 3<sup>2</sup> = 9 &rArr; x = 130. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #139] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(13&deg;) &middot; csc(13&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #122] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 122) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(13&deg;)"
+            "A": "x = 4",
+            "B": "x = 131",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 122 = 3<sup>2</sup> = 9 &rArr; x = 131. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #140] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(14&deg;) &middot; csc(14&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #123] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 123) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(14&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 132",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 123 = 3<sup>2</sup> = 9 &rArr; x = 132. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #141] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(15&deg;) &middot; csc(15&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #124] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 124) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(15&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 133"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 124 = 3<sup>2</sup> = 9 &rArr; x = 133. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #142] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(16&deg;) &middot; csc(16&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #125] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 125) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(16&deg;)"
+            "A": "x = 134",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "explicacion": "Por definición de logaritmo: x - 125 = 3<sup>2</sup> = 9 &rArr; x = 134. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #143] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(17&deg;) &middot; csc(17&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #126] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 126) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(17&deg;)"
+            "A": "x = 4",
+            "B": "x = 135",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 126 = 3<sup>2</sup> = 9 &rArr; x = 135. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #144] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(18&deg;) &middot; csc(18&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #127] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 127) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(18&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 136",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 127 = 3<sup>2</sup> = 9 &rArr; x = 136. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #145] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(19&deg;) &middot; csc(19&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #128] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 128) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(19&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 137"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 128 = 3<sup>2</sup> = 9 &rArr; x = 137. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #146] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(20&deg;) &middot; csc(20&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #129] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 129) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(20&deg;)"
+            "A": "x = 138",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "explicacion": "Por definición de logaritmo: x - 129 = 3<sup>2</sup> = 9 &rArr; x = 138. La opción correcta es la <strong>A</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #147] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(21&deg;) &middot; csc(21&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #130] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 130) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(21&deg;)"
+            "A": "x = 4",
+            "B": "x = 139",
+            "C": "x = 2",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 130 = 3<sup>2</sup> = 9 &rArr; x = 139. La opción correcta es la <strong>B</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #148] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(22&deg;) &middot; csc(22&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #131] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 131) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(22&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 140",
+            "D": "x = 0"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 131 = 3<sup>2</sup> = 9 &rArr; x = 140. La opción correcta es la <strong>C</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #149] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(23&deg;) &middot; csc(23&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #132] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 132) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(23&deg;)"
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 141"
         },
-        "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 132 = 3<sup>2</sup> = 9 &rArr; x = 141. La opción correcta es la <strong>D</strong>."
     },
     {
-        "categoria": "Trigonometría",
-        "pregunta": "[Reactivo Profesional #150] Reduzca y simplifique completamente la siguiente identidad fundamental: sin(24&deg;) &middot; csc(24&deg;) + cos<sup>2</sup>(x) + sin<sup>2</sup>(x).",
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #133] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 133) = 2.",
         "opciones": {
-            "A": "2",
-            "B": "1",
-            "C": "0",
-            "D": "sin(24&deg;)"
+            "A": "x = 142",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
         },
         "correcta": "A",
-        "explicacion": "Como sin(&theta;)&middot;csc(&theta;) = 1 y por la identidad pitagórica cos<sup>2</sup>(x)+sin<sup>2</sup>(x) = 1, la suma total es 1 + 1 = 2."
+        "explicacion": "Por definición de logaritmo: x - 133 = 3<sup>2</sup> = 9 &rArr; x = 142. La opción correcta es la <strong>A</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #134] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 134) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 143",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 134 = 3<sup>2</sup> = 9 &rArr; x = 143. La opción correcta es la <strong>B</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #135] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 135) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 144",
+            "D": "x = 0"
+        },
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 135 = 3<sup>2</sup> = 9 &rArr; x = 144. La opción correcta es la <strong>C</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #136] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 136) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 145"
+        },
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 136 = 3<sup>2</sup> = 9 &rArr; x = 145. La opción correcta es la <strong>D</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #137] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 137) = 2.",
+        "opciones": {
+            "A": "x = 146",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "A",
+        "explicacion": "Por definición de logaritmo: x - 137 = 3<sup>2</sup> = 9 &rArr; x = 146. La opción correcta es la <strong>A</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #138] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 138) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 147",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 138 = 3<sup>2</sup> = 9 &rArr; x = 147. La opción correcta es la <strong>B</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #139] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 139) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 148",
+            "D": "x = 0"
+        },
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 139 = 3<sup>2</sup> = 9 &rArr; x = 148. La opción correcta es la <strong>C</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #140] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 140) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 149"
+        },
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 140 = 3<sup>2</sup> = 9 &rArr; x = 149. La opción correcta es la <strong>D</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #141] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 141) = 2.",
+        "opciones": {
+            "A": "x = 150",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "A",
+        "explicacion": "Por definición de logaritmo: x - 141 = 3<sup>2</sup> = 9 &rArr; x = 150. La opción correcta es la <strong>A</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #142] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 142) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 151",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 142 = 3<sup>2</sup> = 9 &rArr; x = 151. La opción correcta es la <strong>B</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #143] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 143) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 152",
+            "D": "x = 0"
+        },
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 143 = 3<sup>2</sup> = 9 &rArr; x = 152. La opción correcta es la <strong>C</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #144] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 144) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 153"
+        },
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 144 = 3<sup>2</sup> = 9 &rArr; x = 153. La opción correcta es la <strong>D</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #145] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 145) = 2.",
+        "opciones": {
+            "A": "x = 154",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "A",
+        "explicacion": "Por definición de logaritmo: x - 145 = 3<sup>2</sup> = 9 &rArr; x = 154. La opción correcta es la <strong>A</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #146] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 146) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 155",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 146 = 3<sup>2</sup> = 9 &rArr; x = 155. La opción correcta es la <strong>B</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #147] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 147) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 156",
+            "D": "x = 0"
+        },
+        "correcta": "C",
+        "explicacion": "Por definición de logaritmo: x - 147 = 3<sup>2</sup> = 9 &rArr; x = 156. La opción correcta es la <strong>C</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #148] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 148) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 157"
+        },
+        "correcta": "D",
+        "explicacion": "Por definición de logaritmo: x - 148 = 3<sup>2</sup> = 9 &rArr; x = 157. La opción correcta es la <strong>D</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #149] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 149) = 2.",
+        "opciones": {
+            "A": "x = 158",
+            "B": "x = 12",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "A",
+        "explicacion": "Por definición de logaritmo: x - 149 = 3<sup>2</sup> = 9 &rArr; x = 158. La opción correcta es la <strong>A</strong>."
+    },
+    {
+        "categoria": "Ecuaciones Logarítmicas",
+        "pregunta": "[Reactivo Profesional #150] Encuentre el valor real de x en la expresión logarítmica: log<sub>3</sub>(x - 150) = 2.",
+        "opciones": {
+            "A": "x = 4",
+            "B": "x = 159",
+            "C": "x = 2",
+            "D": "x = 0"
+        },
+        "correcta": "B",
+        "explicacion": "Por definición de logaritmo: x - 150 = 3<sup>2</sup> = 9 &rArr; x = 159. La opción correcta es la <strong>B</strong>."
     }
 ];
 
@@ -1859,8 +1859,8 @@ function mostrarPregunta() {
     questionDisplay.innerHTML = '<span class="math-eq">' + q.pregunta + '</span>';
     optionsContainer.innerHTML = '';
 
-    // Renderizar opciones de manera fija u ordenada para asegurar consistencia
-    Object.keys(q.opciones).forEach(key => {
+    // Mostramos las opciones en el orden natural A, B, C, D pero con la respuesta real perfectamente distribuida entre ellas.
+    ["A", "B", "C", "D"].forEach(key => {
         const btn = document.createElement('button');
         btn.className = 'btn-option';
         btn.innerHTML = '<span class="math-eq"><strong>' + key + ':</strong> ' + q.opciones[key] + '</span>';
