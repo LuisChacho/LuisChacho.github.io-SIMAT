@@ -19,8 +19,7 @@ main { flex: 1; display: flex; justify-content: center; align-items: center; pad
 .hud { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
 .score-badge { background: var(--primary-color); color: white; padding: 0.5rem 1.2rem; border-radius: 9999px; font-weight: bold; }
 .lifelines { display: flex; gap: 0.6rem; margin-bottom: 1rem; }
-.btn-lifeline { background: #e2e8f0; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; color: var(--primary-color); font-weight: bold; font-size: 0.9rem; transition: background 0.2s; }
-.btn-lifeline:hover:not(:disabled) { background: #cbd5e1; }
+.btn-lifeline { background: #e2e8f0; border: none; padding: 0.6rem 1.2rem; border-radius: 6px; cursor: pointer; color: var(--primary-color); font-weight: bold; font-size: 0.9rem; }
 .btn-lifeline:disabled { opacity: 0.3; cursor: not-allowed; text-decoration: line-through; }
 .category-tag { display: inline-block; background: #f0fdfa; color: #115e59; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; margin-bottom: 1.2rem; border: 1px solid #ccfbf1; }
 .question-text { font-size: 1.35rem; font-weight: 600; margin-bottom: 1.5rem; line-height: 1.7; color: var(--text-dark); }
@@ -44,5 +43,4 @@ sub { font-size: 0.8rem; vertical-align: sub; line-height: 0; }
 .feedback-box.incorrect { display: block; background: #fef2f2; border-left: 5px solid var(--error); color: #991b1b; }
 .help-display { padding: 1rem; background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; display: none; color: #92400e; margin-bottom: 1rem; font-size: 1rem; }
 .btn-action { display: inline-block; background: var(--secondary-color); color: white; border: none; padding: 0.9rem 2.5rem; font-size: 1.1rem; font-weight: bold; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
-.btn-action:hover { background: #115e59; }
 footer { text-align: center; padding: 1.5rem; color: var(--text-light); font-size: 0.85rem; background: white; margin-top: auto; border-top: 1px solid #e2e8f0; }
