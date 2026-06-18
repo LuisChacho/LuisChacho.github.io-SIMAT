@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Matemáticas Universitario Oficial</title>
+    <title>Plataforma de Simulación Matemática Oficial</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <h1>🎓 SIMULADOR DE MATEMÁTICAS UNIVERSITARIO</h1>
+        <h1>🎓 BANCO DE SIMULACIÓN MATEMÁTICA UNIVERSITARIA</h1>
     </header>
     <main>
         <div class="container">
             <div id="screen-home" class="screen active">
-                <h2>Simulación Continua de Alta Competencia</h2>
-                <p>Este sistema está configurado para evaluar las <strong>150 preguntas de corrido</strong>, simulando las condiciones rigurosas de la prueba real sin interrupciones ni reinicios anticipados.</p>
-                <button id="btn-start" class="btn-action">Iniciar Examen (150 Reactivos)</button>
+                <h2>Evaluación Continua de 150 Reactivos</h2>
+                <p>Bienvenido a la plataforma oficial. Se ha cargado un banco de 150 ejercicios reales con soluciones razonadas paso a paso y visualización científica de alta definición.</p>
+                <button id="btn-start" class="btn-action">Iniciar Evaluación Completa</button>
             </div>
 
             <div id="screen-game" class="screen">
                 <div class="hud">
-                    <div id="progress-text" style="font-weight: bold; color: var(--primary-color);">Pregunta: 0/150</div>
+                    <div id="progress-text" style="font-weight: 700; color: var(--primary-color);">Pregunta: 0/150</div>
                     <div class="score-badge">Aciertos: <span id="score-display">0</span></div>
                 </div>
 
@@ -32,7 +32,7 @@
                 </div>
 
                 <div id="help-box" class="help-display"></div>
-                <hr style="margin: 1rem 0; border: 0; border-top: 1px solid #e2e8f0;">
+                <hr style="margin: 1.2rem 0; border: 0; border-top: 1px solid #e2e8f0;">
 
                 <div id="category-display" class="category-tag">Categoría</div>
                 <div id="question-display" class="question-text"></div>
@@ -49,14 +49,14 @@
             </div>
 
             <div id="screen-result" class="screen" style="text-align: center;">
-                <h2>Evaluación Finalizada</h2>
-                <p style="font-size: 1.4rem; margin-bottom: 1.5rem;">Puntaje Final: <strong id="final-score" style="color: var(--secondary-color); font-size: 2.8rem;">0</strong> / 150</p>
+                <h2>Simulación Concluida</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 1.5rem;">Puntaje Final: <strong id="final-score" style="color: var(--secondary-color); font-size: 3rem;">0</strong> / 150</p>
                 <div id="final-evaluation" style="margin-bottom: 2rem; font-weight: 600; font-size: 1.2rem;"></div>
                 <button id="btn-restart" class="btn-action">Volver al Inicio</button>
             </div>
         </div>
     </main>
-    <footer>Plataforma Autónoma de Evaluación Académica © 2026</footer>
+    <footer>Evaluación de Competencias Académicas © 2026</footer>
     <script src="index.js"></script>
 </body>
 </html>
